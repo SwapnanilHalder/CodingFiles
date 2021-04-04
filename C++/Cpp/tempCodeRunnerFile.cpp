@@ -1,3 +1,1 @@
-int32_t sampling(vector<int> &vec, vi &val, int &n, int &l){
-
-// }
+num1 = "990000000000000", num2 = "000009";

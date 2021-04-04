@@ -1,18 +1,19 @@
-import java.util.Scanner;
+public class test1 {
+    static int x = 11;
+    private int y = 33;
+    public void method1(int x) {
+        test1 t = new test1();
+        this.x = 22;
+        y = 44;
 
-class test1 {
+        System.out.println("test1.x: " + test1.x);
+        System.out.println("t.x: " + t.x);
+        System.out.println("t.y: " + t.y);
+        System.out.println("y: " + y);
+    }
 
     public static void main(String[] args) {
-
-        // Creates a reader instance which takes
-        // input from standard input - keyboard
-        Scanner reader = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-
-        // nextInt() reads the next integer from the keyboard
-        int number = reader.nextInt();
-
-        // println() prints the following line to the output screen
-        System.out.println("You entered: " + number);
+        test1 t = new test1();
+        t.method1(5);
     }
 }

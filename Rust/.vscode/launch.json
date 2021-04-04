@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Launch",
+            "program": "${workspaceFolder}/<your program>",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "initCommands": ["cargo run --package files --bin main"],
+            //"cd $dir && g++ $fullFileName -o /home/swapno/bin/cpp/$fileNameWithoutExt && /home/swapno/bin/cpp/$fileNameWithoutExt"
+        },
+        // {
+        //     "type": "lldb",
+        //     "request": "launch",
+        //     "name": "Debug",
+        //     "program": "${workspaceFolder}/<your program>",
+        //     "args": [],
+        //     "cwd": "${workspaceFolder}"
+        // }
+    ]
+}

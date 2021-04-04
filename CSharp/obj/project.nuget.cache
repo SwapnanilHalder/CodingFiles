@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "427s3Lb/aGpHXND/gv/7yWn5+T7jBukKPmUcVgcz5OKdLhjx10RLiIDgeey/yrHng+iV/5KW/fP96hA1dR4iZg==",
+  "success": true,
+  "projectFilePath": "/home/swapno/Documents/CSharp/CSharp.csproj",
+  "expectedPackageFiles": [
+    "/home/swapno/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.2/microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

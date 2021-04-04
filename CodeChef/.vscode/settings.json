@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "**/templates/**/*.html": "django-html",
+        "*.tcc": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "regex": "cpp",
+        "iosfwd": "cpp",
+        "random": "cpp",
+        "ostream": "cpp"
+    }
+}

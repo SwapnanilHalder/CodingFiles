@@ -1,7 +1,7 @@
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.Iterator;
 
-class Main {
+class test2 {
     public static void main(String[] args) {
         LinkedBlockingQueue<String> animals = new LinkedBlockingQueue<>(5);
 

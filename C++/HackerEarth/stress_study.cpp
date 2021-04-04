@@ -1,0 +1,1 @@
+Foo was not amongst the most brilliant students of his class. So, he has some pending exams to clear. As the exams are approaching, this time he vowed to pass in all of them. This will only happen if he is not under stress. Foo's stress can be calculated using a simple function called Foo_function which depends upon the time for which Foo studies continuously .

@@ -1,0 +1,170 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3757,        161]
+NotebookOptionsPosition[      2825,        122]
+NotebookOutlinePosition[      3178,        138]
+CellTagsIndexPosition[      3135,        135]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Unitary Matrix", "Title"],
+
+Cell[CellGroupData[{
+
+Cell["Author", "Subsection"],
+
+Cell["\<\
+Eric W. Weisstein
+April 22, 2003\
+\>", "Text"],
+
+Cell[TextData[{
+ "This notebook downloaded from ",
+ ButtonBox["http://mathworld.wolfram.com/notebooks/LinearAlgebra/\
+UnitaryMatrix.nb",
+  BaseStyle->"Hyperlink",
+  ButtonData:>{
+    URL["http://mathworld.wolfram.com/notebooks/LinearAlgebra/UnitaryMatrix.\
+nb"], None}],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "For more information, see Eric's ",
+ StyleBox["MathWorld",
+  FontSlant->"Italic"],
+ " entry ",
+ ButtonBox["http://mathworld.wolfram.com/UnitaryMatrix.html",
+  BaseStyle->"Hyperlink",
+  ButtonData:>{
+    URL["http://mathworld.wolfram.com/UnitaryMatrix.html"], None}],
+ "."
+}], "Text"],
+
+Cell["\<\
+\[Copyright]2005 Wolfram Research, Inc. except for portions noted otherwise\
+\>", "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Code", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"UnitaryQ", "[", 
+   RowBox[{"m_List", "?", "MatrixQ"}], "]"}], " ", ":=", "\n", "    ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Conjugate", "@", 
+      RowBox[{"Transpose", "@", "m"}]}], ".", "m"}], " ", "==", 
+    RowBox[{"IdentityMatrix", "@", 
+     RowBox[{"Length", "@", "m"}]}]}], ")"}], " "}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Example", "Section"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "/", 
+        RowBox[{"Sqrt", "[", "2", "]"}]}], ",", 
+       RowBox[{"1", "/", 
+        RowBox[{"Sqrt", "[", "2", "]"}]}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "I"}], "/", 
+        RowBox[{"Sqrt", "[", "2", "]"}]}], ",", 
+       RowBox[{"I", "/", 
+        RowBox[{"Sqrt", "[", "2", "]"}]}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "I"}], "}"}]}], "}"}]}], ";"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitaryQ", "[", "a", "]"}]], "Input"],
+
+Cell[BoxData["True"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitaryQ", "[", 
+  RowBox[{"a", "/", "2"}], "]"}]], "Input"],
+
+Cell[BoxData["False"], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{574, 564},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 31, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[635, 26, 28, 0, 44, "Subsection"],
+Cell[666, 28, 56, 3, 49, "Text"],
+Cell[725, 33, 287, 9, 49, "Text"],
+Cell[1015, 44, 301, 10, 49, "Text"],
+Cell[1319, 56, 99, 2, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1455, 63, 26, 0, 44, "Subsection"],
+Cell[1484, 65, 360, 10, 46, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1881, 80, 26, 0, 80, "Section"],
+Cell[1910, 82, 599, 19, 46, "Input"],
+Cell[CellGroupData[{
+Cell[2534, 105, 61, 1, 28, "Input"],
+Cell[2598, 108, 31, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2666, 113, 84, 2, 28, "Input"],
+Cell[2753, 117, 32, 0, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
