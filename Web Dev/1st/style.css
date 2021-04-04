@@ -1,0 +1,31 @@
+body {
+    font-size: 20px;
+}
+
+#heading {
+    color: black;
+    font-size: 3em;
+    display: inline-block;
+    font-family: 'Architects Daughter', cursive;
+    border-bottom: 2px solid pink;
+    border-right: 2px solid pink;
+    padding-right: 1rem;
+    box-shadow: 4px 4px 5px #888888;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {flex-direction: row-reverse;
+    width: 450px;
+    height: 300px;
+    padding: 0.8rem;
+    transition: all 1s;
+}
+img:hover {
+    transform: scale(1.1);
+}
+

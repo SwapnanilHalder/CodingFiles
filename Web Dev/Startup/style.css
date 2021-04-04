@@ -1,0 +1,36 @@
+html, body {
+    font-family: 'Montserrat', monospace;
+    width: 100%;
+    height: 100%;
+    background: url(header.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+#header {
+    font-size: 3rem;
+    color: #E2dbdb;
+}
+
+#line {
+    border-color: #f05f43;
+    border-width: 3px;
+    max-width: 65px;
+}
+
+.btn-own {
+    padding: 1rem 2rem;
+    border-radius: 300px;
+    text-transform: uppercase;
+    background-color: #f05f43;
+    border-color: #f05f43;
+}
+
+.btn-own:hover {
+    background-color: #ee4b08;
+    border-color: #ee4b08;
+    border-width: 4px;
+}
+
+.buffer {
+    height: 10rem;
+}
