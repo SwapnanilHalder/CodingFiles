@@ -70,22 +70,34 @@ vi input1l(){
 }
 
 void sol() {
-    inpt(n); inpt(k);
-    string str;
-    cin >> str;
-    int counts = 0;
-    For(i, 0, str.size()) {
-        if(str[i] != '*') {
-            counts = 0;
-        }
-        if(str[i] == '*') {
-            counts++;
-        }
-        if(counts == k) {
-            pl("YES"); return;
-        }
+    inpt(n);
+    int perfect = n/4;
+    int total = 0;
+    int rest = 0;
+    rest = (n%4);
+    total += (44 * perfect) ;
+    if(perfect != 0) total += (4*4);
+    // deb(total);
+    if(rest == 0) {
+        pl(total); return;
     }
-    pl("NO"); return;
+    else if (rest == 1) {
+        if(perfect != 0) total -= 4;
+        total += 20;
+        pl(total); return;
+    }
+    else if(rest == 2) {
+        if(perfect != 0) total -= 4*2;
+        total += (7+6+5) * 2;
+        pl(total); return;
+    }
+    else if(rest == 3) {
+        if(perfect != 0) total -= 4 * 3;
+        total += (7+6+5);
+        total += (6+5+4);
+        total += (7+6+5);
+        pl(total); return;
+    }
 }
 
 int32_t main() {
