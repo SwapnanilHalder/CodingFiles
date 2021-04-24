@@ -13,7 +13,7 @@
 #include <cstring>
 #include <numeric>
 #define pi 3.1415926535897932384626
-#define MOD 1000000007
+#define MOD 1000000007 
 #define INF 9223372036854775800 
 #define ll long long
 #define int long long int
@@ -51,7 +51,23 @@ vi input1l(){
 }
 
 void sol() {
-    
+    inpt(n); inpt(k);
+    int couple = pow(2, k-1);
+    deb(couple);
+    int highest = pow(2, k) - 1;
+    deb(highest);
+    int total = 0;
+    total = n % MOD ;
+    int temp = n * (n-1);
+    // temp %= MOD;
+    deb(temp);
+    // For(i, 0, couple - 1) {
+    //     total = (total + temp ) % MOD ; 
+    //     deb(total);
+    // }
+    int total1 = ((temp % MOD) * ((couple-1) % MOD)) % MOD; 
+    total += total1;
+    pl(total);
 }
 
 int32_t main() {

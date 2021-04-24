@@ -50,8 +50,26 @@ vi input1l(){
     return input;
 }
 
+bool is_square(int x) {
+    int t = pow(floor(sqrt(x)), 2);
+    // cout << (t == x) << endl;
+    return (t==x);
+}
+
 void sol() {
-    
+    inpt(n); cinbuffer;
+    vi arr = input1l();
+    For(i, 0, n) {
+        if(!is_square(arr[i])) {
+            pl("YES");
+            return;
+        }
+        else {
+            continue;
+        }
+    }
+    pl("NO");
+    return;
 }
 
 int32_t main() {
