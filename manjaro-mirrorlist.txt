@@ -1,0 +1,87 @@
+ 
+##
+## Manjaro Linux custom mirrorlist
+## Generated on 2021-04-19 14:26
+##
+## Please use 'pacman-mirrors -id' To reset custom mirrorlist
+## Please use 'pacman-mirrors -c all' To reset custom mirrorlist
+## To remove custom config run  'pacman-mirrors -c all'
+##
+
+## Country : Germany
+Server = https://mirror.alpix.eu/manjaro/stable/$repo/$arch
+
+## Country : Denmark
+Server = https://www.uex.dk/public/manjaro/stable/$repo/$arch
+
+## Country : Germany
+Server = https://manjaro.moson.eu/stable/$repo/$arch
+
+## Country : Netherlands
+Server = https://mirror.easylee.nl/manjaro/stable/$repo/$arch
+
+## Country : Austria
+Server = http://mirror.easyname.at/manjaro/stable/$repo/$arch
+
+## Country : Germany
+Server = https://manjaro.moson.org/stable/$repo/$arch
+
+## Country : Germany
+Server = https://manjaro.re/stable/$repo/$arch
+
+## Country : Indonesia
+Server = https://mirror.deace.id/manjaro/stable/$repo/$arch
+
+## Country : New_Zealand
+Server = http://manjaro.mirrors.theom.nz/stable/$repo/$arch
+
+## Country : United_States
+Server = https://repo.ialab.dsu.edu/manjaro/stable/$repo/$arch
+
+## Country : Poland
+Server = https://mirror.tuchola-dc.pl/manjaro/stable/$repo/$arch
+
+## Country : United_States
+Server = https://mirror.math.princeton.edu/pub/manjaro/stable/$repo/$arch
+
+## Country : United_States
+Server = https://mirror.dacentec.com/manjaro/stable/$repo/$arch
+
+## Country : Ukraine
+Server = http://mirrors.colocall.net/manjaro/stable/$repo/$arch
+
+## Country : Global
+Server = https://mirrors.fossho.st/manjaro/stable/$repo/$arch
+
+## Country : United_Kingdom
+Server = http://manjaro.mirrors.uk2.net/stable/$repo/$arch
+
+## Country : Sweden
+Server = https://ftp.lysator.liu.se/pub/manjaro/stable/$repo/$arch
+
+## Country : Germany
+Server = https://ftp.gwdg.de/pub/linux/manjaro/stable/$repo/$arch
+
+## Country : Belgium
+Server = https://mirror.futureweb.be/manjaro/stable/$repo/$arch
+
+## Country : Netherlands
+Server = https://manjaro.mirrors.lavatech.top/stable/$repo/$arch
+
+## Country : Ukraine
+Server = https://fastmirror.pp.ua/manjaro/stable/$repo/$arch
+
+## Country : Hungary
+Server = https://quantum-mirror.hu/mirrors/pub/manjaro/stable/$repo/$arch
+
+## Country : Switzerland
+Server = https://mirror.init7.net/manjaro/stable/$repo/$arch
+
+## Country : Denmark
+Server = https://mirrors.dotsrc.org/manjaro/stable/$repo/$arch
+
+## Country : Bulgaria
+Server = https://mirrors.netix.net/manjaro/stable/$repo/$arch
+
+## Country : Canada
+Server = https://osmirror.org/manjaro/stable/$repo/$arch
