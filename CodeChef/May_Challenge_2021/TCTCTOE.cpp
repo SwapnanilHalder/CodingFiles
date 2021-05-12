@@ -62,7 +62,9 @@ void sol() {
                 os++;
         }
     }
-    if(os > xs || xs > (os+1) ) {
+    // deb(xs); deb(os);
+
+    if( ! ( (os == xs) || (os == xs-1) ) ) {
         pl("3"); return;
     }
     int winx=0, wino = 0;
@@ -107,8 +109,13 @@ void sol() {
             // deb(wino);
         } 
     }
+    // deb(winx); deb(wino);
+
     if( (wino + winx) > 1) {
-        pl("3"); return;
+        if(winx == 2) {
+            pl("1"); return;
+        }
+        else pl("3"); return;
     }
     if( wino == 1 ) {
         if(xs == os) {
@@ -127,11 +134,11 @@ void sol() {
         } 
     }
     if( (wino+winx) == 0 ) {
-        if (xs+os < 9) {
-            pl("2"); return;
-        }
-        else {
+        if (xs+os == 9) {
             pl("1"); return;
+        }
+        else if (xs+os < 9) {
+            pl("2"); return;
         }
     }
 
