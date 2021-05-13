@@ -55,23 +55,31 @@ vi input1l(){
 
 int ans;
 vi2d v;
-vi dp, tot;
+vi dp, total;
 
-void dfs(int cur, int par) {
-    dp[cur] = 1, tot[cur] = 1;
+void D_F_S(int current, int par) {
+    dp[current] = 1;
+    total[current] = 1;
     int sum = 0, cnt = 0;
-    For(i, 0, sz(v[cur])) {
-        int node = v[cur][i];
+    For(i, 0, sz(v[current])) {
+        int node = v[current][i];
         if(node != par) {
-            dfs(node, cur);dp[cur] += ((2*dp[node]) % MOD), dp[cur]%= MOD, cnt++, tot[cur] += tot[node], tot[cur]%=MOD, tot[cur]+= dp[node], tot[cur] %= MOD;
+            D_F_S(node, current);
+            dp[current] += ((2*dp[node]) % MOD);
+            dp[current]%= MOD;
+            cnt++;
+            total[current] += total[node];
+            total[current]%=MOD;
+            total[current]+= dp[node];
+            total[current] %= MOD;
             sum += dp[node];
         }
     }
-    For(i, 0, sz(v[cur])) {
-        int node = v[cur][i];
+    For(i, 0, sz(v[current])) {
+        int node = v[current][i];
         if(node != par) {
-            tot[cur] += (dp[node] * ((sum - dp[node] + MOD) % MOD)) % MOD;
-            tot[cur] %= MOD;
+            total[current] += (dp[node] * ((sum - dp[node] + MOD) % MOD)) % MOD;
+            total[current] %= MOD;
         }
     }
 }
@@ -79,17 +87,17 @@ void dfs(int cur, int par) {
 void sol() {
     ans = 0;
     inpt(n);
-    v.rz(n+1), dp.rz(n+1), tot.rz(n+1);
+    v.rz(n+1), dp.rz(n+1), total.rz(n+1);
     For(i, 0, n-1) {
         inpt(l); inpt(r);
         v[l].pb(r), v[r].pb(l);
     }
-    dfs(1,1);
-    int ans = tot[1] % MOD;
+    D_F_S(1,1);
+    int ans = total[1] % MOD;
     pl(ans);
     dp.clear();
     v.clear();
-    tot.clear();
+    total.clear();
 }
 
 int32_t main() {
