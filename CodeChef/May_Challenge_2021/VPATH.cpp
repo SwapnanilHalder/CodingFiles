@@ -25,6 +25,7 @@
 #define vi2d vector<vector<int>> 
 #define pb push_back
 #define sz(a) (int)(a.size())
+#define rz resize
 #define For(i,a,b) for(int i=a;i<b;i++)
 #define ford(i,a,b) for(int i=a;i>=b;i--)
 #define cinbuffer cin.ignore(numeric_limits<streamsize>::max(),'\n')
@@ -34,6 +35,7 @@
 #define inpt(x) int x{0}; cin >> x
 #define pl(x) cout << x << endl
 #define all(v) v.begin(),v.end()
+
 #define loop(it, v) for(auto it = v.begin(); it != v.end(); it++)
 #define pmint(v) cout<< #v<<endl;loop(itr, v){cout << "\t" << itr->first << " ->  " << itr->second;END;}
 #define pmpair(v) cout<< #v<<endl; cout << "	(" << v.first << " , " << v.second << ")";END
@@ -51,7 +53,7 @@ vi input1l(){
     return input;
 }
 
-ll ans;
+int ans;
 vi2d v;
 vi dp, tot;
 
@@ -75,7 +77,19 @@ void dfs(int cur, int par) {
 }
 
 void sol() {
-    
+    ans = 0;
+    inpt(n);
+    v.rz(n+1), dp.rz(n+1), tot.rz(n+1);
+    For(i, 0, n-1) {
+        inpt(l); inpt(r);
+        v[l].pb(r), v[r].pb(l);
+    }
+    dfs(1,1);
+    int ans = tot[1] % MOD;
+    pl(ans);
+    dp.clear();
+    v.clear();
+    tot.clear();
 }
 
 int32_t main() {
