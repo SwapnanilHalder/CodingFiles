@@ -16,7 +16,6 @@
 #define MOD 1000000007
 #define INF 9223372036854775800 
 #define ll long long
-#define int long long int
 #define END cout<<"\n"
 #define SPEED ios_base::sync_with_stdio(false)
 #define SPEED1 ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0)
@@ -50,50 +49,40 @@ vi input1l(){
     return input;
 }
 
-vi calculate(4000001), C_ount(4000001, 0);
+const int N = 4e6;
 
-void pre_process() {
-    // pl("ENTERED");
-    For(i, 0, 4000002) {
-        // pl("HI");
-        calculate[i] = i;
+void generate() {
+    For(i, 0, N) {
+        F[i] = i;
     }
-    // pl("1st done");
-    For(i ,2, 4000001) {
-        // pl("HELLO");
-        if(calculate[i] == i) {
-            calculate[i] = i-1;
-            for(int j= 2*i;j < 4000001; j+= i) {
-                calculate[j] = (calculate[j]/i) *(i-1);
+    For(i, 2, N) {
+        if(F[i] == i) {
+            F[i] = i-1;
+            for(int j = 2*i; j< N; j+= i) {
+                F[j] = F[j] / i * (i-1);
             }
-        }     
-    }
-    // pl("2nd done");
-
-    For(i, 1, 4000001) {
-        C_ount[i] += (i-1);
-        // pl("Entered 3rd");
-        for(int j= 2*i;j < 4000001; j+= i) {
-            C_ount[j] += i* ((1+calculate[j/i]) / 2);
         }
-        // pl("looped");
     }
-    // pl("3rd done");
-    // pl("DONE");
+    For(i, 1, N) {
+        A[i] += (i-1);
+        for(int j = 2*i; j < N; j+= i) {
+            A[j] += (i * ((1 + F[j/i]) /2));
+        }
+    }
 }
 
 void sol() {
     int k;
     scanf("%d", &k);
-    // pl("DONE");
-    printf("%d\n", C_ount[4*k+1]);
+    printf("%d\n", A[4*k+1]);
     return;
 }
 
 int32_t main() {
+    SPEED;
     int t;
-    scanf("%d", &t); 
-    pre_process();
+    scanf("%d", &t);
+    generate();
     while(t--) {
         sol();
     }
