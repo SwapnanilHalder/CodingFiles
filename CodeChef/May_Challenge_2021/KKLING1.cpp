@@ -1,31 +1,43 @@
 #include <iostream>
 #include <string>
-#include <sstream>
 #include <vector>
 #include <algorithm>
+#include <unordered_map>
+#include <fstream>
+#include <queue>
+#include <deque>
+#include <bitset>
 #include <iterator>
 #include <list>
+#include <stack>
 #include <map>
 #include <set>
+#include <functional>
+#include <utility>
 #include <climits>
 #include <cmath>
 #include <cstdio>
 #include <cstring>
+#include <iomanip>
+#include <cassert>
+#include <chrono>
 #include <numeric>
-#define pi 3.1415926535897932384626
-#define MOD 1000000007
-#define INF 9223372036854775800 
-#define ll long long
-#define int long long
-#define END cout<<"\n"
 #define SPEED ios_base::sync_with_stdio(false)
 #define SPEED1 ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0)
 #define endl '\n'
 #define vi vector<int>
 #define vi2d vector<vector<int>> 
+#define li list<int>
+#define mii map<int, int>
+#define msi map<string, int>
 #define pb push_back
 #define For(i,a,b) for(int i=a;i<b;i++)
 #define ford(i,a,b) for(int i=a;i>=b;i--)
+#define pi 3.1415926535897932384626
+#define MOD 1000000007
+#define INF 9223372036854775800 
+#define ll long long
+#define END cout<<"\n"
 #define cinbuffer cin.ignore(numeric_limits<streamsize>::max(),'\n')
 #define pv(v) for(const auto &i: v){cout<<i<<" ";}END
 #define pv2d(v2d) for(const auto &i : v2d) {pv(i);}cout<<""
@@ -36,45 +48,39 @@
 #define loop(it, v) for(auto it = v.begin(); it != v.end(); it++)
 #define pmint(v) cout<< #v<<endl;loop(itr, v){cout << "\t" << itr->first << " ->  " << itr->second;END;}
 #define pmpair(v) cout<< #v<<endl; cout << "	(" << v.first << " , " << v.second << ")";END
+#define timestart auto start = chrono::high_resolution_clock::now()
+#define timestop auto stop = chrono::high_resolution_clock::now();auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);cout << "Time taken by function: "<< duration.count() << " microseconds" << endl
 using namespace std;
-
-vi input1l(){
-    vi input(0);
-    string str, num;
-    getline(cin, str);
-    stringstream X(str);
-    while(getline(X, num, ' ')) {
-        input.pb(stoll(num));
-    }
-    //pv(input);
-    return input;
-}
+int gcd(int a, int b){return b ? gcd(b, a%b): a;}
+int lcm(int a, int b){return (a*b)/gcd(a,b);}
+template <class T> T Max(T x,T y){return (x>y)?x:y;}
+template <class T> T Min(T x,T y){return (y>x)?x:y;}
 
 struct TreeNode {
     int data, lvl;
     vector<TreeNode *> child;
-    TreeNode (int x) {
+    TreeNode(int x) {
         data = x;
         lvl = 0;
     }
 };
 
-void buildTree(TreeNode *root, vi2d &adj, vector<bool> &visited) {
+void buildTree(TreeNode *root, vector<vector<int>> &adj, vector<bool> &visited) {
     visited[root->data] = 1;
-    For(i, 0, adj[root->data].size()) {
-        if(! visited[adj[root->data][i]]) {
-            TreeNode *temp = new TreeNode (adj[root->data][i]);
-            root->child.pb(temp);
+    for(int i=0; i< adj[root->data].size(); i++) {
+        if ( ! visited[adj[root->data][i]]) {
+            TreeNode *temp = new TreeNode(adj[root->data][i]);
+            root->child.push_back(temp);
         }
     }
-    For(i, 0, root->child.size()) {
+    for(int i=0; i< root->child.size(); i++) {
         buildTree(root->child[i], adj, visited);
     }
 }
 
 void DFS(TreeNode *root, int l) {
     root->lvl = l;
-    For(i, 0, root->child.size()) {
+    for(int i = 0; i < root->child.size(); i++) {
         TreeNode *current = root->child[i];
         DFS(current, l+1);
     }
@@ -82,51 +88,50 @@ void DFS(TreeNode *root, int l) {
 
 vector<pair<int, int>> leaves;
 
-void DFS_2(TreeNode *root) {
-    For(i, 0, root->child.size()) {
+void DFS2(TreeNode *root) {
+    for(int i = 0; i < root->child.size(); i++) {
         TreeNode *current = root->child[i];
-        DFS_2(current);
+        DFS2(current);
     }
     if(root->child.size() == 0) {
-        leaves.pb({root->lvl, root->data + 1});
+        leaves.push_back({root->lvl, root->data + 1});
     }
 }
 
-void sol () {
-    inpt(n);
-    vi2d adj(n);
-    For(i, 0, n-1) {
+void solve() {
+    int n;
+    cin >> n;
+    vector<vector<int>> adj(n);
+    for(int i =0; i<n-1; i++) {
         int u, v;
         cin >> u >> v;
-        u--; v--;
-        adj[u].pb(v);
-        adj[v].pb(u);
+        u--;
+        v--;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
     }
-    // pl("\n\n\n\n");
-    // pv2d(adj);
-    // pl("DONE");
     TreeNode *root = new TreeNode(0);
-    vector<bool> visited(n, 0) ;
+    vector<bool> visited(n, 0);
     buildTree(root, adj, visited);
     DFS(root, 0);
     vector<pair<int, int>> ans;
-    For(i, 0, root->child.size()) {
-        DFS_2(root->child[i]);
+    for(int i=0; i < root->child.size(); i++) {
+        DFS2(root->child[i]);
         vector<pair<int, int>> v;
         pair<int, int> p;
         bool f = 0;
-        sort(all(leaves));
+        sort(leaves.begin(), leaves.end());
         p = leaves[0];
-        v.pb(p);
+        v.push_back(p);
         int val = p.first;
-        int j = 1;
+        int j = 1; 
         while(j < leaves.size()) {
             while(j < leaves.size() && leaves[j].first == val) {
-                if (f == 1) {
-                    v.pb({p.first + 1, leaves[j].second});
+                if (f) {
+                    v.push_back({p.first + 1, leaves[j].second});
                 }
                 else {
-                    v.pb(leaves[j]);
+                    v.push_back(leaves[j]);
                 }
                 j++;
             }
@@ -134,7 +139,7 @@ void sol () {
                 v.clear();
                 f = 1;
                 p.second = leaves[j].second;
-                v.pb({p.first+1, leaves[j].second});
+                v.push_back({p.first+1, leaves[j].second});
                 val = leaves[j].first;
                 j++;
             }
@@ -142,36 +147,34 @@ void sol () {
         leaves.clear();
 
         for(auto x : v) {
-            ans.pb(x);
+            ans.push_back(x);
         }
     }
 
-    sort(all(ans));
-    // pl("ANS : ");
-    // loop(it, ans) {
-    //     cout << it->first << " , " << it->second <<"\n";
-    // }
+    sort(ans.begin(), ans.end());
+
     int day = ans[0].first;
     // deb(day);
-    vi AA;
-    For(i, 0, ans.size()) {
-        // deb(ans[i].first);
+    vector<int> Ans_Array;
+    for(int i = 0; i < ans.size(); i++) {
         if(ans[i].first == day) {
-            AA.pb(ans[i].second);
-            // pl(ans[i].second);
+            Ans_Array.push_back(ans[i].second);
         }
         // else {
         //     break;
         // }
     }
-    cout << AA.size() << " " << day << "\n";
-    pv(AA);
+    cout << Ans_Array.size() << " " << day << "\n";
+    for(auto x : Ans_Array) {
+        cout << x << " ";
+    }
+    cout << "\n";
 }
 
-int32_t main() {
-    SPEED1;
-    inpt(t); 
+int32_t main () {
+    SPEED;
+    inpt(t);
     while(t--) {
-        sol();
+        solve();
     }
 }

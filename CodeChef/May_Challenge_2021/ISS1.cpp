@@ -51,6 +51,8 @@ vi input1l(){
 
 const int N = 4e6;
 
+int F[N], A[N];
+
 void generate() {
     For(i, 0, N) {
         F[i] = i;
