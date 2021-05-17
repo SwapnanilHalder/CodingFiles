@@ -50,51 +50,54 @@ vi input1l(){
     return input;
 }
 
-vi calculate(4000001), C_ount(4000001, 0);
-
-void pre_process() {
-    // pl("ENTERED");
-    For(i, 0, 4000002) {
-        // pl("HI");
-        calculate[i] = i;
-    }
-    // pl("1st done");
-    For(i ,2, 4000001) {
-        // pl("HELLO");
-        if(calculate[i] == i) {
-            calculate[i] = i-1;
-            for(int j= 2*i;j < 4000001; j+= i) {
-                calculate[j] = (calculate[j]/i) *(i-1);
-            }
-        }     
-    }
-    // pl("2nd done");
-
-    For(i, 1, 4000001) {
-        C_ount[i] += (i-1);
-        // pl("Entered 3rd");
-        for(int j= 2*i;j < 4000001; j+= i) {
-            C_ount[j] += i* ((1+calculate[j/i]) / 2);
-        }
-        // pl("looped");
-    }
-    // pl("3rd done");
-    // pl("DONE");
-}
-
 void sol() {
-    int k;
-    scanf("%d", &k);
-    // pl("DONE");
-    printf("%d\n", C_ount[4*k+1]);
-    return;
+    inpt(n); cinbuffer;
+    vi initial = input1l();
+    vi occupied(n, 0);
+    int i=0, temp =0, temp_step = 0, count = 0, succ = 0;
+    while(i < n) {
+        if(initial[i] == 1) {
+            temp = i;
+            temp_step =0;
+            succ = 0;
+            while(temp > 0) {
+                temp--;
+                temp_step++;
+                if(initial[temp] == 0 && occupied[temp] == 0) {
+                    occupied[temp] = 1;
+                    count += temp_step;
+                    succ = 1;
+                    break;
+                }
+            }
+            if(succ == 0) {
+                temp = i;
+                temp_step =0;
+                while(temp < n-1) {
+                    temp++;
+                    temp_step++;
+                    if(initial[temp] == 0 && occupied[temp] == 0) {
+                        occupied[temp] = 1;
+                        count += temp_step;
+                        succ = 1;
+                        break;
+                    }
+                }              
+            }
+        }
+        i++;
+    }
+    // pv(occupied);
+    // deb(count);
+    pl(count);
+    
 }
 
 int32_t main() {
-    int t;
-    scanf("%d", &t); 
-    pre_process();
-    while(t--) {
-        sol();
-    }
+    SPEED;
+    // inpt(t); 
+    // while(t--) {
+    //     sol();
+    // }
+    sol();
 }

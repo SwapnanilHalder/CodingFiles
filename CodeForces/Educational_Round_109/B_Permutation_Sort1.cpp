@@ -50,50 +50,47 @@ vi input1l(){
     return input;
 }
 
-vi calculate(4000001), C_ount(4000001, 0);
-
-void pre_process() {
-    // pl("ENTERED");
-    For(i, 0, 4000002) {
-        // pl("HI");
-        calculate[i] = i;
-    }
-    // pl("1st done");
-    For(i ,2, 4000001) {
-        // pl("HELLO");
-        if(calculate[i] == i) {
-            calculate[i] = i-1;
-            for(int j= 2*i;j < 4000001; j+= i) {
-                calculate[j] = (calculate[j]/i) *(i-1);
-            }
-        }     
-    }
-    // pl("2nd done");
-
-    For(i, 1, 4000001) {
-        C_ount[i] += (i-1);
-        // pl("Entered 3rd");
-        for(int j= 2*i;j < 4000001; j+= i) {
-            C_ount[j] += i* ((1+calculate[j/i]) / 2);
-        }
-        // pl("looped");
-    }
-    // pl("3rd done");
-    // pl("DONE");
-}
-
 void sol() {
-    int k;
-    scanf("%d", &k);
-    // pl("DONE");
-    printf("%d\n", C_ount[4*k+1]);
+    inpt(k); cinbuffer;
+    vi arr = input1l();
+    int n = arr.size();
+    int one=0, end = 0, sorted = 1;
+    For(i, 0, n) {
+        if(arr[i] != i+1) {
+            sorted = 0;
+        }
+        if(arr[i] == 1) {
+            one = i;
+        }
+        if(arr[i] == n) {
+            end = i;
+        }
+    }
+    // deb(one); deb(end);
+    if(sorted == 1) {
+        pl("0");
+        return;
+    }
+    if(one == n-1 && end == 0 ) {
+        pl("3");
+        return;
+    }
+    // if(one == n-1 || end == 0) {
+    //     pl("2");
+    //     return;
+    // }
+    if(one == 0 || end == n-1) {
+        pl("1");
+        return;
+    }
+    pl("2");
     return;
+
 }
 
 int32_t main() {
-    int t;
-    scanf("%d", &t); 
-    pre_process();
+    SPEED;
+    inpt(t); 
     while(t--) {
         sol();
     }
