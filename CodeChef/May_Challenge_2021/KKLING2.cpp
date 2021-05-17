@@ -72,20 +72,20 @@ void buildTree(TreeNode *root, vi2d &adj, vector<bool> &visited) {
     }
 }
 
-void DFS(TreeNode *root, int l) {
+void Level_Set(TreeNode *root, int l) {
     root->lvl = l;
     For(i, 0, root->child.size()) {
         TreeNode *current = root->child[i];
-        DFS(current, l+1);
+        Level_Set(current, l+1);
     }
 }
 
 vector<pair<int, int>> leaves;
 
-void DFS_2(TreeNode *root) {
+void leaves_decide(TreeNode *root) {
     For(i, 0, root->child.size()) {
         TreeNode *current = root->child[i];
-        DFS_2(current);
+        leaves_decide(current);
     }
     if(root->child.size() == 0) {
         leaves.pb({root->lvl, root->data + 1});
@@ -115,26 +115,33 @@ void sol () {
         adj[u].pb(v);
         adj[v].pb(u);
     }
-    // pl("\n\n\n\n");
-    // pv2d(adj);
-    // pl("DONE");
+    pl("\n\n\n\n");
+    pv2d(adj);
+    pl("DONE");
     TreeNode *root = new TreeNode(0);
     vector<bool> visited(n, 0) ;
     buildTree(root, adj, visited);
-    DFS(root, 0);
+    Level_Set(root, 0);
     vector<pair<int, int>> ans;
     For(i, 0, root->child.size()) {
-        DFS_2(root->child[i]);
+        leaves_decide(root->child[i]);
         vector<pair<int, int>> v;
         pair<int, int> p;
         bool f = 0;
+
         sort(all(leaves), leaves_sort);
+
+        For(i, 0, leaves.size()) {
+            pmpair(leaves[i]);
+        }
+        pl("END");
+
         p = leaves[0];
         v.pb(p);
         int val = p.first;
         int j = 1;
         while(j < leaves.size()) {
-            while(j < leaves.size() && leaves[j].first == val) {
+            while(j < leaves.size() && leaves[j].first == val) {  //
                 if (f == 1) {
                     v.pb({p.first + 1, leaves[j].second});
                 }
@@ -146,20 +153,33 @@ void sol () {
             if (j < leaves.size() ) {
                 v.clear();
                 f = 1;
+                pl("Gets Eaten : "); pmpair(p);
                 p.second = leaves[j].second;
                 v.pb({p.first+1, leaves[j].second});
+                pl("Replaced by : "); cout << p.first+1 << " , " << leaves[j].second << endl;
                 val = leaves[j].first;
                 j++;
             }
+            pl("Everytime : ");
+            For(i, 0, v.size()) {
+                pmpair(v[i]);
+            }
         }
+        pl("last :");
+        For(i, 0, leaves.size()) {
+            pmpair(leaves[i]);
+        }
+        
         leaves.clear();
-
+        For(i, 0, v.size()) {
+            pmpair(v[i]);
+        }
         for(auto x : v) {
             ans.pb(x);
         }
     }
 
-    sort(all(ans), leaves_sort);
+    sort(all(ans));
     // pl("ANS : ");
     // loop(it, ans) {
     //     cout << it->first << " , " << it->second <<"\n";
@@ -167,6 +187,9 @@ void sol () {
     int day = ans[0].first;
     // deb(day);
     vi AA;
+    For(i, 0, ans.size()) {
+        pmpair(ans[i]);
+    }
     For(i, 0, ans.size()) {
         // deb(ans[i].first);
         if(ans[i].first == day) {
@@ -179,7 +202,6 @@ void sol () {
     }
     cout << AA.size() << " " << day << "\n";
     pv(AA);
-    return;
 }
 
 int32_t main() {
@@ -189,3 +211,31 @@ int32_t main() {
         sol();
     }
 }
+
+/*
+
+1
+10    
+1 2
+1 3
+2 4
+2 5
+3 6
+3 7
+5 8
+6 9   
+6 10
+
+
+
+
+1
+7
+1 2
+2 3
+2 4
+4 5
+4 6
+5 7
+
+*/

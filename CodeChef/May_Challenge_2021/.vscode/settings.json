@@ -5,6 +5,7 @@
         "deque": "cpp",
         "string": "cpp",
         "vector": "cpp",
-        "climits": "cpp"
+        "climits": "cpp",
+        "cstdio": "cpp"
     }
 }
