@@ -16,7 +16,6 @@
 #define MOD 1000000007
 #define INF 9223372036854775800 
 #define ll long long
-#define int long long int
 #define END cout<<"\n"
 #define SPEED ios_base::sync_with_stdio(false)
 #define SPEED1 ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0)
@@ -50,24 +49,42 @@ vi input1l(){
     return input;
 }
 
-void sol() {
-    inpt(n);
-    int divs = (n-1)/29;
-    int rim = (n-1) % 29;
-    int unit = (1<<29) % MOD;
-    int temp = 1;
-    For(i, 0, divs) {
-        temp = (temp * unit) % MOD;
-        // deb(temp);
+const int N = 4e6;
+
+int F[N], A[N];
+
+void generate() {
+    For(i, 0, N) {
+        F[i] = i;
     }
-    temp = (temp * (1 << rim) ) % MOD;
-    pl(temp);
+    For(i, 2, N) {
+        if(F[i] == i) {
+            F[i] = i-1;
+            for(int j = 2*i; j< N; j+= i) {
+                F[j] = F[j] / i * (i-1);
+            }
+        }
+    }
+    For(i, 1, N) {
+        A[i] += (i-1);
+        for(int j = 2*i; j < N; j+= i) {
+            A[j] += (i * ((1 + F[j/i]) /2));
+        }
+    }
+}
+
+void sol() {
+    int k;
+    scanf("%d", &k);
+    printf("%d\n", A[4*k+1]);
     return;
 }
 
 int32_t main() {
     SPEED;
-    inpt(t); 
+    int t;
+    scanf("%d", &t);
+    generate();
     while(t--) {
         sol();
     }

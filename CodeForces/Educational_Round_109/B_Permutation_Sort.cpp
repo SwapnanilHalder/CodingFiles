@@ -51,17 +51,42 @@ vi input1l(){
 }
 
 void sol() {
-    inpt(n);
-    int divs = (n-1)/29;
-    int rim = (n-1) % 29;
-    int unit = (1<<29) % MOD;
-    int temp = 1;
-    For(i, 0, divs) {
-        temp = (temp * unit) % MOD;
-        // deb(temp);
+    inpt(k); cinbuffer;
+    vi arr = input1l();
+    int n = arr.size();
+    int i = 0, start = 0, step = 0;
+    int max = 1;
+    while(i < n) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        if( (i+1) == max) {
+            // if(i == n-1) {
+
+            // }
+            if(start == 0 && i == n-1) {
+                if(arr[start] == n && arr[i] == 1) {
+                    step = 2;
+                    break;
+                }
+                step = 1;
+                break;
+            }
+            if( (i - start) > 0 ) {
+                // deb(arr[i]); deb(arr[start]);
+                step++;
+            }
+            start = i+1;
+        }
+
+        i++;
     }
-    temp = (temp * (1 << rim) ) % MOD;
-    pl(temp);
+    // deb(i); deb(start);
+    if( (i - start) > 0 ) {
+        step++;
+    }
+
+    pl(step);
     return;
 }
 

@@ -50,19 +50,46 @@ vi input1l(){
     return input;
 }
 
-void sol() {
-    inpt(n);
-    int divs = (n-1)/29;
-    int rim = (n-1) % 29;
-    int unit = (1<<29) % MOD;
-    int temp = 1;
-    For(i, 0, divs) {
-        temp = (temp * unit) % MOD;
-        // deb(temp);
+int soln(int ind, vi2d &graph, vi &degree) {
+    if (degree[ind] == 1) {
+        return 1;
     }
-    temp = (temp * (1 << rim) ) % MOD;
-    pl(temp);
-    return;
+    vi temp;
+    For(i, 1, degree.size()) {
+        if(graph[ind][i] == 1) {
+            temp.pb(soln(i, graph, degree));
+        }
+    }
+    sort(all(temp), greater<int>());
+    int sum = 0;
+    cout << "FOR : " << ind << " => \n";
+    pv(temp); 
+    For(i,0, temp.size()) {
+        sum += temp[i] * (i+1);
+        deb(sum);
+    }
+    return (sum + 1) ;
+}
+
+void sol() {
+    inpt(n); inpt(x);
+    vi2d graph(n+1, vi(n+1, 0));
+    int p,q;
+    vi degree(n+1, 0);
+    For(i, 0, n-1) {
+        cin >> p >> q;
+        deb(p); deb(q);
+        degree[p]++; degree[q]++;
+        graph[p][q] = 1;
+        graph[q][p] = 1;
+        pv2d(graph);
+    }
+    pv2d(graph);
+    pv(degree);
+    vi score(n+1, 1);
+    int total = 0;
+    total = soln(1, graph, degree);
+    deb(total);
 }
 
 int32_t main() {

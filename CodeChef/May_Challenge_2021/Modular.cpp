@@ -51,22 +51,22 @@ vi input1l(){
 }
 
 void sol() {
-    inpt(n);
-    int divs = (n-1)/29;
-    int rim = (n-1) % 29;
-    int unit = (1<<29) % MOD;
-    int temp = 1;
-    For(i, 0, divs) {
-        temp = (temp * unit) % MOD;
-        // deb(temp);
+    inpt(n); inpt(m);
+    int count = 0;
+    vi mod(n+1, 1);
+    For(i, 2, n+1) {
+        int x = m%i;
+        count += mod[x];
+        for(int j =x; j<= n; j += i) {
+            mod[j]++;
+        }
     }
-    temp = (temp * (1 << rim) ) % MOD;
-    pl(temp);
+    pl(count);
     return;
 }
 
 int32_t main() {
-    SPEED;
+    // SPEED;
     inpt(t); 
     while(t--) {
         sol();

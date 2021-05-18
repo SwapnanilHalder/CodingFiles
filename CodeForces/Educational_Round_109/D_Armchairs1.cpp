@@ -51,24 +51,48 @@ vi input1l(){
 }
 
 void sol() {
-    inpt(n);
-    int divs = (n-1)/29;
-    int rim = (n-1) % 29;
-    int unit = (1<<29) % MOD;
-    int temp = 1;
-    For(i, 0, divs) {
-        temp = (temp * unit) % MOD;
-        // deb(temp);
+    inpt(n); cinbuffer;
+    vi initial = input1l();
+    vi occupied(n, 0);
+    int i=0, temp =0, temp_step = 0, count = 0, succ = 0;
+    while(i < n) {
+        if(initial[i] == 1) {
+            temp_step = 1;
+            succ = 0;
+            while( (i + temp_step <= n-1) || (i - temp_step) >= 0 ) {
+                deb(temp_step);
+                if ( (i - temp_step) >= 0 ) {
+                    if(initial[(i - temp_step)] == 0 && occupied[(i - temp_step)] == 0) {
+                        occupied[(i - temp_step)] = 1;
+                        count += temp_step;
+                        succ = 1;
+                        break;
+                    }
+                }
+                if( (succ == 0) && ( (i + temp_step) <= n-1 ) ) {
+                    if(initial[(i + temp_step)] == 0 && occupied[(i + temp_step)] == 0) {
+                        occupied[(i + temp_step)] = 1;
+                        count += temp_step;
+                        succ = 1;
+                        break;
+                    }
+                }
+                temp_step++;
+            }
+        }
+
+        i++;
     }
-    temp = (temp * (1 << rim) ) % MOD;
-    pl(temp);
-    return;
+    pv(occupied);
+    deb(count);
+    pl(count);return;
 }
 
 int32_t main() {
     SPEED;
-    inpt(t); 
-    while(t--) {
-        sol();
-    }
+    // inpt(t); 
+    // while(t--) {
+    //     sol();
+    // }
+    sol();
 }

@@ -50,23 +50,58 @@ vi input1l(){
     return input;
 }
 
-void sol() {
-    inpt(n);
-    int divs = (n-1)/29;
-    int rim = (n-1) % 29;
-    int unit = (1<<29) % MOD;
-    int temp = 1;
-    For(i, 0, divs) {
-        temp = (temp * unit) % MOD;
-        // deb(temp);
+int soln(int ind, int prev, vi2d &graph, vi &degree) {
+    // deb(ind); deb(prev);
+    if (degree[ind] == 1 && ind != 1) {
+        return 1;
     }
-    temp = (temp * (1 << rim) ) % MOD;
-    pl(temp);
-    return;
+    vi temp;
+    // For(i, 1, degree.size()) {
+    //     if(graph[ind][i] == 1 && i != prev) {
+    //         temp.pb(soln(i, ind, graph, degree));
+    //     }
+    // }
+    For(i, 0, graph[ind].size()) {
+        if(graph[ind][i] != prev ) {
+            temp.pb(soln(graph[ind][i], ind, graph, degree));
+        }
+    }
+    sort(all(temp), greater<int>());
+    int sum = 0;
+    // cout << "FOR : " << ind << " => \n";
+    // pv(temp); 
+    For(i,0, temp.size()) {
+        sum += temp[i] * (i+1);
+        // deb(sum);
+    }
+    return (sum + 1) ;
+}
+
+void sol() {
+    inpt(n); inpt(x);
+    vi2d graph(300005);
+    int p,q;
+    vi degree(n+1, 0);
+    For(i, 0, n-1) {
+        cin >> p >> q;
+        // deb(p); deb(q);
+        degree[p]++; degree[q]++;
+        graph[p].pb(q);
+        graph[q].pb(p);
+        // pv2d(graph);
+    }
+    // pv2d(graph);
+    // pv(degree);
+    vi score(n+1, 1);
+    int total = 0;
+    // pl("Starting process");
+    total = soln(1, -1, graph, degree);
+    int ans = ((total % MOD ) * (x % MOD) ) % MOD;
+    pl(ans); return;
 }
 
 int32_t main() {
-    SPEED;
+    // SPEED;
     inpt(t); 
     while(t--) {
         sol();
