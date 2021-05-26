@@ -74,7 +74,7 @@ void printPreorder(Node* root) {
         return;    
     cout << root->data << " , ";
     printPreorder(root->left);
-    printPreorder(root->right);
+    printPreorder(root->right);    
 }
 
 void printInorder(Node* root) {
@@ -101,11 +101,12 @@ void printLevelorder(Node* root) {
 }
 
 int main() {
-    Node* root = new Node(1);
-    root->left = new Node(2);
-    root->right = new Node(3);
-    root->left->left = new Node(4);
-    root->left->right = new Node(5);
+    inpt(x); inpt(y); inpt(z); inpt(a); inpt(b);
+    Node* root = new Node(x);
+    root->left = new Node(y);
+    root->right = new Node(z);
+    root->left->left = new Node(a);
+    root->left->right = new Node(b);
     pl("Preorder traversal of binary tree is : ");
     printPreorder(root); END;
     pl("Inorder traversal of binary tree is : ");
