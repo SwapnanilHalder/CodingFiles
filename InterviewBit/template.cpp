@@ -6,9 +6,10 @@ using namespace std;
 
 class Solution {
 public:
-    string answer(string str) {
-        return str;
+    int answer() {
+        return 123456789;
     }
+    
 };
 
 
@@ -17,5 +18,6 @@ int main() {
     vector<int> arr{4,2,3,0,3,1,2};
     int start = 5;
     string str = "abcdefg";
-    cout << "Answer : " << mySolution.answer(str) << endl;
+    cout << "Answer : " << endl;
+    cout << mySolution.answer() << endl;
 }
