@@ -78,12 +78,18 @@ int maxSubArrayStoreSum(vi &a)
     For(i, 0, a.size()) {
         deb(max_ending_here); deb(max_so_far);
         max_ending_here = max_ending_here + a[i];
-        if (max_so_far < max_ending_here)
+        if (max_so_far < max_ending_here) {
             max_so_far = max_ending_here;
+            store.pb(max_ending_here);
+        }
  
-        if (max_ending_here < 0)
+        if (max_ending_here < 0) {
             max_ending_here = 0;
+            max_so_far = INT_MIN;
+        }
+            
     }
+    pv(store);
     return max_so_far;
 }
 
@@ -94,17 +100,20 @@ void sol() {
         int ans = maxSubArraySum(arr);
         pl(ans); return;
     }
-    int ended = n;
-    int ind = n-1;
-    int pos_sum = -((1<<31) - 1);
-    int max_sum = -((1<<31) - 1);
-    store.clear();
-    store = vi(k+1, 0);
-    ford(multiplicity, k, 1) {
-        ind = ended-1;
-        store[k] = arr[ind];
-        for(;ind >= )
+    if(k == 2) {
+        int ans = maxSubArrayStoreSum(arr);
     }
+    // int ended = n;
+    // int ind = n-1;
+    // int pos_sum = -((1<<31) - 1);
+    // int max_sum = -((1<<31) - 1);
+    // store.clear();
+    // store = vi(k+1, 0);
+    // ford(multiplicity, k, 1) {
+    //     ind = ended-1;
+    //     store[k] = arr[ind];
+    //     for(;ind >= )
+    // }
 }
 
 int32_t main() {
