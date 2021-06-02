@@ -61,19 +61,7 @@ template <class T> T Min(T x,T y){return (y>x)?x:y;}
 
 class Solution {
 public:
-    // int succ = 0;
-    // void recur(vector<int> &A, int left, int ind) {
-    //     if (ind == 0 && left != 0) {
-    //         return ;
-    //     }
-    //     if(left == 0) {
-    //         succ = 1;
-    //         return;
-    //     }
-    //     recur(A, left, ind-1);
-    //     recur(A, left - A[ind-1], ind-1);
-    // }
-    int solve(vector<int> &A, int B) {
+    int SubsetSum(vector<int> &A, int B) {
         int n = A.size();
         vector<vector<int>>dp (n+1, vector<int>(B+1, 0));
         for(int i=0; i < B+1; i++) {
@@ -94,12 +82,6 @@ public:
         }
         pv2d(dp);
         return dp[n][B];
-
-        // recur(A, B, n);
-        // if(succ == 1) {
-        //     return 1;
-        // }
-        // return 0;
     }
 };
 
@@ -109,5 +91,5 @@ int main() {
     vector<int> arr{3,4,5,6};
     int start = 9;
     string str = "abcdefg";
-    cout << "Answer : " << mySolution.solve(arr, start) << endl;
+    cout << "Answer : " << mySolution.SubsetSum(arr, start) << endl;
 }
