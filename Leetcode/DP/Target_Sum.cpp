@@ -66,18 +66,23 @@ public:
         int sum = accumulate(nums.begin(), nums.end(), 0);
         int n = nums.size();
         // if(n == 1)
-        int s = (sum - target) / 2;
-        if(s == 0) {
-            return 1;
+        if(sum < target) {
+            return 0;
         }
-        vector<vector<int>> dp (n+1, vector<int> (s+1, 0));
+        int s = sum - (sum - target) / 2 ;
+        // deb(s);
+        // if(s == 0) {
+        //     return 1;
+        // }
+        vector<vector<int>> dp (n+1, vector<int> (sum+1, 0));
         for(int i{0}; i< n+1; i++) {
             dp[i][0] = 1;
         }
-        vector<int> ans (s+1, 0);
+        // pv2d(dp);
+        vector<int> ans (sum+1, 0);
         for(int i{1}; i<n+1; i++) {
-            for(int j{1}; j<s+1; j++) {
-                // deb(i); deb(j); deb(dp[i-1][j-nums[i-1]]);
+            for(int j{1}; j<sum+1; j++) {
+                // deb(i); deb(j); deb(dp[i-1][j-nums[i-1]]); deb(dp[0][0]); deb(j-nums[i-1]);
                 dp[i][j] = dp[i-1][j];
                 if(nums[i-1] <= j) {
                     if(dp[i-1][ j-nums[i-1]] >= 1) {
@@ -97,8 +102,8 @@ public:
 
 int main() {
     Solution mySolution;
-    vector<int> arr{1,0};
-    int start = 1;
+    vector<int> arr{1};
+    int start = 2;
     string str = "abcdefg";
     cout << "Answer : " << endl;
     cout << mySolution.TargetSum(arr, start) << endl;
