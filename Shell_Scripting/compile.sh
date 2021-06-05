@@ -1,4 +1,6 @@
 #!/bin/sh
-g++ $1 -o /home/swapno/bin/cpp/compiled.out
+# touch ~/bin/cpp/input.txt
+# echo '' > ~/bin/cpp/input.txt
+
 /home/swapno/bin/cpp/compiled.out
 
