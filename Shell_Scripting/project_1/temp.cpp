@@ -3,6 +3,7 @@
 using namespace std;
 int main() {
     int x;
+    // cout << "C++ file running" << endl;
     cin >> x;
-    cout << x << endl;
+    cout << x*2 << endl;
 }
