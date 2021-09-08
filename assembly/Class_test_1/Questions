@@ -1,0 +1,25 @@
+Question 1: Write smallest program to print U      G. It is U(6 blank)G
+Use only Mov, Int.
+
+Question 2: The following program prints ABCDEF What is missing line. One missing line.
+answer format mov bx,t  here t=12 or t>=67
+.MODEL SMALL
+.CODE
+mov dl,65
+<one missing line>
+L:CMP DL,70
+JG L1
+MOV AH,2
+INT 33
+ADD DL,1
+LOOP L
+L1:MOV AH,76
+INT 33
+END
+
+Question 3: Write formula for m/c code for Mov x,y where x,y are registers 
+AH,AL,BH,BL,CH,CL,DH,DL
+Hint formula for mov x,y where x register and y number is (176+g(x))(y)
+Here g(AL)=0 ... g(BH)=7
+
+Question 4: g value of AL is 0. BH is 7. Write g value of others.
