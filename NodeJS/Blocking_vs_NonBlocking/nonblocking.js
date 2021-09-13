@@ -7,4 +7,4 @@ fs.readFile('text.txt', function (err) {
         console.log("Display after 1 second");
     }, 1000);
 });
-console.log("Start here");ss
+console.log("Start here");
