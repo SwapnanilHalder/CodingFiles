@@ -46,7 +46,7 @@ app.post('/new_contact', function(req,res) {
             return;
         }
 
-        rs.send("Contact created successfully..");
+        rs.send("Contact created successfully..\n Very Good.");
     });
 });
 
@@ -69,8 +69,8 @@ app.post('/view_contact', function (req, res) {
 app.post('/delete_contact' , function(req , res){
     db.get(req.body.phone, {revs_info: true}, function(err, body){
         if(!err) {
-            db.destroy(req.body.phone, body._rev, function(err, body) {
-                if(err) {
+            db.destroy(req.body.phone, body._rev, function(error, bodyy) {
+                if(error) {
                     res.send("Error deleting Contact");
                 }
                 res.send("Contact deleted successfully");
