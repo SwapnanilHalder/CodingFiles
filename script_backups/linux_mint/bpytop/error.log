@@ -1,0 +1,300 @@
+17/07/21 (15:48:15) | ERROR: [Errno 13] Permission denied: '/home/swapno/.config/bpytop/bpytop.conf'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/bpytop.py", line 592, in save_config
+    with open(self.config_file, "w" if os.path.isfile(self.config_file) else "x") as f:
+PermissionError: [Errno 13] Permission denied: '/home/swapno/.config/bpytop/bpytop.conf'
+17/07/21 (15:48:19) | INFO: New instance of bpytop version 1.0.67 started with pid 58401
+17/07/21 (15:48:19) | INFO: Loglevel set to DEBUG
+17/07/21 (15:48:19) | DEBUG: Using psutil version 5.8.0
+17/07/21 (15:48:19) | DEBUG: CMD: /usr/local/bin/bpytop
+17/07/21 (15:48:19) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+17/07/21 (15:48:19) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home']
+17/07/21 (15:48:19) | DEBUG: Collect and draw completed in 0.183908 seconds
+17/07/21 (15:48:19) | DEBUG: Init completed in 0.368330 seconds
+17/07/21 (19:54:21) | INFO: New instance of bpytop version 1.0.67 started with pid 2033
+17/07/21 (19:54:21) | INFO: Loglevel set to DEBUG
+17/07/21 (19:54:21) | DEBUG: Using psutil version 5.8.0
+17/07/21 (19:54:21) | DEBUG: CMD: /usr/local/bin/bpytop
+17/07/21 (19:54:21) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+17/07/21 (19:54:21) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home']
+17/07/21 (19:54:21) | DEBUG: Collect and draw completed in 0.250700 seconds
+17/07/21 (19:54:21) | DEBUG: Init completed in 0.337509 seconds
+20/07/21 (17:20:38) | INFO: New instance of bpytop version 1.0.67 started with pid 4252
+20/07/21 (17:20:38) | INFO: Loglevel set to DEBUG
+20/07/21 (17:20:38) | DEBUG: Using psutil version 5.8.0
+20/07/21 (17:20:38) | DEBUG: CMD: /usr/local/bin/bpytop
+20/07/21 (17:20:38) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+20/07/21 (17:20:38) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+20/07/21 (17:20:39) | DEBUG: Collect and draw completed in 0.633758 seconds
+20/07/21 (17:20:39) | DEBUG: Init completed in 0.708546 seconds
+20/07/21 (20:47:52) | INFO: New instance of bpytop version 1.0.67 started with pid 5724
+20/07/21 (20:47:52) | INFO: Loglevel set to DEBUG
+20/07/21 (20:47:52) | DEBUG: Using psutil version 5.8.0
+20/07/21 (20:47:52) | DEBUG: CMD: /usr/local/bin/bpytop
+20/07/21 (20:47:52) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+20/07/21 (20:47:52) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+20/07/21 (20:47:52) | DEBUG: Collect and draw completed in 0.487633 seconds
+20/07/21 (20:47:52) | DEBUG: Init completed in 0.566694 seconds
+20/07/21 (20:49:16) | INFO: New instance of bpytop version 1.0.67 started with pid 5837
+20/07/21 (20:49:16) | INFO: Loglevel set to DEBUG
+20/07/21 (20:49:16) | DEBUG: Using psutil version 5.8.0
+20/07/21 (20:49:16) | DEBUG: CMD: /usr/local/bin/bpytop
+20/07/21 (20:49:16) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+20/07/21 (20:49:16) | WARNING: No theme named "default" found!
+20/07/21 (20:49:16) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+20/07/21 (20:49:16) | DEBUG: Collect and draw completed in 0.151186 seconds
+20/07/21 (20:49:16) | DEBUG: Init completed in 0.172228 seconds
+20/07/21 (21:16:07) | INFO: New instance of bpytop version 1.0.67 started with pid 10658
+20/07/21 (21:16:07) | INFO: Loglevel set to DEBUG
+20/07/21 (21:16:07) | DEBUG: Using psutil version 5.8.0
+20/07/21 (21:16:07) | DEBUG: CMD: /usr/local/bin/bpytop
+20/07/21 (21:16:07) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+20/07/21 (21:16:07) | WARNING: No theme named "default" found!
+20/07/21 (21:16:07) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+20/07/21 (21:16:07) | DEBUG: Collect and draw completed in 0.455909 seconds
+20/07/21 (21:16:07) | DEBUG: Init completed in 0.482045 seconds
+22/07/21 (19:06:21) | INFO: New instance of bpytop version 1.0.67 started with pid 40640
+22/07/21 (19:06:21) | INFO: Loglevel set to DEBUG
+22/07/21 (19:06:21) | DEBUG: Using psutil version 5.8.0
+22/07/21 (19:06:21) | DEBUG: CMD: /usr/local/bin/bpytop
+22/07/21 (19:06:21) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+22/07/21 (19:06:21) | WARNING: No theme named "default" found!
+22/07/21 (19:06:21) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+22/07/21 (19:06:23) | DEBUG: Collect and draw completed in 2.138160 seconds
+22/07/21 (19:06:23) | DEBUG: Init completed in 2.292515 seconds
+22/07/21 (19:06:26) | ERROR: [Errno 13] Permission denied: '/home/swapno/.config/bpytop/bpytop.conf'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/bpytop.py", line 592, in save_config
+    with open(self.config_file, "w" if os.path.isfile(self.config_file) else "x") as f:
+PermissionError: [Errno 13] Permission denied: '/home/swapno/.config/bpytop/bpytop.conf'
+22/07/21 (19:06:26) | INFO: Exiting. Runtime 0:00:05 
+
+22/07/21 (21:14:29) | INFO: New instance of bpytop version 1.0.67 started with pid 48580
+22/07/21 (21:14:29) | INFO: Loglevel set to DEBUG
+22/07/21 (21:14:29) | DEBUG: Using psutil version 5.8.0
+22/07/21 (21:14:29) | DEBUG: CMD: /usr/local/bin/bpytop
+22/07/21 (21:14:29) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+22/07/21 (21:14:29) | WARNING: No theme named "default" found!
+22/07/21 (21:14:29) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+22/07/21 (21:14:30) | DEBUG: Collect and draw completed in 1.745919 seconds
+22/07/21 (21:14:30) | DEBUG: Init completed in 1.786058 seconds
+22/07/21 (23:19:20) | INFO: New instance of bpytop version 1.0.67 started with pid 3523
+22/07/21 (23:19:20) | INFO: Loglevel set to DEBUG
+22/07/21 (23:19:20) | DEBUG: Using psutil version 5.8.0
+22/07/21 (23:19:20) | DEBUG: CMD: /usr/local/bin/bpytop
+22/07/21 (23:19:20) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+22/07/21 (23:19:20) | WARNING: No theme named "default" found!
+22/07/21 (23:19:20) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+22/07/21 (23:19:22) | DEBUG: Collect and draw completed in 2.197872 seconds
+22/07/21 (23:19:22) | DEBUG: Init completed in 2.259887 seconds
+23/07/21 (23:09:51) | INFO: New instance of bpytop version 1.0.67 started with pid 21179
+23/07/21 (23:09:51) | INFO: Loglevel set to DEBUG
+23/07/21 (23:09:51) | DEBUG: Using psutil version 5.8.0
+23/07/21 (23:09:51) | DEBUG: CMD: /usr/local/bin/bpytop
+23/07/21 (23:09:51) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+23/07/21 (23:09:51) | WARNING: No theme named "default" found!
+23/07/21 (23:09:51) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+23/07/21 (23:09:53) | DEBUG: Collect and draw completed in 2.463484 seconds
+23/07/21 (23:09:53) | DEBUG: Init completed in 2.505603 seconds
+23/07/21 (23:10:11) | ERROR: [Errno 13] Permission denied: '/home/swapno/.config/bpytop/bpytop.conf'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/bpytop.py", line 592, in save_config
+    with open(self.config_file, "w" if os.path.isfile(self.config_file) else "x") as f:
+PermissionError: [Errno 13] Permission denied: '/home/swapno/.config/bpytop/bpytop.conf'
+23/07/21 (23:10:11) | INFO: Exiting. Runtime 0:00:21 
+
+23/07/21 (23:11:30) | INFO: New instance of bpytop version 1.0.67 started with pid 21306
+23/07/21 (23:11:30) | INFO: Loglevel set to DEBUG
+23/07/21 (23:11:30) | DEBUG: Using psutil version 5.8.0
+23/07/21 (23:11:30) | DEBUG: CMD: /usr/local/bin/bpytop
+23/07/21 (23:11:30) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+23/07/21 (23:11:30) | WARNING: No theme named "default" found!
+23/07/21 (23:11:31) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+23/07/21 (23:11:31) | DEBUG: Collect and draw completed in 0.151047 seconds
+23/07/21 (23:11:31) | DEBUG: Init completed in 0.172209 seconds
+23/07/21 (23:12:16) | ERROR: [Errno 13] Permission denied: '/home/swapno/.config/bpytop/bpytop.conf'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/bpytop.py", line 592, in save_config
+    with open(self.config_file, "w" if os.path.isfile(self.config_file) else "x") as f:
+PermissionError: [Errno 13] Permission denied: '/home/swapno/.config/bpytop/bpytop.conf'
+23/07/21 (23:12:16) | INFO: Exiting. Runtime 0:00:46 
+
+24/07/21 (00:00:49) | INFO: New instance of bpytop version 1.0.67 started with pid 23606
+24/07/21 (00:00:49) | INFO: Loglevel set to DEBUG
+24/07/21 (00:00:49) | DEBUG: Using psutil version 5.8.0
+24/07/21 (00:00:49) | DEBUG: CMD: /usr/local/bin/bpytop
+24/07/21 (00:00:49) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+24/07/21 (00:00:49) | WARNING: No theme named "default" found!
+24/07/21 (00:00:49) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+24/07/21 (00:00:49) | DEBUG: Collect and draw completed in 0.470778 seconds
+24/07/21 (00:00:49) | DEBUG: Init completed in 0.490423 seconds
+24/07/21 (09:49:08) | INFO: New instance of bpytop version 1.0.67 started with pid 3175
+24/07/21 (09:49:08) | INFO: Loglevel set to DEBUG
+24/07/21 (09:49:08) | DEBUG: Using psutil version 5.8.0
+24/07/21 (09:49:08) | DEBUG: CMD: /usr/local/bin/bpytop
+24/07/21 (09:49:08) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+24/07/21 (09:49:08) | WARNING: No theme named "default" found!
+24/07/21 (09:49:08) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+24/07/21 (09:49:09) | DEBUG: Collect and draw completed in 0.601691 seconds
+24/07/21 (09:49:09) | DEBUG: Init completed in 0.694950 seconds
+25/07/21 (22:23:44) | INFO: New instance of bpytop version 1.0.67 started with pid 30114
+25/07/21 (22:23:44) | INFO: Loglevel set to DEBUG
+25/07/21 (22:23:44) | DEBUG: Using psutil version 5.8.0
+25/07/21 (22:23:44) | DEBUG: CMD: /usr/local/bin/bpytop
+25/07/21 (22:23:44) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+25/07/21 (22:23:44) | WARNING: No theme named "default" found!
+25/07/21 (22:23:44) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+25/07/21 (22:23:47) | DEBUG: Collect and draw completed in 2.586215 seconds
+25/07/21 (22:23:47) | DEBUG: Init completed in 2.640023 seconds
+26/07/21 (14:45:46) | INFO: New instance of bpytop version 1.0.67 started with pid 2659
+26/07/21 (14:45:46) | INFO: Loglevel set to DEBUG
+26/07/21 (14:45:46) | DEBUG: Using psutil version 5.8.0
+26/07/21 (14:45:46) | DEBUG: CMD: /usr/local/bin/bpytop
+26/07/21 (14:45:46) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+26/07/21 (14:45:46) | WARNING: No theme named "default" found!
+26/07/21 (14:45:46) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+26/07/21 (14:45:47) | DEBUG: Collect and draw completed in 0.618938 seconds
+26/07/21 (14:45:47) | DEBUG: Init completed in 0.646912 seconds
+29/07/21 (19:54:42) | INFO: New instance of bpytop version 1.0.67 started with pid 15080
+29/07/21 (19:54:43) | INFO: Loglevel set to DEBUG
+29/07/21 (19:54:43) | DEBUG: Using psutil version 5.8.0
+29/07/21 (19:54:43) | DEBUG: CMD: /usr/local/bin/bpytop
+29/07/21 (19:54:43) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+29/07/21 (19:54:43) | WARNING: No theme named "default" found!
+29/07/21 (19:54:43) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+29/07/21 (19:54:43) | DEBUG: Collect and draw completed in 0.611291 seconds
+29/07/21 (19:54:43) | DEBUG: Init completed in 0.649461 seconds
+30/07/21 (02:43:49) | ERROR: Input thread failed with exception: [Errno 5] Input/output error
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/bpytop.py", line 937, in _get_key
+    input_key += sys.stdin.read(1)						#* Read 1 key safely with blocking on
+OSError: [Errno 5] Input/output error
+30/07/21 (02:43:49) | ERROR: Data collection thread failed with exception: [Errno 5] Input/output error
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/bpytop.py", line 2945, in _runner
+    else: Draw.out()
+  File "/usr/local/lib/python3.8/dist-packages/bpytop.py", line 1071, in out
+    cls.now(out)
+  File "/usr/local/lib/python3.8/dist-packages/bpytop.py", line 1019, in now
+    print(*args, sep="", end="", flush=True)
+OSError: [Errno 5] Input/output error
+30/07/21 (17:45:08) | INFO: New instance of bpytop version 1.0.67 started with pid 17892
+30/07/21 (17:45:08) | INFO: Loglevel set to DEBUG
+30/07/21 (17:45:08) | DEBUG: Using psutil version 5.8.0
+30/07/21 (17:45:08) | DEBUG: CMD: /usr/local/bin/bpytop
+30/07/21 (17:45:08) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+30/07/21 (17:45:08) | WARNING: No theme named "default" found!
+30/07/21 (17:45:08) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+30/07/21 (17:45:10) | DEBUG: Collect and draw completed in 1.227190 seconds
+30/07/21 (17:45:10) | DEBUG: Init completed in 1.452018 seconds
+31/07/21 (02:59:54) | INFO: New instance of bpytop version 1.0.67 started with pid 36971
+31/07/21 (02:59:54) | INFO: Loglevel set to DEBUG
+31/07/21 (02:59:54) | DEBUG: Using psutil version 5.8.0
+31/07/21 (02:59:54) | DEBUG: CMD: /usr/local/bin/bpytop
+31/07/21 (02:59:54) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+31/07/21 (02:59:54) | WARNING: No theme named "default" found!
+31/07/21 (02:59:54) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+31/07/21 (02:59:54) | DEBUG: Collect and draw completed in 0.161167 seconds
+31/07/21 (02:59:54) | DEBUG: Init completed in 0.262492 seconds
+06/08/21 (15:55:07) | INFO: New instance of bpytop version 1.0.67 started with pid 14561
+06/08/21 (15:55:07) | INFO: Loglevel set to DEBUG
+06/08/21 (15:55:07) | DEBUG: Using psutil version 5.8.0
+06/08/21 (15:55:07) | DEBUG: CMD: /usr/local/bin/bpytop
+06/08/21 (15:55:07) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+06/08/21 (15:55:07) | WARNING: No theme named "default" found!
+06/08/21 (15:55:08) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+06/08/21 (15:55:11) | DEBUG: Collect and draw completed in 4.289335 seconds
+06/08/21 (15:55:11) | DEBUG: Init completed in 4.571095 seconds
+06/08/21 (19:00:39) | INFO: New instance of bpytop version 1.0.67 started with pid 27079
+06/08/21 (19:00:39) | INFO: Loglevel set to DEBUG
+06/08/21 (19:00:39) | DEBUG: Using psutil version 5.8.0
+06/08/21 (19:00:39) | DEBUG: CMD: /usr/local/bin/bpytop
+06/08/21 (19:00:39) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+06/08/21 (19:00:39) | WARNING: No theme named "default" found!
+06/08/21 (19:00:39) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+06/08/21 (19:00:39) | DEBUG: Collect and draw completed in 0.167268 seconds
+06/08/21 (19:00:39) | DEBUG: Init completed in 0.213519 seconds
+07/08/21 (09:03:52) | INFO: New instance of bpytop version 1.0.67 started with pid 5622
+07/08/21 (09:03:52) | INFO: Loglevel set to DEBUG
+07/08/21 (09:03:52) | DEBUG: Using psutil version 5.8.0
+07/08/21 (09:03:52) | DEBUG: CMD: /usr/local/bin/bpytop
+07/08/21 (09:03:52) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+07/08/21 (09:03:52) | WARNING: No theme named "default" found!
+07/08/21 (09:03:53) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home', '/mnt/c1d785cd-402a-41f6-bc06-de4830e81169', '/mnt/987C1B5F7C1B3788', '/mnt/7a44a348-1800-46f5-8575-1c24725658d1']
+07/08/21 (09:03:56) | DEBUG: Collect and draw completed in 4.025477 seconds
+07/08/21 (09:03:57) | DEBUG: Init completed in 4.080130 seconds
+26/08/21 (10:01:43) | INFO: New instance of bpytop version 1.0.67 started with pid 2218
+26/08/21 (10:01:43) | INFO: Loglevel set to DEBUG
+26/08/21 (10:01:43) | DEBUG: Using psutil version 5.8.0
+26/08/21 (10:01:43) | DEBUG: CMD: /home/swapno/.local/bin/bpytop
+26/08/21 (10:01:43) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+26/08/21 (10:01:43) | WARNING: No theme named "default" found!
+26/08/21 (10:01:44) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home']
+26/08/21 (10:01:44) | DEBUG: Collect and draw completed in 0.160222 seconds
+26/08/21 (10:01:44) | DEBUG: Init completed in 0.180459 seconds
+26/08/21 (10:39:49) | INFO: New instance of bpytop version 1.0.67 started with pid 4648
+26/08/21 (10:39:49) | INFO: Loglevel set to DEBUG
+26/08/21 (10:39:49) | DEBUG: Using psutil version 5.8.0
+26/08/21 (10:39:49) | DEBUG: CMD: /home/swapno/.local/bin/bpytop
+26/08/21 (10:39:49) | INFO: Config file version and bpytop version missmatch, will be recreated on exit!
+26/08/21 (10:39:49) | WARNING: No theme named "default" found!
+26/08/21 (10:39:49) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home']
+26/08/21 (10:39:50) | DEBUG: Collect and draw completed in 0.816830 seconds
+26/08/21 (10:39:50) | DEBUG: Init completed in 0.837544 seconds
+26/08/21 (10:40:09) | INFO: Exiting. Runtime 0:00:20 
+
+03/09/21 (09:26:38) | INFO: New instance of bpytop version 1.0.67 started with pid 4459
+03/09/21 (09:26:38) | INFO: Loglevel set to DEBUG
+03/09/21 (09:26:38) | DEBUG: Using psutil version 5.8.0
+03/09/21 (09:26:38) | DEBUG: CMD: /home/swapno/.local/bin/bpytop
+03/09/21 (09:26:38) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home']
+03/09/21 (09:26:38) | DEBUG: Collect and draw completed in 0.639519 seconds
+03/09/21 (09:26:38) | DEBUG: Init completed in 0.703629 seconds
+03/09/21 (09:26:56) | INFO: Exiting. Runtime 0:00:18 
+
+13/09/21 (10:28:02) | INFO: New instance of bpytop version 1.0.67 started with pid 14698
+13/09/21 (10:28:03) | INFO: Loglevel set to DEBUG
+13/09/21 (10:28:03) | DEBUG: Using psutil version 5.8.0
+13/09/21 (10:28:03) | DEBUG: CMD: /home/swapno/.local/bin/bpytop
+13/09/21 (10:28:03) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home']
+13/09/21 (10:28:03) | DEBUG: Collect and draw completed in 0.599131 seconds
+13/09/21 (10:28:03) | DEBUG: Init completed in 0.648797 seconds
+13/09/21 (10:28:48) | INFO: Exiting. Runtime 0:00:46 
+
+13/09/21 (16:05:28) | INFO: New instance of bpytop version 1.0.67 started with pid 55205
+13/09/21 (16:05:28) | INFO: Loglevel set to DEBUG
+13/09/21 (16:05:28) | DEBUG: Using psutil version 5.8.0
+13/09/21 (16:05:28) | DEBUG: CMD: /home/swapno/.local/bin/bpytop
+13/09/21 (16:05:28) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home']
+13/09/21 (16:05:29) | DEBUG: Collect and draw completed in 1.662639 seconds
+13/09/21 (16:05:29) | DEBUG: Init completed in 1.706189 seconds
+13/09/21 (22:04:52) | INFO: New instance of bpytop version 1.0.67 started with pid 26119
+13/09/21 (22:04:52) | INFO: Loglevel set to DEBUG
+13/09/21 (22:04:52) | DEBUG: Using psutil version 5.8.0
+13/09/21 (22:04:52) | DEBUG: CMD: /home/swapno/.local/bin/bpytop
+13/09/21 (22:04:53) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home']
+13/09/21 (22:04:53) | DEBUG: Collect and draw completed in 0.217431 seconds
+13/09/21 (22:04:53) | DEBUG: Init completed in 0.269843 seconds
+13/09/21 (22:06:22) | INFO: New instance of bpytop version 1.0.67 started with pid 26810
+13/09/21 (22:06:22) | INFO: Loglevel set to DEBUG
+13/09/21 (22:06:22) | DEBUG: Using psutil version 5.8.0
+13/09/21 (22:06:22) | DEBUG: CMD: /home/swapno/.local/bin/bpytop
+13/09/21 (22:06:22) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home']
+13/09/21 (22:06:22) | DEBUG: Collect and draw completed in 0.191866 seconds
+13/09/21 (22:06:22) | DEBUG: Init completed in 0.213417 seconds
+13/09/21 (22:06:26) | INFO: Exiting. Runtime 0:00:04 
+
+18/09/21 (10:43:09) | INFO: New instance of bpytop version 1.0.67 started with pid 3468
+18/09/21 (10:43:09) | INFO: Loglevel set to DEBUG
+18/09/21 (10:43:09) | DEBUG: Using psutil version 5.8.0
+18/09/21 (10:43:09) | DEBUG: CMD: /home/swapno/.local/bin/bpytop
+18/09/21 (10:43:09) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home']
+18/09/21 (10:43:09) | DEBUG: Collect and draw completed in 0.700158 seconds
+18/09/21 (10:43:09) | DEBUG: Init completed in 0.744075 seconds
+18/09/21 (10:45:26) | INFO: New instance of bpytop version 1.0.67 started with pid 4128
+18/09/21 (10:45:26) | INFO: Loglevel set to DEBUG
+18/09/21 (10:45:26) | DEBUG: Using psutil version 5.8.0
+18/09/21 (10:45:26) | DEBUG: CMD: /home/swapno/.local/bin/bpytop
+18/09/21 (10:45:26) | DEBUG: new fstab_filter set : ['/', '/boot/efi', '/home']
+18/09/21 (10:45:27) | DEBUG: Collect and draw completed in 0.198280 seconds
+18/09/21 (10:45:27) | DEBUG: Init completed in 0.255661 seconds
