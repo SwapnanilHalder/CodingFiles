@@ -44,3 +44,22 @@ const timer = setInterval(() => {
     clearInterval(timer)
   }
 }, 100)
+
+
+
+const barr = () => {
+  throw new DOMException();
+}
+
+const baz = () => {
+  console.log('baz');
+}
+
+const foo = () => {
+  console.log('foo');
+  barr();
+  baz();
+}
+
+foo();
+

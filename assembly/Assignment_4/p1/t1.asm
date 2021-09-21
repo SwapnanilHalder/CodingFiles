@@ -10,6 +10,11 @@ main PROC
     mov ch, 0
     l1:
         int 21h
+        xor dl, dl
+        ; mov dl, cl
+        ; add dl, '0'
+        ; int 21h
+        mov dl, al
         loop l1
     mov ah, 76
     int 21h
