@@ -1,0 +1,101 @@
+[/]
+app-menu-label=''
+command-history=['clear', 'bash /home/swapno/onedrive.sh']
+desklet-snap-interval=25
+desktop-effects-close-effect='traditional'
+desktop-effects-close-time=120
+desktop-effects-close-transition='easeOutQuad'
+desktop-effects-map-effect='traditional'
+desktop-effects-map-time=100
+desktop-effects-map-transition='easeOutQuad'
+desktop-effects-maximize-effect='none'
+desktop-effects-maximize-time=100
+desktop-effects-maximize-transition='easeInExpo'
+desktop-effects-minimize-effect='traditional'
+desktop-effects-minimize-time=160
+desktop-effects-minimize-transition='easeInQuad'
+desktop-effects-tile-effect='none'
+desktop-effects-tile-time=100
+desktop-effects-tile-transition='easeInQuad'
+desktop-effects-unmaximize-effect='none'
+desktop-effects-unmaximize-time=100
+desktop-effects-unmaximize-transition='easeNone'
+enabled-applets=['panel1:left:0:menu@cinnamon.org:72', 'panel1:left:1:show-desktop@cinnamon.org:73', 'panel1:left:2:grouped-window-list@cinnamon.org:74', 'panel1:right:0:systray@cinnamon.org:75', 'panel1:right:1:xapp-status@cinnamon.org:76', 'panel1:right:2:notifications@cinnamon.org:77', 'panel1:right:3:printers@cinnamon.org:78', 'panel1:right:4:removable-drives@cinnamon.org:79', 'panel1:right:5:keyboard@cinnamon.org:80', 'panel1:right:6:favorites@cinnamon.org:81', 'panel1:right:7:network@cinnamon.org:82', 'panel1:right:8:sound@cinnamon.org:83', 'panel1:right:9:power@cinnamon.org:84', 'panel1:right:10:calendar@cinnamon.org:85']
+enabled-desklets=['simple-system-monitor@ariel:0:1725:0']
+hotcorner-layout=['scale:true:1000', 'scale:false:0', 'scale:false:0', 'desktop:false:0']
+next-applet-id=86
+next-desklet-id=1
+panel-launchers=['DEPRECATED']
+panel-zone-icon-sizes='[{"panelId": 1, "left": 0, "center": 0, "right": 24}]'
+panels-enabled=['1:0:bottom']
+panels-height=['1:40']
+
+[control-center/display]
+show-fractional-scaling-controls=true
+
+[desktop/background]
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/linuxmint-uma/aholmes_canada.jpg'
+
+[desktop/background/slideshow]
+delay=15
+image-source='xml:///usr/share/cinnamon-background-properties/linuxmint-uma.xml'
+
+[desktop/interface]
+clock-show-date=true
+clock-show-seconds=true
+clock-use-24h=false
+cursor-blink-time=1200
+cursor-size=24
+gtk-theme='Adapta-Nokto'
+icon-theme='Papirus-Dark'
+scaling-factor=uint32 1
+
+[desktop/keybindings/media-keys]
+search=['XF86Search', '<Primary><Alt><Super>f']
+
+[desktop/keybindings/wm]
+move-to-workspace-left=['<Primary><Super>Left']
+move-to-workspace-right=['<Primary><Super>Right']
+push-snap-left=@as []
+push-snap-right=@as []
+push-tile-up=@as []
+switch-to-workspace-left=['<Alt><Super>Left']
+switch-to-workspace-right=['<Alt><Super>Right']
+switch-to-workspace-up=['<Control><Alt>Up', '<Alt>F1', '<Super>a']
+switch-windows=@as []
+switch-windows-backward=@as []
+toggle-maximized=['<Alt>F10', '<Super>Up']
+
+[desktop/notifications]
+remove-old=true
+
+[desktop/sound]
+event-sounds=false
+
+[desktop/wm/preferences]
+theme='Adapta-Nokto'
+
+[muffin]
+workspace-cycle=true
+
+[settings-daemon/peripherals/keyboard]
+delay=uint32 500
+numlock-state='on'
+repeat-interval=uint32 30
+
+[settings-daemon/peripherals/mouse]
+double-click=400
+drag-threshold=8
+motion-threshold=1
+
+[settings-daemon/peripherals/touchpad]
+horizontal-scrolling=true
+motion-threshold=1
+touchpad-enabled=true
+
+[sounds]
+switch-enabled=false
+
+[theme]
+name='Adapta-Nokto'
