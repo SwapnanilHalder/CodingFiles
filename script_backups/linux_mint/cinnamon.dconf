@@ -25,10 +25,13 @@ enabled-desklets=['simple-system-monitor@ariel:0:1725:0']
 hotcorner-layout=['scale:true:1000', 'scale:false:0', 'scale:false:0', 'desktop:false:0']
 next-applet-id=86
 next-desklet-id=1
+no-adjacent-panel-barriers=false
+panel-edit-mode=false
 panel-launchers=['DEPRECATED']
 panel-zone-icon-sizes='[{"panelId": 1, "left": 0, "center": 0, "right": 24}]'
+panel-zone-symbolic-icon-sizes='[{"panelId": 1, "left": 28, "center": 28, "right": 16}]'
 panels-enabled=['1:0:bottom']
-panels-height=['1:40']
+panels-height=['1:29']
 
 [control-center/display]
 show-fractional-scaling-controls=true
@@ -74,7 +77,9 @@ remove-old=true
 event-sounds=false
 
 [desktop/wm/preferences]
+num-workspaces=3
 theme='Adapta-Nokto'
+workspace-names=@as []
 
 [muffin]
 workspace-cycle=true
