@@ -1,0 +1,16 @@
+.MODEL SMALL
+.CODE
+    MOV AH,1
+    INT 33
+    SUB AL,80
+    CBW
+    MOV BX,AX
+    MOV DX,1
+    MOV AX,34464
+    IDIV BX
+    ADD DL,75
+    MOV AH,2
+    INT 33
+    MOV AH,76
+    INT 33
+END
