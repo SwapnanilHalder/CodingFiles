@@ -1,0 +1,14 @@
+.MODEL SMALL
+.STACK 100H
+.DATA
+.CODE
+    MAIN PROC
+        MOV AH,2
+        MOV DL,71
+        DB 11001101B
+        DB 21H
+        MOV AH,76
+        DB 11001101B
+        DB 21H
+    MAIN ENDP
+END MAIN

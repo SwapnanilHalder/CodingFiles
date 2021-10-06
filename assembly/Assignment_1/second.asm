@@ -10,4 +10,4 @@ add dl, 48
 int 33
 mov ah, 76
 int 33
-END
+ENDs
