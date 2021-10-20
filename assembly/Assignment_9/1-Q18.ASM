@@ -1,0 +1,16 @@
+.MODEL SMALL
+.CODE
+    MOV AH,1
+    MOV DL,0
+    REPT 10
+    INT 33
+    PUSH AX
+    ENDM
+    MOV AH,2
+    REPT 10
+    POP DX
+    INT 33
+    ENDM
+    MOV AH,76
+    INT 33
+END

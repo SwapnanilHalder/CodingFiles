@@ -1,0 +1,14 @@
+.MODEL SMALL
+.CODE
+    MOV DL,'Z'
+    REPT 8
+    MOV AH,1
+    INT 33
+    MOV BL,AL
+    MOV AH,2
+    INT 33
+    MOV DL,BL
+    ENDM
+    MOV AH,76
+    INT 33
+END
