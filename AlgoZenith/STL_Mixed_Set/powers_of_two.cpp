@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define For(i, a, b) for(int i=a; i<b; i++)
 #define SPEED1 ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
 #define int long long
@@ -16,10 +16,17 @@ void solve() {
     int x = 1, count = 0;
     For(j, 0, 32) {
         For(i, 0, n) {
-            if(x < arr[i]) 
-                continue;
+            mapped[arr[i]]--;
+            if(mapped.count(x-arr[i])) {
+                count += mapped[x-arr[i]];
+            }
         }
+        For(i, 0, n) {
+            mapped[arr[i]]++;
+        }
+        x <<=1;
     }
+    cout << count << endl;
 }
 
 int32_t main() {
