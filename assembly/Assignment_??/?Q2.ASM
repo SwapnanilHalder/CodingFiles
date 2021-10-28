@@ -1,9 +1,0 @@
-.MODEL SMALL
-.CODE
-    MOV AH,2
-    DB 10110010B
-    DB 70D
-    INT 33
-    MOV AH,76
-    INT 33
-END
