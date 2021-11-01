@@ -1,0 +1,33 @@
+1 =>
+.MODEL SMALL
+.DATA
+    A DB 'wadctzhfred'
+.CODE
+    MOV AX,@DATA
+    MOV DS,AX
+    LEA SI,A+5
+    STD
+    LODSB
+    MOV AH,2
+    MOV CX,5
+    L: LODSB
+    MOV DL,AL
+    INT 21H
+    LOOP L
+    MOV AH,76
+    INT 21H
+END
+
+2 =>
+.MODEL SMALL
+.CODE
+    MOV DX,512
+    MOV BX,65535
+    DIV BX
+    MOV DX,82
+    INT 33
+    MOV AH,76
+    INT 33
+END
+
+3 =>

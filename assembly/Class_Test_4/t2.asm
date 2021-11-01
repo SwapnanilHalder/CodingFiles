@@ -1,0 +1,19 @@
+.MODEL SMALL
+.CODE
+    MOV AH,1
+    INT 33
+    MOV AH,0
+    REPT 26
+    SUB AX,3
+    SUB AL,AH
+    SUB AL,AH
+    SUB AL,AH
+    MOV AH,0
+    ENDM
+    MOV AH,2
+    SUB AL,208
+    MOV DL,AL
+    INT 33
+    MOV AH,76
+    INT 33
+END
