@@ -5,11 +5,11 @@
     SUB AL,80
     MOV BL,13
     IMUL BL
-    ADD AX,75
     XOR AH, AH
+    ADD AX,75
     MOV DL,AL
     MOV AH,2
     INT 33
     MOV AH,76
-    INT 33sas
+    INT 33
 END

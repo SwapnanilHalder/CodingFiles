@@ -1,0 +1,24 @@
+.MODEL SMALL
+.CODE
+FUNC PROC
+    MOV AH,0
+    CMP AL,0
+    JE L
+    MOV BL,3
+    DIV BL
+    ADD DL,AH
+    CALL FUNC
+    L:
+        RET
+FUNC ENDP
+MAIN PROC
+    MOV AL, 128
+    MOV DL,0
+    CALL FUNC
+    ADD DL,48
+    MOV AH,2
+    INT 21H
+    MOV AH,76
+    INT 21H
+MAIN ENDP
+END MAIN
