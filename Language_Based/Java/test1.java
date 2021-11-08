@@ -3,11 +3,11 @@ public class test1 {
     private int y = 33;
     public void method1(int x) {
         test1 t = new test1();
-        this.x = 22;
+        test1.x = 22;
         y = 44;
 
         System.out.println("test1.x: " + test1.x);
-        System.out.println("t.x: " + t.x);
+        System.out.println("t.x: " + test1.x);
         System.out.println("t.y: " + t.y);
         System.out.println("y: " + y);
     }

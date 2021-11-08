@@ -13,5 +13,6 @@ public class printLn_shortcut {
             System.out.printf("%-15s%03d%n", s, p);
         }
         pl("================================");
+        scan.close();
     }
 }

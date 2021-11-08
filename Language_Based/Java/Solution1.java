@@ -10,5 +10,6 @@ public class Solution1 {
         for(int i=1; i<11; i++) {
             pl(k+" x "+i+" = "+k*i);
         }
+        scan.close();
     }
 }

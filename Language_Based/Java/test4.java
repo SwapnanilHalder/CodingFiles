@@ -1,4 +1,3 @@
-import java.io.*; 
 class Marks { 
 	// These variables are instance variables. 
 	// These variables are in a class 

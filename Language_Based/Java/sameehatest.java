@@ -1,5 +1,4 @@
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 class Shape
 {
     double sa;
@@ -109,5 +108,6 @@ class sameehatest {
            
            
             }
+            sc.close();
         }
     }

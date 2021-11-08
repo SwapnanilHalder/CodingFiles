@@ -12,7 +12,7 @@ public class learn1 {
         String s = "I have " + num + " cookies";
         System.out.println(s);
 
-        int[] arr1 = new int[1];
+        // int[] arr1 = new int[1];
         int[] arr = {5,4,8,9,2,3,6,7,1};
         for (int i : arr) {
             System.out.print(i+ "  ");
