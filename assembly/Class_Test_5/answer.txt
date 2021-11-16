@@ -1,0 +1,27 @@
+1 =>
+.MODEL SMALL
+.CODE 
+    MOV AH,1
+    INT 21H
+    ROR AL,1
+    SAR AL,1
+    ROL AL,1
+    ROL AL,1
+    MOV DL,AL
+    MOV AH,2
+    INT 21H 
+    MOV AH,76
+    INT 21H   
+END  
+
+2 =>
+
+
+3 =>
+43 'B' will be printed.
+CL takes following values
+125,250 , 119 ,244 , 113 ,238 , 107 ...[stop]
+125, 119, 113, ..., 5 => 21 terms
+250, 244, ..., 130 => 21 terms
+1 term to begin with
+Total 43 Terms

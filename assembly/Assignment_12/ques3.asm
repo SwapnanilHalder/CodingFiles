@@ -1,0 +1,21 @@
+.MODEL SMALL
+.STACK 100H
+.CODE
+MAIN PROC
+    MOV AH,1
+    MOV DL,66
+    INT 33
+    MOV BH,AL
+    ADD BH,150
+    PUSHF
+    POP AX
+    AND AL,01H
+    JP LOOPY
+    SUB DL,1
+    LOOPY:
+    MOV AH,2
+    INT 33
+    MOV AH,76
+    INT 33
+MAIN ENDP
+    END MAIN

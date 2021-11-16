@@ -1,0 +1,14 @@
+.MODEL SMALL
+.CODE 
+    MOV AH,1
+    INT 21H
+    ROR AL,1
+    SAR AL,1
+    ROL AL,1
+    ROL AL,1
+    MOV DL,AL
+    MOV AH,2
+    INT 21H 
+    MOV AH,76
+    INT 21H   
+END
