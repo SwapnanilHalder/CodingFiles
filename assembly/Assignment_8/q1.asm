@@ -8,7 +8,6 @@
         DB 11001101B
         DB 21H
         MOV AH,76
-        DB 11001101B
-        DB 21H
+        DB CD21H
     MAIN ENDP
 END MAIN
