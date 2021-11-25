@@ -5,6 +5,7 @@
 #define pv(v) for(const auto &i: v){cout<<i<<" ";}cout << "\n"
 #define SPEED1 ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
 #define all(x) x.begin(), x.end()
+#define pb push_back
 
 
 using namespace std;
@@ -23,10 +24,37 @@ void sol() {
     }
     sort(all(a)); sort(all(b));
     int i1=0, i2=0;
+    vi unio, inters, sub;
+    // a[i1] should always be less than b[i2]
     while(i1 < n && i2 < m) {
-        
+        if(a[i1] == b[i2]) {
+            unio.pb(a[i1]);
+            inters.pb(a[i1]);
+            i1++; i2++; continue;
+        }
+        if(a[i1] > b[i2]) {
+            unio.pb(b[i2]);
+            i2++; continue;
+        }
+        else {
+            unio.pb(a[i1]);
+            sub.pb(a[i1]);
+            i1++; continue;
+        }
     }
-    // vi unio, inters, sub;
+    if(i1 == n) {
+        for(;i2 < m; i2++) {
+            unio.pb(b[i2]);
+        }
+    }
+    if(i2 == m) {
+        for(;i1<n; i1++) {
+            unio.pb(a[i1]);
+            sub.pb(a[i1]);
+        }
+    }
+    pv(unio); pv(inters); pv(sub);
+
     // For(i, 0, MAX) {
 
     //     if(a[i]){
@@ -42,7 +70,6 @@ void sol() {
     //         unio.push_back(i);
     //     }
     // }
-    // pv(unio); pv(inters); pv(sub);
 
 }
 

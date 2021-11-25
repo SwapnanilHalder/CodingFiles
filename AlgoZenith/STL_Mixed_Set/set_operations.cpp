@@ -22,7 +22,6 @@ void sol() {
     }
     vi unio, inters, sub;
     For(i, 0, MAX) {
-
         if(a[i]){
             unio.push_back(i);
             if(b[i]) {
