@@ -1,0 +1,3 @@
+1. Run install.sh, if error, check /usr/local/bin and /usr/local/lib exists or not
+2. general format :
+gcccheck <full_file_path> <flag> 

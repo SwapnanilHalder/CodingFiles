@@ -4,24 +4,26 @@ import subprocess
 import filecmp
 
 flag = ""
+# print(sys.argv)
 if(len(sys.argv) == 3) :
     flag = sys.argv[2]
-    print(flag)
+    # print(flag)
 
 path = sys.argv[1]
+# print("Path : " + path)
 path = path[:-4]
 
-print("Started")
+# print("Started")
 
-print(len(path))
+# print(len(path))
 for i in range(len(path)-1, -1, -1) :
     # print("path[i] : ", path[i])
     if (path[i] == '/'):
         file_name = path[(i+1):]
         break
 
-print(path)
-print(file_name)
+# print(path)
+# print(file_name)
 
 # os.system("g++", file_name, "-o /home/swapno/bin/cpp/compiled.out")
 # subprocess.run(["echo","g++", file_name, "-o ~/bin/cpp/compiled"])

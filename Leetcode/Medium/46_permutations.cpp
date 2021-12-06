@@ -1,13 +1,15 @@
-#include <iostream>
-#include <vector>
-#include <string>
-
+#include <bits/stdc++.h>
 using namespace std;
+#define For(i, a, b) for(int i=a; i<b; i++)
+#define SPEED ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
+#define pv(v) for(const auto &i: v){cout<<i<<" ";}cout << "\n"
+#define pv2d(v2d) for(const auto &i : v2d) {pv(i);}cout<<""
 
 class Solution {
 public:
-    int answer() {
-        return 123456789;
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<vector<int>> answer;
+        return answer;
     }
     
 };
@@ -19,5 +21,5 @@ int main() {
     int start = 5;
     string str = "abcdefg";
     cout << "Answer : " << endl;
-    cout << mySolution.answer() << endl;
+    // cout << mySolution.permute(arr) << endl;
 }
