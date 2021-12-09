@@ -2,6 +2,11 @@
 2. general format :
 gcccheck <full_file_path> <flag> 
 
+copy paste input with last line as a input(not a newline), press Enter, then ctrl+d
+copy paste output with last line as a output(not a newline), press Enter, then ctrl+d
+
+
 FLAGS : 
 new : for delete prev everything, and give input output from fresh
 add : also works for again compile with same input, just press ctrl+d two times
+if no flag, it just compiles and checks once again
