@@ -1,0 +1,1 @@
+find / \( -path /mnt -o -path /.snapshots -o -path /run -o -path /proc -o -path /home/swapno/Downloads/Onedrive -o -path /Users/swapno/"OneDrive - iitkgp.ac.in" -o -path /Library -o -path /Applications -o -path /System -o -path /Users/swapno/Library -o -path /private/var -o -path /Users/swapno/.Trash -o -path /dev \) -prune -false -o -name "$1"
