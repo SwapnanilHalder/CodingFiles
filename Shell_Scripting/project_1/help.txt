@@ -10,3 +10,4 @@ FLAGS :
 new : for delete prev everything, and give input output from fresh
 add : also works for again compile with same input, just press ctrl+d two times
 if no flag, it just compiles and checks once again
+del : delete previously created folder

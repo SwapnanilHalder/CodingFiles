@@ -9,18 +9,34 @@ if(len(sys.argv) == 3) :
     flag = sys.argv[2]
     # print(flag)
 
-path = sys.argv[1]
+file_name_exnt = sys.argv[1]
+file_name = file_name_exnt[:-4] # removing last .cpp part
+path = file_name_exnt
+if(file_name_exnt.__contains__('/')):
+    # for i in range(len(path)-1, -1, -1) :
+    #     # print("path[i] : ", path[i])
+    #     if (path[i] == '/'):
+    #         file_name = path[(i+1):]
+    #         break
+    file_name = os.path.basename(file_name)
+    file_name_exnt = os.path.basename(file_name_exnt)
+
+else :
+    path = os.path.abspath(os.getcwd()) + '/' + file_name_exnt
+
+print(path)
+print(file_name_exnt)
+print(file_name)
+
+
 # print("Path : " + path)
-path = path[:-4]
 
 # print("Started")
 
 # print(len(path))
-for i in range(len(path)-1, -1, -1) :
-    # print("path[i] : ", path[i])
-    if (path[i] == '/'):
-        file_name = path[(i+1):]
-        break
+
+# print(os.path.abspath(os.getcwd()))
+
 
 # print(path)
 # print(file_name)
@@ -51,6 +67,9 @@ if (flag == 'add') :
     print("Enter Extra Correct Answer : (Press Enter to register the line of answer) ")
     os.system("cat "+ '>> '+ result_file)
 
+if(flag == 'del') :
+    os.system("rm -f " + "~/bin/cpp/file_name")
+
 
 
 if (os.path.isdir(in_out) == False) :
@@ -66,7 +85,7 @@ if (os.path.isdir(in_out) == False) :
     
 
 
-os.system("g++ "+ path + ".cpp -o ~/bin/cpp/" + file_name+ "/"+file_name)
+os.system("g++ "+ path + " -o ~/bin/cpp/" + file_name+ "/"+file_name)
 # subprocess.run(["g++", "--version"])
 
 print()
