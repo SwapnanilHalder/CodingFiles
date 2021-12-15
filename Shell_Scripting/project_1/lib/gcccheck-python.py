@@ -24,9 +24,9 @@ if(file_name_exnt.__contains__('/')):
 else :
     path = os.path.abspath(os.getcwd()) + '/' + file_name_exnt
 
-print(path)
-print(file_name_exnt)
-print(file_name)
+# print(path)
+# print(file_name_exnt)
+# print(file_name)
 
 
 # print("Path : " + path)
@@ -58,6 +58,9 @@ result_file = in_out + 'result.txt'
 # os.system('echo '+ str(os.path.isdir(in_out)))
 # print(os.path.isfile(in_out))
 
+if(flag == 'flags'):
+    print('flags '+'new '+'add '+'del '+'show_input '+'result' )
+
 if (flag == "new") :
     os.system("rm -rf " + "~/bin/cpp/"+file_name)
 
@@ -68,7 +71,16 @@ if (flag == 'add') :
     os.system("cat "+ '>> '+ result_file)
 
 if(flag == 'del') :
-    os.system("rm -f " + "~/bin/cpp/file_name")
+    os.system("rm -rf " + "~/bin/cpp/"+file_name)
+    exit()
+
+
+if(flag == 'show_input'):
+    try:
+        os.system('cat '+input_file)
+    except:
+        print("input_file not available")
+    exit()
 
 
 
@@ -79,9 +91,10 @@ if (os.path.isdir(in_out) == False) :
     os.system("touch " + input_file)
     os.system("cat "+ '> '+ input_file)
     # os.system("cat "+  input_file)
-    print("Enter Correct Answer : (Press Enter to register the line of answer) ")
-    os.system("touch "+ result_file)
-    os.system("cat "+ '> '+ result_file)
+    if(flag != 'result'):
+        print("Enter Correct Answer : (Press Enter to register the line of answer) ")
+        os.system("touch "+ result_file)
+        os.system("cat "+ '> '+ result_file)
     
 
 
@@ -91,6 +104,12 @@ os.system("g++ "+ path + " -o ~/bin/cpp/" + file_name+ "/"+file_name)
 print()
  
 os.system(in_out+file_name+'<'+input_file+'>'+output_file)
+if(flag == 'result'):
+    print("INPUT => ")
+    os.system('cat '+input_file)
+    print("OUTPUT => ")
+    os.system('cat '+output_file)
+    exit()
 result = filecmp.cmp(output_file, result_file, shallow=False)
 if(result == True) :
     print("Correct!!")
