@@ -54,18 +54,37 @@ vi input1l(){
 }
 
 void sol() {
-    inpt(x);
-    int sq = sqrt(x+0.5);
-    int cube = cbrt(x+0.5);
-    int sixth = (int)(pow(x+0.5, 1.0/6));
-    pl(sq+cube-sixth);
-    return;
+    inpt(n); cinbuffer;
+    int fives=0, zeros=0, x;
+    For(i, 0, n) {
+        cin >> x;
+        if(x == 5) {
+            fives++;
+        }
+        else {
+            zeros++;
+        }
+    }
+    if(zeros == 0) {
+        pl("-1"); return;
+    }
+    if(fives < 9) {
+        pl("0"); return;
+    }
+    For(i, 0, (int)(fives/9) *9 ) {
+        cout << 5;
+    }
+    For(i, 0, zeros) {
+        cout << 0;
+    }
+    END;
 }
 
 int32_t main() {
-    SPEED1;
-    inpt(t); 
-    while(t--) {
-        sol();
-    }
+    // SPEED1;
+    // inpt(t); 
+    // while(t--) {
+    //     sol();
+    // }
+    sol();
 }
