@@ -1,0 +1,10 @@
+Answers to Q3 :
+
+3A > 
+10 A 's printed
+
+3B >
+10 A 's printed
+
+3C >
+nCr A 's printed

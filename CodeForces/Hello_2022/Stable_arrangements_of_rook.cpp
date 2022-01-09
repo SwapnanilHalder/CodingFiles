@@ -42,7 +42,7 @@
 #define END cout << "\n" 
 #define ENDstd printf("\n")
 #define cinbuffer cin.ignore(numeric_limits<streamsize>::max(),'\n')
-#define pv(v) for(const auto &i: v){cout<<i<<" ";}END
+#define pv(v) for(const auto &i: v){cout<<i<<"";}END
 #define pv2d(v2d) for(const auto &i : v2d) {pv(i);}cout<<""
 #define deb(x) cout << '\t'<<#x << " = " << x << endl
 #define inpt(x) int x{}; cin >> x
@@ -78,6 +78,13 @@ void sol() {
     if(k > (n+1)/2) {
         pl("-1"); return;
     }
+    vector<vector<char>> arr(n, vector<char>(n, '.'));
+    for(int i=0; i<n && k > 0 ; i +=2) {
+        arr[i][i] = 'R';
+        k--;
+    }
+    pv2d(arr);
+    return;
 }
 
 int32_t main() {
