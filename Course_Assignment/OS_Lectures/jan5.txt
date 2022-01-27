@@ -1,0 +1,39 @@
+​​​​​Process 1: [run 10][rest 15][run 7]
+Process 2: [run 8][rest 12][run 20]
+process 1: t=0-32  [processor is not doing any thing t:10-25]
+process 2: t=32-72 [process is not doing any thing t:40-52]
+P1: [0-10run]  [10-25blocked] [25-32run]
+P2: [0-32ready][32-40run] [40-52blocked] [52-72run]
+The above was sequential processing
+
+Following is concurrent processing
+t=0-10 P1
+t=10-18P2
+t=18-25 nothing
+t=25-32P1
+t=32-52P2
+------------------
+Concurrent processing: Even when one of the programs is
+not over then the second program has started running.
+But two programs are never running at the same time.
+P1:[0-10run][10-25blocked][25-32run]
+P2:[0-10ready][10-18run][18-30blocked][30-32ready][32-52run]
+State:
+Ready: Computing unit not available
+Run: Computing unit is allocated
+Blocked: Can not execute even if processor available
+State transition in concurrent processing
+Ready->Run
+Run->Blocked
+Blocked->Ready
+Blocked->Run
+-----------------
+Parallel processing
+P1: [0-10run]  [10-25blocked] [25-32run]
+P2: [0-8run] [8-20blocked] [20-40run]
+---------------------------
+Concurrent processing when second process is done first
+Process 1: [run 10][rest 15][run 7]
+Process 2: [run 8][rest 12][run 20]
+P2:[0-8run][8-20blocked][20-40run]
+P1:[8-18run][18-33blocked][33-40ready][40-47run]

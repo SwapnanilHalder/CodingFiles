@@ -1,0 +1,8 @@
+Static Partition
+Parts A:30  B:50  C:10  D:40   Total: 130
+Process  need    Status    Internal fragementation    External Fragementation
+P         45      B           5
+Q         42      wait                                 30+10+40=80
+R         24      A           6
+S         22      wait                Best fit only    
+                  D           18      Best fit available.

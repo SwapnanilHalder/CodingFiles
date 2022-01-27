@@ -1,0 +1,37 @@
+Storage on Disk
+a.c: pqwswasdfrghwsxcfgh
+t.txt: zxswertdy
+rty:cqardfthtrewr
+The above is logical
+Following is physical
+Dir: a.c:0-18   t.txt:19-27   rty:28-40
+     01234567890123456789012345678901234567890
+Disk:pqwswasdfrghwsxcfghzxswertdycqardfthtrewr
+The directory stores locations over which data is stored.
+The above was continuous storage.
+Following is non continuous block structure.
+Directory:
+a.c:0,4,2,6     t.txt:3,5     rty:7,1,8
+0:pqwsw  1:fthtr   2:ghwsx   3:zxswe  4:asdfr
+5:rtdy   6:cfgh    7:cqard   8:ewr    9: 
+A) Let 3rd letter of file t.txt is deleted: 3:zxse
+B) Let 8th letter of file a.c is inserted as m
+Block4:asdmfr Hence block 4 is made in 2 parts
+Block4:asd  Block9:mfr
+Here a.c was in logical blocks pqwsw,asdfr,ghwsx,cfgh
+It becomes as pqwsw,asd,mfr,ghwsx,cfgh
+Block size 5. Each block has 3 to 5 letters.
+When it has 6 letters it splits.
+When it has 2 letters then it takes one/all letters of neighbour.
+Initial qwe,asdf,hcm,aqwer,hyc
+A) Insert 4th letter as h: qwe,ahsdf,hcm,aqwer,hyc
+B) Delete 2nd letter qw,asdf,hcm,aqwer,hyc
+It is modified as qwa,sdf,hcm,aqwer,hyc [transfer]
+C) Insert 11th letter as z. qwe,asdf,hcm,azqwer,hyc 
+It is modified as qwe,asdf,hcm,azq,wer,hyc [split]
+Initial qwe,rty,hcmyd,tud
+A) Delete 0th letter  we,rty,hcmyd,tud
+It is modified as  werty,hcmyd,tud  [merge]
+B) Delete 4th letter qwe,ry,hcmyd,tud
+It is modified as qwery,hcmyd,tud [merge]
+It can also be qwe,ryh,cmyd,tud [transfer]

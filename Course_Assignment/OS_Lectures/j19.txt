@@ -1,0 +1,27 @@
+Job C:[run 10][needP][run7][needQ][run 3]
+Job D:[run 5][needQ][run8][needP][run 4]
+Job E:[run 12][needP][run 10]
+Normal execution:
+C:[0-10][10-17P][17 onwards waits for Q]
+D:[0-5][5-13Q][13 onwards waits for P]
+E:[0-12][12 onwards waits for P]
+At t=10 System became unsafe(Deadlock guarantee). 
+At t=17 deadlock resulted.
+
+Following is done using Banker algorithm for deadlock avoidance.
+C:[0-10][wait for P][26-33P][33-36PQ]
+D:[0-5][5-13Q][13-22wait forP][22-26PQ]
+E:[0-12][12-22P]
+Question 1: Why at t=10 P was not given to C.
+Question 2: At t=22 why P was given to D not to C.
+Question 3: At t=12 why P was given to E after deny at t=10 to C.
+Question 4: At t=5 why D was not asked to wait for Q.
+
+Deadlock Prevention: Lower resource can not be allocated when higher resource is holded.
+Job C:[run 10][needP][run7][needQ][run 3]
+Job D:[run 5][needPQ][run8][run 4]
+Job E:[run 12][needP][run 10]
+C:[0-10][10-17wait forP][17-24][24-27PQ]
+D:[0-5][5-17PQ]
+E:[0-12][12-27wait for P][27-37P]
+At t=17 P can be allocated to E(in place of C).

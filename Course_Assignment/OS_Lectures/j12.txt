@@ -1,0 +1,32 @@
+Job 1 prints ABCD   [BC critical]
+Job 2 prints EFGH   [FG critical]
+time   Job1          Job2
+0      A
+1      while(Y!=0);
+2      Y=9
+3      B
+4                           E
+5                           while(Y!=0);
+6      C
+7      Y=0                   
+8                           Y=9
+9                           F
+10     D                    
+11                          G
+12                          Y=0
+13                          H
+Job1  [A5][B7][C3][D5]  (BC tritical)
+Job2  [E14][F5][G7][H6] (FG critical)
+Initial Y is 0. 
+Before enetering critical section while(Y!=0); Y=9; is done
+On exit Y=0 is done
+[A0-5][t=6 while(Y!=0);][t=7Y=9][B7-14][C14-17][t=18Y=0][D18-23]
+[E0-14][t=15 while(Y!=0);][t=19Y=9][F19-24][G24-31][t=32Y=0][H32-38]
+---------------------------------------------
+Initial P and Q are 0.
+Job1: P=9 while(Q==9); at entry and P=0 at exit
+Job2: Q=9 while(P==9); at entry and Q=0 at exit
+-----------------------------------------------------
+J1: P=9 R=1 while(Q==9)and(R==1); at entry and P=0 at exit
+J2: Q=9 R=2 while(P==9)and(R==2); at entry and Q=0 at exit
+Let t(R=1)<t(R=2) hence t(P=9)<while(P==9) and (R==2); hence J2 waits.

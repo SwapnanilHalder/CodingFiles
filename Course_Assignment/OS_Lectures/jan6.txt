@@ -1,0 +1,56 @@
+RAID Redundant array of independent disk
+a  b   c   d   e   f   g  h  i  j
+56 39  42  78  83  62  83 21 52 36
+Let head [read unit at t=0 is at a]
+
+print(d)->78  t=3 [abc]
+print(g)->83  t=6 [def]
+print(b)->39  t=11[gfedc]
+print(h)->21  t=17[bcdefg]
+print(j)->36  t=19[hi] 
+print(c)->42  t=26[jihgfed]
+e=29          t=28[cd]
+-----------------------------------
+Use two disk. Part of information on one disk. Another part on another.
+a  b   c   d   e  
+56 39  42  78  83 
+Let head1 [read unit at t=0 is at a]
+f   g  h  i  j
+62  83 21 52 36
+Let head2 [read unit at t=0 is at f]
+print(d)->78  t=3 [abc]
+print(g)->83  t=4 [f]
+print(b)->39  t=6 [dc]
+print(h)->21  t=7[g]
+print(j)->36  t=9[hi] 
+print(c)->42  t=10[b]
+e=29          t=12[cd]
+---------------------------------
+The following information is duplicated on 2 disk
+a  b   c   d   e   f   g  h  i  j
+56 39  42  78  83  62  83 21 52 36
+Let head1 [read unit at t=0 is at a]
+Let head2 [read unit at t=0 is at a]
+
+print(d)->78  t=3 h1=d  h2=a
+print(g)->83  t=6 h1=g  h2=a  abcdefghij
+                              2     1   
+print(b)->39  t=7 h1=g h2=b [h2 is nearer to b than h1]
+print(h)->21  t=8 h1=h h2=b
+print(j)->36  t=10 h1=j h2=b 
+print(c)->42  t=11 h1=j h2=c
+e=29          t=16 h1=e h2=e
+---------------------------------------
+Following information is duplicated on 2 disk
+a  b   c   d   e   f   g  h  i  j
+56 39  42  78  83  62  83 21 52 36
+Let head1 [read unit at t=0 is at a]
+Let head2 [read unit at t=0 is at a]
+print(j)   t=9  h1=j   h2=a
+print(e)   t=13 h1=j   h2=e
+print(b)   t=16 h1=j   h2=b
+----------The above is gready. Following is optimal.
+print(j)   t=9  h1=j   h2=a
+print(e)   t=14 h1=e   h2=a
+print(b)   t=15 h1=e   h2=b
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

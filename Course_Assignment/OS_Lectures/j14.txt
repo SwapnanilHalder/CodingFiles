@@ -1,0 +1,15 @@
+Processor Scheduling
+Job  Arrival  Service time  FCFS       SJF      SRTN                     RR(time quantum 5)
+A     0         20          0-20       0-20     0-10,20-30               0-5,5-10,15-20,25-30
+B     10        6           20-26      24-30    10-16    [20-10>6]       10-15,24-25
+C     13        4           26-30      20-24    16-20    [6-(13-10)<=4]  20-24,
+Round Robin Scheduling with a critical section. Time Quantum 10
+Job1 : (A12)(B16)(C13)  [B critical]
+Job2 : (G7)(H24)(K13)   [H ctitical]
+(A0-10)(G10-17H17-20)(A20-22)(H22-43)(B43-53)(K53-63)(B63-69C69-73)(K73-76)(C76-85)
+Job   Ready     Service  RR(Q=10)              
+P     0          30       0-10,30-40,70-80     
+Q     5          30       10-20,40-50,80-90    
+R     7          30       20-30,60-70,100-110  
+S     22         30       50-60,90-100,110-120 
+Do when arrival time of S is 8, 12

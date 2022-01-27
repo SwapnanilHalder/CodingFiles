@@ -1,0 +1,10 @@
+ABCDEG
+8
+AB C
+C A
+BC D
+ACD B
+D EG
+BE C
+CG BD
+CE AG
