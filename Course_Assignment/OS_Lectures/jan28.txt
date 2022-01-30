@@ -1,0 +1,65 @@
+Demand Paging
+y00=29 y01=42  page0
+y02=78 y03=84  page1
+y04=23 y05=45  page2
+y06=89 y07=21  page3
+y08=73 y09=45  page4
+y10=29 y11=42  page5
+y12=78 y13=84  page6
+y14=23 y15=45  page7
+y16=89 y17=21  page8
+y18=73 y19=45  page9
+Disk is above.
+How to store values of y07, y15, y06, y18 in memory.
+0721, 1545, 0689, 1873 [space 4*4=16 needed]
+38921, 72345, 97345  [space 5*3=15 needed]
+
+abcde: a is page no. y[2a]=bc y[2a+1]=de
+Example: 36234 means y[3*2]=y[6] is 62 y[3*2+1]=y[7] is 34
+             RAM                Action
+print(y12)  67884               p6:Disk->RAM
+print(y05)  67884,22345         p2:Disk->RAM
+print(y13)  same                No transfer
+----------------------------------------------
+Valid and dirty bits: zabcde
+z=3:both valid  0:0th variable valid  1:1st variable valid
+z=4:both updated  z=0,1 means only one updated
+352987 means y[10] is 29  y[11] is 87
+025623 means y[04] is 56  y[05] cannot say (in place of 23 any number possible)
+142893 means y[08]=can not say y[09] is 93
+print(y18)   397345               p9:Disk->Ram
+y[12]=86     397345,068656        no transfer [56 can be any]
+print(y19)   same                 no transfer
+print(y12)   same                 no transfer [o/p is 86 not 78]
+program over                      p6:Ram->Disk partially
+Partial transfer is done as following
+p6 (7884) is transfered from disk to ram.
+Now 8684 is transfered from ram to disk.  
+zabcde z:0 y[2a] is made bc   z:1 y[2a+1] is made de 
+z:3 no update on disk
+z:4 page a is made as bcde.
+z:4 means y[2a] and y[2a+1] made as bc and de respectively.
+--------------------------------------------------
+print(y06) 338921              p3:Disk->Ram
+y[07]=38   438938              No transfer
+over                           p3:Ram->Disk 8938 to Disk
+---------------------------------------------------
+y[13]=57     164557              No transfer  [45 can be any]
+print(y[12]) 467857              p6:Disk->Ram [7884 transfered]
+y[18]=38     093877              No transfer  [77 can be any]
+over                             p6:Ram->disk fully [7857->D]
+                                 p9:Ram->disk partially
+To transfer p9 partially p9:Disk->Ram 7345 3845 is Ram->disk
+----------------------------------------------------
+y[12]=79     067992            No transfer [92 is any]
+y[13]=86     467986            No tranfer
+y[12]=67     466786            No tranfer
+y[04]=92     029278,466786     No transfer [78 is any]
+over                           p6:Ram->disk fully p2:partially
+p2:Disk->Ram(2345->R) (9245->D)
+---------------------------------------------------
+y[16]=y[04]+34  322345,085792      p2:D->R
+print(y[16])                       No tranfer
+print(y[17])    322345,485721      p8:D->R 8921
+over                               p8:R->D 5721 
+-----------------------------------------------------

@@ -1,0 +1,28 @@
+Multilevel Feedback queue
+Job Ready  Service  RR             MLFQ
+P    0      20     0-10,30-40       0-10,40-50
+Q    5      20    10-20,40-50      10-20,50-60
+R    7      20    20-30,60-70      20-30,60-70
+S   22      20    50-60,70-80      30-40,70-80
+RR Queue:5Q  7QR  10RP  20PQ 22PQS 30QSR 40:SR 50:RS 60:S
+MLFQ High 5Q 7QR 10R 20nil 22S 30nil
+Low 10P 20PQ 30PQR 40QRS 
+-------------------------------------------
+In high priority queue time quantum is 3.
+In low priority queue time quantum is 10.
+When a job of high priority comes then a running job of low priority may be removed even when time quantum not complete.
+To reduce context switching a job(M) in low queue is permitted to execute if high queue is empty. It is done even if job M is behind in queue.
+Job Ready  Service   Different Quantum
+P     0     20       0-5,18-19,49-59,76-80
+Q     5     20       5-8,29-39,69-76,
+R     7     20       8-18,39-49
+S    19     20       19-29,59-69
+High 7R 8nil
+Low 5P  8PQ  18QR  19QRP 29RPS 39PSQ 49SQP 59QP 69P
+Job Ready Service Interval
+A    0     20      0-3,18-28,33-40
+B    1      8      3-8,28-31
+C    8     12      8-18,31-33
+High 1B 3nil
+Low 3A 8AB 18BC 28CA  31A
+ 
