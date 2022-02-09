@@ -1,0 +1,10 @@
+                                                          MLFA Assignment-2
+			Implement SGD from scratch
+			           					Swapnanil Halder
+								18MA20046
+
+- The score of the implemented model is 1.0 with a learning rate = 0.01 and iterations = 100
+
+- The score for the logistic regression model from Sklearn is 1.0 with a learning rate = 0.01 and iterations = 1000
+
+The score values change by changing the randomised state value in test_train_split function

@@ -1,0 +1,15 @@
+MLFA Assignment - 1
+Cervical Cancer Behaviour Risk
+---------------------------------
+Swapnanil Halder | 18MA20046
+
+    * Condensed k-nearest neighbour (CNN in short) to classify the points is applied.
+    * The last 15 examples in the dataset as the test set and the remaining examples as the training set is used.
+    * For CNN, while condensing, only the closest neighbour (1-NN) is taken into account.
+    * After condensation, the value of k is set to 5 for performing classification on the test data. 
+
+Result:
+Condensed KNN accuracy : 93.33%
+Standard KNN accuracy : 86.67%
+
+In this dataset Condensed KNN is performing slightly better than standard KNN. Probably here the Condensed KNN is representing the better decision boundary eliminating the noise. Also for Condensed KNN is a bit faster during inference.
