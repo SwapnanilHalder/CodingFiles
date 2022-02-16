@@ -1,0 +1,323 @@
+qque1
+
+#include<stdio.h>
+#include<signal.h>
+int count=0;
+void a();
+void b(){
+	count++;
+	signal(SIGINT, a);
+}
+void a(){ 
+	count++;
+	if(count==5)
+	signal(SIGINT, SIG_DFL);
+	else
+	signal(SIGINT,b);
+ }
+main()
+{  
+	signal(SIGINT, a);
+	for(;;);
+
+
+   }
+
+
+que2
+
+#include<stdio.h>
+#include<signal.h>
+int count=0;
+void a();
+void b(){
+	
+	
+	
+	if(count%2!=0)
+	printf("QQ\n");
+	count++;
+	signal(SIGINT,a);
+}
+void a(){ 
+	
+	if(count%2==0)
+	printf("PP\n");
+	
+	count++;
+	
+	signal(SIGINT,b);
+ }
+main()
+{  
+	signal(SIGINT, a);
+	for(;;);
+
+
+   }
+
+que2a
+
+#include<stdio.h>
+#include<signal.h>
+void a();
+void b(){	
+	printf("QQ\n");
+	signal(SIGINT,SIG_DFL);
+}
+void a(){ 
+	printf("PP\n");
+	
+	signal(SIGINT,b);
+ }
+main()
+{  
+	signal(SIGINT, a);
+	for(;;);
+
+
+   }
+
+que3
+
+#include<stdio.h>
+#include<signal.h>
+int p=1;
+void a(){ 
+	
+	printf("Do you want to terminate? Enter 0 for yes 1 for no: ");
+	scanf("%d",&p);
+	
+ }
+main()
+{  
+	signal(SIGINT, a);
+	while(p==1);
+
+
+   }
+
+que4
+
+#include<stdio.h>
+#include<signal.h>
+int count=0;
+void a(){ 
+	count++;
+	for(int i=count-1;i>=0;i--){
+	printf("X\n");
+	}
+	
+	signal(SIGINT,a);
+ }
+main()
+{  
+	signal(SIGINT, a);
+	for(;;);
+
+
+   }
+
+que5
+
+#include<stdio.h>
+#include<signal.h>
+int t1,t2;
+void a(){ alarm(1);t1++;}
+
+void b(){ 
+	
+	printf("%d\n",t1-t2);
+	t2=t1;
+}
+
+main(){ 
+
+	signal(SIGALRM,a);
+		alarm(1);
+	signal(SIGINT,b);
+	for(;;);
+}
+
+que6
+
+#include<stdio.h>
+#include<signal.h>
+
+main()
+{  
+	signal(SIGINT, SIG_DFL);
+	for(;;){
+		printf("Z\n");
+	}
+
+
+   }
+
+que9
+
+#include<stdio.h>
+#include<signal.h>
+void g(){ 
+	printf("AA\n");
+	alarm(3);
+	signal(SIGALRM,g);
+}
+
+main(){ 
+	alarm(3);
+	signal(SIGALRM,g);
+	for(;;);
+}
+
+que9a
+
+#include<stdio.h>
+#include<signal.h>
+int time=3;
+void g(){ 
+	printf("AA\n");
+	alarm(time++);
+	signal(SIGALRM,g);
+}
+
+main(){ 
+	alarm(time++);
+	signal(SIGALRM,g);
+	for(;;);
+}
+
+que10
+
+#include<stdio.h>
+#include<signal.h>
+void h(){
+	printf("AA\n");
+	}
+void g(){ 
+	alarm(3);
+	signal(SIGALRM,h);
+}
+main(){ 
+	
+	signal(SIGINT,g);
+	for(;;);
+}
+
+
+que10a
+
+#include<stdio.h>
+#include<signal.h>
+int p=0;
+void h(){
+	p=1;
+	}
+void g(){ 
+	alarm(3);
+	signal(SIGALRM,h);
+}
+main(){ 
+	
+	signal(SIGINT,g);
+	while(p==0);
+	}
+
+que11
+
+#include<stdio.h>
+#include<signal.h>
+int p=0;
+void g(){ 
+p=1;
+}
+main(){ 
+	
+	alarm(1);
+	signal(SIGALRM,g);
+	while(p==0){
+	printf("A");
+	}
+}
+
+que12
+
+#include<stdio.h>
+#include<signal.h>
+int count=1;
+void g(){ 
+	printf("%d\n",count++);
+	alarm(1);
+	signal(SIGALRM,g);
+}
+main(){ 
+	
+	alarm(1);
+	signal(SIGALRM,g);
+	for(;;);
+}
+
+
+
+que13
+
+#include <stdio.h>
+  #include <signal.h>
+  int f = 0;
+  void a(){
+    printf("%dX\n", getpid());
+  }
+  void b(){
+    if(f)
+        printf("%dZ\n", getpid());
+    else
+        printf("%dY\n", getpid());
+    f^=1;
+  }
+
+  int main(){
+    printf("%d\n", getpid());
+    int q = fork();
+    if(q!=0)
+        signal(SIGINT, a);
+    else
+        signal(SIGINT, b);
+    for(;;);
+  }
+
+
+
+que14
+
+#include <stdio.h>
+#include <signal.h>
+int f = 0;
+void a(){
+    printf("%dX\n", getpid());
+}
+void b(){
+    if(f)
+        printf("%dY\n", getpid());
+    else
+        printf("%dX\n", getpid());
+    f^=1;
+}
+
+int main(){
+    printf("%d\n", getpid());
+    int q = fork();
+    if(q!=0)
+        signal(SIGINT, a);
+    else
+        signal(SIGINT, b);
+    for(;;);
+}
+
+
+
+
+
+
+
+
+
