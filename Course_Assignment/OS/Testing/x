@@ -1,0 +1,5 @@
+p="ram shyam hari"
+for i in $p
+do
+echo $i
+done

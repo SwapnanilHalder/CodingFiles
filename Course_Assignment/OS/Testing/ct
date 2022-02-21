@@ -1,0 +1,4 @@
+date="echo ram"
+date
+./date
+$date

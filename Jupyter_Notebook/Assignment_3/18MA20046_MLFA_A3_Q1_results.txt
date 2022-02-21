@@ -1,0 +1,6 @@
+Name : Swapnanil Halder
+Roll No. : 18MA20046
+
+Accuracy on test set using UniformNet :  0.9108
+Accuracy on test set using PyramidNet :  0.6666
+Accuracy on test set using InvPyramidNet :  0.6544

@@ -1,0 +1,7 @@
+Name : Swapnanil Halder
+Roll No. : 18MA20046
+
+Accuracy on MNIST data : 
+
+Accuracy on test set coding backpropagation from scratch :  0.9359
+Accuracy on test set using standard libraries :  0.9398
