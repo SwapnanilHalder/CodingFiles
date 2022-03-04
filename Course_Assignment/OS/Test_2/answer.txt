@@ -1,0 +1,86 @@
+Name : Swapnanil Halder
+Roll No. : 18MA20046
+
+1 => 
+
+int main() {  
+    int p,q;
+    p=getpid();
+    fork(); fork(); fork(); fork();
+    if(p==getpid()){
+        fork(); fork(); fork(); fork(); fork(); fork(); fork();
+    }
+    printf("T");fflush(stdout);
+    sleep(1);
+}
+
+2 =>
+int g(int num) {
+    while(num >= 10) {
+        if(fork() == 0)
+            return num%10;
+        num /= 10;
+    }
+    return num;
+}
+
+3 =>
+
+PIDs :
+main = 40522
+child1 = 40529
+child2 = 40530
+grandchild2 = 40532
+grandchild1 = 40531
+
+Returns : 
+40522 returns 40530
+40529 returns 40531
+40530 returns 40532
+40532 returns 0
+40531 returns 0
+
+4 =>
+
+#include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdlib.h>
+
+// create a file named file_name
+
+int main() {
+    int file = open("file_name", O_RDWR);
+    int i=0;
+    if (fork()){
+        while (!i)
+            i=lseek(file,0,SEEK_END);
+        printf("M\n");
+    }
+    else {
+        printf("U\n");
+        write(file, "U", 1);
+    }
+}
+
+5 =>
+
+hari ravi gopal sani kapil 27 anil
+
+6 =>
+
+#include<stdio.h>
+#include<pthread.h>
+int u,k=0;
+void *d() {
+    scanf("%d",&u);
+    u <<=1 ; 
+    k=1;
+}
+main() {
+    pthread_t a;
+    pthread_create(&a,NULL,&d,NULL);
+    sleep(5);
+    if (k) printf("%d\n",u); else printf("68");
+}
+

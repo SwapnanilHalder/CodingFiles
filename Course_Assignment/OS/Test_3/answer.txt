@@ -1,0 +1,45 @@
+Name : Swapnanil Halder
+Roll No. : 18MA20046
+
+1 =>
+Let there be 3 Memory Blocks B1, B2, B3
+Process	Needs		Internal Fragmentation		External Fragmentation
+A		339           287(B1=339+287=626)		
+B		178                                         229(B2+B3=229)
+C		47            24(B2=47+24=71, B3=229-B2=158)
+
+Sizes of Parts :
+Process A => 626
+Process B => 158
+Process C => 71
+
+2 =>
+
+rdsm011001 -> physical address for virtual 10011001
+memory need of the process = 109
+
+3 =>
+
+a = 121
+b >= 38 ; b <= 54
+c >= 11 ; c <= 71
+
+4 =>
+
+Job     Arrival         Service         Interval                           Waiting Time
+A           0                  1075         0-80 , 185-1180              105 + 20 = 125
+B           80                100           80-91 , 96-185                5 + 20 = 25
+C           91                 5                  91-96                                 0
+
+5 =>
+
+y11=87         no transfer       p5(RAM):uv87
+print(y10)     5773D->R          p5(RAM):5787
+over p5:5787R->D
+
+6 =>
+
+76P, 78Q
+92P, 44Q
+76P, 56Q
+79P, 44Q

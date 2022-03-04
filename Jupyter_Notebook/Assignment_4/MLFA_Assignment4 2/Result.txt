@@ -1,0 +1,14 @@
+Name : Swapnanil Halder
+Roll No. : 18MA20046
+
+Problem 1:
+Accuracy of predicting label of each year using Decison Tree of depth 10: 0.55
+Accuracy of predicting label of each year using Random Forest with 20 estimators of depth 10: 0.77
+Accuracy of predicting label of each location on any given year using Decison Tree of depth 10: 0.71
+Accuracy of predicting label of each location on any given year using Random Forest with 20 estimators of depth 10: 0.72
+
+Problem 2:
+Accuracy of predicting label of image using Decison Tree of depth 20: 0.87
+Accuracy of predicting label of image using Decison Tree of depth 50: 0.87
+Accuracy of predicting label of image using Random Forest with 20 estimators of depth 20: 0.93
+

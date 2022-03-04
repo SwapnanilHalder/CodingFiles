@@ -1,0 +1,43 @@
+Group 1	Assignment 4 Results:
+Tree depth: 20
+DT cross val score: 0.8720380952380953
+DT test accuracy: 0.8716571428571429
+Tree depth: 25
+DT cross val score: 0.870761904761905
+DT test accuracy: 0.8727428571428572
+Tree depth: 30
+DT cross val score: 0.8705904761904761
+DT test accuracy: 0.8709142857142858
+Tree depth: 35
+DT cross val score: 0.8702666666666667
+DT test accuracy: 0.8701714285714286
+Tree depth: 40
+DT cross val score: 0.8705714285714287
+DT test accuracy: 0.8713142857142857
+Tree depth: 45
+DT cross val score: 0.8694285714285714
+DT test accuracy: 0.8697142857142857
+Tree depth: 50
+DT cross val score: 0.8692952380952381
+DT test accuracy: 0.8692
+Tree depth: 20
+RF cross val score: 0.9673714285714287
+RF test accuracy: 0.9647428571428571
+Tree depth: 25
+RF cross val score: 0.9675619047619047
+RF test accuracy: 0.9668
+Tree depth: 30
+RF cross val score: 0.9680761904761905
+RF test accuracy: 0.9660571428571428
+Tree depth: 35
+RF cross val score: 0.9677523809523809
+RF test accuracy: 0.9659428571428571
+Tree depth: 40
+RF cross val score: 0.9682095238095239
+RF test accuracy: 0.9668
+Tree depth: 45
+RF cross val score: 0.9683809523809523
+RF test accuracy: 0.9669142857142857
+Tree depth: 50
+RF cross val score: 0.9680571428571427
+RF test accuracy: 0.9661714285714286
