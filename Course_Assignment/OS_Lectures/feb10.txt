@@ -1,0 +1,45 @@
+Method of password.
+Users  Password   CP  ZKP
+Anil    17        39
+Dipu    8         21
+Gyan    29        63
+Hari    8         21
+Jalaj   5              189
+How to give security to password. Do not store password. Store coded password.
+coding scheme is 2P+5 (CP). Let some one knows coded passwd of Anil 39.
+He can not know origional password until coding scheme is known.
+Zero knowledge password.
+Coding scheme P^3+7P+29
+Let P=5   125+35+29=189 is coded passwd.
+Even after knowing coding scheme and coded password the actual pasword can not be obtained.
+When someone wants to login. He will give password. The claimed password will be coded under given scheme. 
+If code matches with coded passwd then enrty permitted.
+When someone forgets password.
+Coding scheme satisfies following
+1) Coding is easy.
+2) Decoding in general is hard.
+3) Decoding is easy for the designer of coding scheme.
+
+Let coding scheme is 187P+59.
+Password 7. Coded pasword: 7*187+59=1309+59=1368.
+
+To know actual password (1368-59)/187 is done.
+x*y is easy   z/y is hard.
+Any person can not  do division by 187.
+How System Administrator will do decoding when
+some user forgets password.
+He divides by 17 and 11.
+1368/17=80
+80/11=7.
+OS stores 187P+59.
+Admistrartor know 187=17*11.
+
+How factors of 187 are known to Administrator only.
+
+Administrator took a and b two primes.
+K=a*b is done by him.
+In OS K is stored. coded password is stored.
+Division by K is hard.
+Administrator can easily divide by K by dividing by a and b.
+conclusion: Getting factor of a number is not easy.
+Getting a number whose factors are known is easy.

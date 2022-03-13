@@ -1,0 +1,61 @@
+Resource J can be given to which persons. 
+Person  Given   Additional need
+Anil      AB      JK
+Dipu      C       JH
+Gyan      DE      JF
+Hari      FG      JA
+Jalaj     H       JLU
+Kapil     I       JV
+Suresh    U       Y
+Umesh     Y       JT
+Yogesh    V       Z
+Ravi      K       S
+
+Let Anil asks for J. It should be given or not.
+Anil can be done after Ravi is over.
+Let Ravi complete then Anil will complete.
+J can be given to Anil.
+
+Let Dipu asks for J. 
+Dipu depends on H. It is with Jalaj.
+Dipu can be completed after the completion of Jalaj.
+If J is given to Dipu then Jajaj can not complete.
+Hence J should not be given to Dipu.
+
+Resource allocation graph.
+H given to Jalaj. H-->Jalaj
+Dipu may need H in future. Dipu-->H
+J given to Dipu. J-->Dipu
+Jajal may need J. Jalaj-->J 
+H-->Jalaj-->J-->Dipu-->H cycle Deadlock
+Hence it is not safe to give J to Dipu.
+
+A resource M can not be given to a person Pankaj
+if Pankaj needs a resource N which is with Sani
+and Sani may need M in the future. 
+
+Whether J can be given to Jalaj?
+Let given  J-->Jalaj
+Jalaj may need U   Jalaj-->U
+U is with Suresh   U-->Suresh
+Suresh may need Y. Suresh-->Y
+Y is with Umesh. Y-->Umesh
+Umesh may need J. Umesh-->J
+A resource(R) should not be given to a person (K) if K may need Q also which is with a person who may need P.
+P is with a person who many need R.
+ 
+Person  Given  Additional Need
+Anil    3P,4Q   2P,9Q
+Dipu    4P,3Q   8P,3Q
+Gyan    3P,2Q   5P,5Q
+How many additional minimum P and Q are needed to complete?
+Minimum additional need
+5P,5Q or 8P,4Q  or 2P,9Q
+
+
+Person  Given  Additional Need
+Hari    3P,4Q   2P,9Q
+Lalit   4P,1Q   8P,3Q
+Ravi    3P,4Q   7P,5Q
+Minimum additional need.
+4P,9Q or 8P,4Q or 7P,5Q

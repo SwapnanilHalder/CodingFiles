@@ -1,0 +1,74 @@
+1) Programmed driven I/O
+The request is sent to disk. Repeated check is made whether work is done. When work is over then normal execution proceeds. CPU is in busy-wait condition during I/O.
+Job Ready Service    Interval
+A    0    60[80]40   0-180
+B   10    90         180-270
+During 60-140 cpu is not doing any computation.
+60[80]40 means 60 units of execution. 80 units of I/O and 40 units of execution after I/O.
+80 unit of I/O 10 unit time to send information.
+60 unit of disk operation.
+10 unit time to transfer information to main memory.
+2) Interrupt driven I/O
+The request is sent to disk. When work is over disk sends a signal. 
+Job Ready Service    Interval-cpu   Interval disk
+A    0    60[80]40   0-70,160-210    70-130
+B   10    90         70-160
+Normal execution from t=0 to 60.
+What is to be done is sent to disk t=60-70
+t=70-130 disk I/O is done.
+At t=130 interrupt is sent that work is over.
+At t=160-170 cpu picks information from disk.
+170-210 normal execution.
+Disk operation is done in parallel with CPU execution of some other job.
+3) DMA: Direct memory access
+Whatever is to be done is written at some place in the main memory. 
+P: Disk picks information from main memory.
+Q: Disk carries required work.
+R: Disk transfers information to main memory.
+Cpu can do the execution of some other job during PQR.
+Job Ready Service    Interval-cpu   Interval disk
+A    0    60[80]40   0-60,150-190
+B   10    90         60-150
+During 60-70 Disk picks information.
+70-130 disk operations.
+130-140 disk transfers information to main memory.
+60-70 and 130-140 both cpu and disk are using main memory. Disk works in cycle stealing mode.
+------------------------------------------------
+Total memory 100 Shortest remaining time next
+Swap in-out time is 5.
+Job  Memory Ready Service  Intervalprogrammed I/O
+P     40     0     100     0-20,80-160
+Q     40     20     40     20-40,55-75
+R     40     40     10     45-55
+40-45 Job P is swapped out[Main memory to disk]
+75-80 Job P is swapped in [Disk to main memory]  
+
+Job  Memory Ready Service  IntervalDMA
+P     40     0     100     0-20,70-150
+Q     40     20     40     20-45,55-70
+R     40     40     10     45-55
+40-45 Job P is swapped out[Main memory to disk]
+55-60 Job P is swapped in [Disk to main memory] 
+40-45 swap out of P and execution of Q is going on.
+55-60 execution of Q and swap in of P is going on.
+Job  Memory Ready Service  IntervalDMA
+P     80     0     100     0-40,60-120
+Q     10     20    200     40-45,55-60,120-310
+R     80     40     10     45-55
+40-45 swap out of P and execution of Q is going on.
+55-60 execution of Q and swap in of P is going on.
+Job  Memory Ready Service  IntervalDMA
+P     80     0     100     0-20,105-185
+Q     80     20     40     25-65
+R     10     40     40     65-105
+20-25 swap-out of P is going on.
+65-70 swap in of P and execution of R is going on.
+Job  Memory Ready Service  IntervalDMA
+P     80     0     100     0-20,105-185
+Q     10     20     40     20-60
+R     80     40     40     60-100
+40-45 swap-out of P and execution of P
+100-105 Swap in of P.
+
+ 
+

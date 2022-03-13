@@ -1,0 +1,46 @@
+1:In log updated values of variables are written.
+2:done is written in log
+3:actual information is updated
+4:over is written in log.
+When power fails.
+On the arrival of power following method followed.
+A: done not written. Do from beginning. do +,-.
+Recalculation is done using actual information.
+B: done written but over not written. do log only[not+-].
+Actual information is updated using log only.
+C: over written. Do not do anything. 
+
+Actual Information
+Dipu 8142
+Hari 3445
+Anil 6267
+Cheque: Pay to Anil 1013 by Dipu.
+Anil=Anil+1013
+Dipu=Dipu-1013
+Step 1: Anil=7280 Dipu=7129 only in log
+Step 2: done in log
+Step 3:
+Actual Information
+Dipu 7129
+Hari 3445
+Anil 7280
+Step4: over in log.
+
+
+Initial Memory
+0:3445  1:    2:   3:6267     4:8142    5:      6:    free 1,2,5,6
+Dipu:4
+Hari:0
+Anil:3
+Anil=Anil+1013
+Dipu=Dipu-1013
+
+0:3445  1:7129    2:7280   3:6267     4:8142    5:      6:  free 5,6
+Dipu:4,1
+Hari:0
+Anil:3,2
+done written
+Dipu:4<-1
+Hari:0
+Anil:3<-2
+over written

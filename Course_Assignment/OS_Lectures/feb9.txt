@@ -1,0 +1,54 @@
+States of a process
+1) Running: CPU is given.
+2) Ready state: Except cpu every thing is available
+3) Blocked state: Process does not want to execute.
+4) Suspand: Process does not have resource.
+
+FCFS: First come first serve
+Job Resoure Arrival Sevice    Run      Ready   Suspend
+A    R       0       20       0-20
+B    S       5        8      20-28     5-20
+C    R       12       5      28-33     20-28   12-20
+
+SJF: Shortest Job first
+Job  Resource Arrival  Service  Run    Ready    Suspend
+A     R         0        20     0-20
+B     S         5         8     25-33   5-12     12-25
+C     S        12         5     20-25  12-20
+
+SJF: Shortest Job first
+Job  Resource Arrival  Service  Run       Ready         Suspend
+A     R         0        20    0-20  
+B     S         5         8    33-41      5-12,25-27    12-25,27-33  
+C     S        12         5    20-25      12-20
+D     U        15         6    25-31      15-25
+E     S        27         2    31-33      27-31
+
+Job   Arrival  Service     Run        Ready     Blocked
+A       0       10(8)20    0-10,18-38            10-18
+B       8       5         10-15        8-10
+10(8)20 means execute10. rest for 8, execute 20  
+
+Job   Arrival  Service     Run          Ready     Blocked
+A       0       10(8)20    0-10,20-40   18-20     10-18
+B       8       10         10-20        8-10 
+
+
+Job Resource  Arrival     Service        Run          Ready     Blocked     Blocked-Suspend
+A       R       0          10(8)20       0-10,18-38             10-12,17-18    12-17
+B       S       8          5             10-15         8-10
+C       R       12         2             15-17         12-15
+
+Job Resource  Arrival     Service        Run          Ready     Blocked  Suspend
+A       R       0          10(8)20       0-10,20-40              10-12,    12-20
+B       S       8          5             10-15         8-10
+C       R       12         5             15-20         12-15
+suspend time of Job A  12-18Blocked Suspend     18-20Ready suspend
+Blocked suspend: Job does not want to execute and does not has resource.
+Ready suspend: Job does not have cpu and resource.
+
+Earliest ready job first
+Job  Resource  Arrival Service    Run       Ready    Suspend
+A     R         0       20        0-20
+B     R         12      4         30-34     20-30      12-20
+C     S         15      10        20-30     15-20  

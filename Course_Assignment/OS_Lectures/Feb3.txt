@@ -1,0 +1,84 @@
+Virtual Memory Replacement algorithm
+  FIFO LRU Optimal  3 frames
+a
+b
+c 
+a  abc  bca
+d  bcd  cad bcd
+b
+
+-----------------------
+Following is second chance. 3 frames.
+a
+b
+c 
+d ar,br,cr->a,b,c->b,c,dr,
+b br,c,dr,
+e c,dr,b->dr,b,er,
+------------------------------
+Following is second chance. 5 frames.
+a
+b
+c
+a
+d
+e
+f    bcdef
+b    br,c,d,e,f
+e    br,c,d,er,f
+c    br,cr,d,er,f
+g    cr,d,er,f,b->d,er,f,b,c->er,f,b,c,g
+
+Disk(D)     
+a=45  b=87  page:u 4587
+c=29  d=92  page:v 2992
+e=43  f=35  page:w 4335
+g=94  h=82  page:y 9482
+
+Let RAM capacity is 3
+                 RAM FIFO    LRU      Optimal  Second chance
+print(b)   87:D->R    b      b        b         br
+print(d)   92:D->R    bd     bd       bd        br,dr
+print(a)   45:D->R    bda    bda      bda       br,dr,ar
+print(b)    nil              dab                br,dr,ar
+print(a)    nil              dba                br,dr,ar
+print(e)   43:D->R    dae    bae      bde       dr,ar,b->ar,b,d->b,d,a->d,a,er
+print(d)              dae  92:D->Raed bde       dr,a,er
+print(b)   87:D->R    aeb  87:D->Redb bde       a,er,d->er,d,br
+print(a)                   45:D->Rdba 45:D->R   d,br,e->br,e,ar
+Varible removed is victim.
+Disk to Ram data transfer is fault. 
+FIFO: First brought variable is removed.victim b
+LRU:Least receantly used. victim d
+Optimal: Will be used after lot of time is future victim a
+Clock algorithm: A referenced variable is given another chance.
+Assume Ram capacity 5
+a   ar,
+b   ar,br,
+c   ar,br,cr
+d   ar,br,cr,dr
+e   ar,br,cr,dr,er,
+f   br,cr,dr,er,a->cr,dr,er,a,b->dr,er,a,b,c->er,a,b,c,d->a,b,c,d,e->b,c,d,e,fr
+b    br,c,d,e,fr
+e    br,c,d,er,fr
+c    br,cr,d,er,fr
+g    cr,d,er,fr,b->d,er,fr,b,c->er,fr,b,c,gr
+k    fr,b,c,gr,e->b,c,gr,e,f->c,gr,e,f,kr
+
+Let following is first in first out capacity 3 variables.
+print(a)   45:D->R       a45,
+b=74        nil          a45,b74
+print(c)  29:D->R        a45,b74,c29
+print(a)  nil            a45,b74,c29
+d=56      nil            b74,c29,d56
+print(f)  35:D->R,74R->D c29,d56,f35
+------------------------------------------
+Ram capacity 2 pages
+print(b) 4587:D->R                u4587
+e=83      nil                     u4587,w83gh
+a=42                              u4287,w83gh
+print(c) 2992:D->R 4287:R->D      w83gh,v2992
+h=93     4335:D->R 8335:R->D      v2992,yst93
+a=56     nil                      yst93,u56as
+g=81     nil                      y8193,u56as
+print(c) 2992:D->R 8193:R->D      u56as,v2992

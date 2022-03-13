@@ -1,0 +1,38 @@
+2 =>
+
+A: run 0-5; t=5 i=1; run 5-78; t=78 i=1;
+B: run 0-20; t=20 i=2; run 20-70; t=70 i=2, signal z[1]=C;
+C: run 0-53; t=53 i=3; z[1]=C stop; run 70-112; t=112 i=0;
+D: run 0-94; t=94 i=2; run 94-109; t=109 i=1;
+
+
+A [run  5][g][run 73][h]
+B [run 20][g][run 50][h]
+C [run 53][g][run 42][h]
+D [run 94][g][run 15][h]
+
+
+A [run  5][g][run 73][h]
+B [run 20][g][run 45][h]
+C [run 47][g][run 59][h]
+D [run 87][g][run 35][h]
+
+
+1 =>
+
+g = 47                nil                        y47gh
+print(h)             9482 D->R                   y4782
+print(i)             8428 D->R                 y4782, z8428
+print(c)             2993 D->R, y4782 R->D     z8428, v2992
+
+3 =>
+
+(12823 zero)1(6457 zero)1(23 zero)1(22 zero)
+(200*64 zero),(23 zero)1(40 zero),(100*64 zero),(17 zero)1(23 zero)1(22 zero)
+code: (64 zero)10010111(100 zero)11(17 zero)1(23 zero)1(22 zero)
+
+(6437 zero)1(19252 zero)1(17 zero)1(19 zero)
+(100*64 zero),(37zero)1(26 zeros)(300*64 zero)(26 zeros)1(17zero)1(19 zero)
+
+(12823 zero)1(6457 zero)1(23 zero)1(22 zero)
+(6437 zero)1(19252 zero)1(17 zero)1(19 zero)

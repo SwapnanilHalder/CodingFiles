@@ -1,0 +1,51 @@
+Job1  [A5][B7][C3][D5] (BC tritical)
+Job2  [E8][F5][G7][H6] (FG critical)
+
+Initial Y is 0. 
+Before enetering critical section 
+while(Y!=0);
+Y=9; is done
+On exit Y=0 is done
+
+Job1 [A0-5][t=5-6 while(Y!=0);][t=6-7 Y=9][7-14B][14-17C][t=17-18 Y=0][18-23D]
+Job2 [E0-8][t=8-9 while(Y!=0);][t=9-18 while(Y!=0);][t=18-19 Y=9][F19-24][G24-31][31-32Y=0][H32-38]
+---------------------------------------------------------------------
+How can above fail?
+Job1: [P5][Q5]  Q critical
+Job2: [U5][V7]  V critical
+[P0-5][t=5-6 while(Y!=0);][t=6-7 Y=9][7-12Q]
+[U0-5][t=5-6 while(Y!=0);][t=6-7 Y=9][7-14V]  Mutual exculion of critical section not maintained
+------------------------------------------------------------------------ 
+Initial P and Q are 0.
+Job1: P=9; while(Q==9); at entry and P=0 at exit
+Job2: Q=9; while(P==9); at entry and Q=0 at exit
+Job1: [G5][H5]  H critical
+Job2: [U2][V7]  V critical
+Job1: [0-5G][t=5-6 P=9][t=6-12 while(Q==9);]                     [12-17H][17-18Q=0]
+Job2: [0-2U][t=2-3 Q=9][t=3-4while(P==9);][t=4-11 V][t=11-12 Q=0]
+Prove both can not execute critical section together.
+Without loss of generality Let t(P=9)<=t(Q=9)
+t(P=9)<=t(Q=9)<while(P==9);  hence job2 waits.
+Job1: [G5][H5]  H critical
+Job2: [U5][V7]  V critical
+[G0-5][t=5-6 P=9][t=6-7 while(Q==9);]
+[U0-5][t=5-6 Q=9][t=6-7 while(P==9);]   
+Deadlock both wait infinite.
+------------------------------------------------------------------------------
+Initial P and Q are 0.
+Job1:R=1; P=9; while((Q==9)and(R==1)); at entry and P=0 at exit
+Job2:R=2; Q=9; while((P==9)and(R==2)); at entry and Q=0 at exit
+Job1: [G5][H5]  H critical
+Job2: [U5][V7]  V critical
+[G0-5][t=5-6R=1][t=6-7P=9][t=7-8while((Q==9)and(R==1));][8-13H][13-14P=0]
+[U0-5][t=5-6R=2][t=6-7Q=9][t=7-8while((P==9)and(R==2));]                [14-21V][21-22Q=0]
+Without loss of generality let R=2 is retained. Hence Job1 enters critical section.
+How can it fail
+Job1: [G5][H5]  H critical
+Job2: [W6][V7]  V critical
+[G0-5][t=5-6R=1]                                                 [t=9-10P=9][while((Q==9)and(R==1));[H10-15]
+[W0-6]         [t=6-7R=2][t=7-8Q=9][t=8-9while((P==9)and(R==2));][V9-16]
+Following is Peterson Algorithm
+J1: P=9 R=1 while(Q==9)and(R==1); at entry and P=0 at exit
+J2: Q=9 R=2 while(P==9)and(R==2); at entry and Q=0 at exit
+Let t(R=1)<t(R=2) hence t(P=9)<while(P==9) and (R==2); hence J2 waits.

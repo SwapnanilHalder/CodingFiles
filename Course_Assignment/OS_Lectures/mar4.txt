@@ -1,0 +1,30 @@
+Dynamic Partition
+Total memory 100 0-99 Multiple CPU All ready time 0
+Job Memory Service Memory  Interval
+    need   time    allocated
+A    5      20     0-4      0-20 
+B   15      10     5-19     0-10
+C   10      20     20-29    0-20
+D   10      10     30-39    0-10
+E   5       20     40-44    0-20
+F   25      10     45-69    0-10
+G   25      20     70-94    0-20
+H   30      15              20-35
+I    7      15      z       10-25
+J   18      15              10-25
+K   15      15              10-25
+L   10      15              10-25(worst fit)  20-35(best fit)
+During 0-10 only 95-99[5] free
+At t=10 5-19[15]  30-39[10] 45-69[25] 95-99[5] free.
+At t=10 job H has external fragementation of 15+10+25+5=55
+During 10-20 job H has external fragementation of 48.
+z is 
+5-11 first fit  Advantage: easy to implement.
+30-36best fit   Disadvantage: makes very small holes
+45-51worst fit  Disadvantage: makes middle size holes
+At t=10
+First fit I[5-11] J[45-62] Kwait
+Best  fit I[30-36] J[45-62] K[5-19] Lwaits
+Worst fit I[45-51] J[52-69] K[5-19] L[30-39]
+Let J K L need 25, 5, 5 memory then K waits in worst fit. But not in first/best.
+What are sizes of JKL so that wait is in best and worst fit. But not in first fit.

@@ -1,0 +1,44 @@
+Critical Section
+A [run 0][critical 10]
+B [run 2][critical 5]
+C [run 8][critical 7]
+D [run 12][critical 2]
+at enter P   at exit V
+A [run 0]P[run 10]V
+B [run 2]P[run 5]V
+C [run 8]P[run 7]V
+D [run 12]P[run 2]V
+initial i=0
+P:i++; if i>1 {u=i-1;z[u]=-1;while(z[u]<0)skip;}  u is local
+V:i--; if i>0 z[i]++;
+A[0-0run]t=0i=1    [0-10run] t=10 i=2 z[2]=0
+B[0-2run]t=2i=2u=1;z[1]=-1;while(z[1]<0)skip;[19-24run]t=24i=0
+C[0-8run]t=8i=3u=2;z[2]=-1;while(z[2]<0)skip;[10-17run]t=17i=2z[2]=0
+D[0-12run]t=12i=3u=2;z[2]=-1;while(z[2]<0)skip;[17-19run]t=19i=1z[1]=0
+
+modified w:wait   s:signal
+A [run 0][w][run 10][s]
+B [run 2][w][run 5][s]
+C [run 8][w][run 7][s]
+D [run 12][w][run 2][s]
+initial i is 0
+wait:i++; if i>1 z[i-1]=id; stop
+signal:i--; if i>0 signal(z[i]) 
+A           t=0 i=1 [0-10run]     t=10 i=2 signal(z[2]C)
+B t=0-2run  t=2 i=2 z[1]=B stop [19-24run]t=24i=0
+C t=0-8run  t=8 i=3 z[2]=C stop [10-17run]t=17i=2 sig(Dz[2])
+D t=0-12run t=12i=3 z[2]=D stop [17-19run]t=19i=1 sig(Bz[1])
+
+Dining philosopher's problem
+A  P  B
+S     Q
+D  R  C
+ABCD spoons and PQRS persons.
+Spoons are not marked.
+For eating 2 spoons are needed.
+First pick right then left.
+spoon picking 5 unit time and eating 20 unit time
+Person ready  right pick   left pick   eat
+S      40       D40         A45/101  106-126       
+P      42       A42         B47/76    81-101
+Q      46       B46         C51       56-76

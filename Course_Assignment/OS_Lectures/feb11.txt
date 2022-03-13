@@ -1,0 +1,116 @@
+file a.c contents weryasdfgh
+file k.txt contents zswrtysd
+Directory
+a.c   b
+k.txt c
+
+Disk:
+a:sdz   b:weri   c:zswj     d:        e:hz     
+f:      g:dfge   h:         i:yasg    j:rtya
+z denotes end
+
+a.c logically wer,yas,dfg,h
+w is 0th letter, e is 1st letter, a is 4h letter
+Insert k as 2nd letter  we,kr,yas,dfg,h
+
+Disk:
+a:sdz   b:weh   c:zswj         d:        e:hz     
+f:      g:dfge   h:kri         i:yasg    j:rtya
+-----------------------------------------
+Every block has atleast 2 and atmost 3 letters.
+When 1 letter: adjust load with neighbour
+---------------------------------------------
+m.c: qwersdfvbhjk  logical qw,ers,dfv,bh,jk
+m.c:d
+disk:
+a:bhc   b:erse    c:jkz   d:qwb    e:dfva
+
+Delete w: q,ers,dfv,bh,jk->qe,rs,dfv,bh,jk 
+a:bhc   b:rse    c:jkz   d:qeb    e:dfva
+----------------------------------------------
+u.txt sxcghifdmt  logical sxc,gh,if,dmt
+u.txt d
+a:dmtz  b:  c:ghe   d:sxcc  e:ifa
+Delete 3rd leter sxc,h,if,dmt->sx,ch,if,dmt
+a:dmtz  b:  c:che   d:sxc  e:ifa
+  or
+u.txt sxcghifdmt  logical sxc,gh,if,dmt
+u.txt d
+a:dmtz  b:  c:ghe   d:sxcc  e:ifa
+Delete 3rd letter sxc,h,if,dmt->sxc,hif,dmt
+a:dmtz  b:  c:   d:sxce  e:hifa
+----------------------------------------
+abc,de,fg is given delete d
+abc,e,fg
+can be ab,ce,fg    or  abc,efg
+-------------------------------------
+abc,de,fgh  delete e
+abc,d,fgh
+can be ab,cd,fgh   or  abc,df,gh
+---------------------------------------
+pq,rs,tu  delete s  pq,r,tu
+can be pqr,tu or pq,rtu
+--------------------------------------
+abc,de  insert m as 1st letter ambc,de
+changed to am,bc,de   [not amb,cde]
+------------------------------------
+Overloading  split.
+Underloading merge/shift
+------------------------------
+uv,ghi   delete u vg,hi
+qw,er    delete q wer
+-------------------------------
+file is qwe,ty,rse delete t  qwe,y,rse
+qw,ey,rse  or  qwe,yr,se
+----------------------------------
+file qwertyuighsd
+qwe,rt,yu,igh,sd
+[qwe,rt,yu][igh,sd]
+insert m as 1st letter
+[qmwe,rt,yu][igh,sd]
+[qm,we,rt,yu][igh,sd]
+[qm,we][rt,yu][igh,sd]
+-----------------------------------------
+[abc,de,fgh][ij,kl]
+delete k
+[abc,de,fgh][ij,l]
+[abc,de,fgh][ijl]
+[abc,de][fgh,ijl]
+-------------------------------------
+[ab,de][fgh,ij,klm] delete b [ade,fgh][ij,klm]
+[ab,de][fgh,ij] delete b  [ade,fgh,ij]
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+                                  

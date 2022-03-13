@@ -1,0 +1,21 @@
+Data compression
+Make block of size 4.
+Block is completely 0. It is put as 0.
+Block has single 1. 10addr
+Block has 2 or more 1's. 11block
+File 0100000001101000
+block 0100,0000,0110,1000
+0100->1001
+0000->0
+0110->110110
+1000->1000
+100101101101000 is code.
+--------------------------------------------------
+Method n 0's is n/2 a's upperbound followed by ba/bb  ba:odd 0  bb:even 0
+n1's is (n-1)b's.
+Insert 1 at beginning and at last.
+Example: code  10010001110
+It is made as 1100100011101
+11,00,1,000,111,0,1
+b,abb,,aaba,bb,aba,,
+babbaababbaba is code

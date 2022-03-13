@@ -1,0 +1,65 @@
+Question 1: Show RAM and transfer in following. RAM capacity 2 pages.
+Use FIFO replacement.
+g=62     
+print(h)   
+print(i)   
+print(c)   
+
+
+Disk(D)     
+a=45  b=87  page:u 4587
+c=29  d=92  page:v 2992
+e=43  f=35  page:w 4335
+g=34  h=91  page:y 3491
+i=72  j=34  page:z 7234
+Do as in following example
+print(b) 4587:D->R                u4587
+e=83      nil                     u4587,w83gh
+a=42      nil                     u4287,w83gh
+print(c) 2992:D->R 4287:R->D      w83gh,v2992
+
+Question 2: Show execution of jobs in following
+A [run  5][g][run 73][h]
+B [run 20][g][run 45][h]
+C [run 47][g][run 59][h]
+D [run 87][g][run 35][h]
+initial i is 0
+g:i++; if i>2 {z[i-2]=id; stop;}
+h:i--; if i>1 signal(z[i-1])
+
+Example:
+G [run  0][w][run 10][s]
+H [run  2][w][run  5][s]
+K [run  8][w][run  7][s]
+L [run 12][w][run  2][s]
+w:i++; if i>1 {z[i-1]=id; stop;}
+s:i--; if i>0 signal(z[i])
+G: run0-0 t=0i=1  run0-10  t=10 i=2 signalKz[2]
+H: run0-2 t=2i=2  z[1]=H stop run19-24 t=24i=0
+K: run0-7 t=7i=3  z[2]=K stop run10-17 t=17i=2 signalLz[2]
+L: run0-12t=12i=3 z[2]=L Stop run17-19 t=19i=1 signalHz[1]
+
+Question 3: Write code of (6437 zero)1(19252 zero)1(17 zero)1(19 zero)
+Block size 64.
+Complete block zero is 0.
+Single one in block 10<addr>
+More one's in block 11<block>
+Show method as shown following. No marks without method.
+Example: (459 zero)1(405 zero)1(7 zero)1(22 zero)
+(7*64zero)[(11zero)1(52zero)](320 zero)[(33 zero)1(7 zero)1(22 zero)]
+code: (7 zero)(10001011)(5 zero)(11)(33 zero)(1)(7 zero)(1)(22 zero)
+
+Question 4:Find related words for A)Dynamic partitioning B)Static partitioning  C)Paging  D)SRTN E)C-Scan F)SSTF
+Write answer in following form
+C-Scan={Least waiting, Internal fragmentation, hole}. A word can come in more than one set.
+Choose from following: Hole, Best fit, Best fit only, Worst fit, Least waiting,
+Internal fragmentation, External fragmentation, Table fragmentation,
+Inverted table, Pre-emption, Compaction, Starvation.
+SSTF : Shortest seek time first in disk scheduling.
+Let location of job A, B, C, D be 45,70,47,34 respectively. Their ready time are 0, 41,42,43 respectively.
+Job A is served at t=45. Now head is at location 45. C is nearest to 45. 47-45=2 70-45=25 45-34=11.
+Job C is served at t=47. Now D is nearest to head. 47-34<70-47. D is served at 60 and B at t=96.
+Compaction is following: Job A is allocated memory 10-19. Memory 0-9 and 20-29 free.
+Job B needs 15 unit memory. Job A is transferred to 0-9. Now 10-29 is free.
+Job B can be allocated. It is called memory compaction.
+Starvation is following: Job A, B, C, ... arrive at t=0, 2, 4, 6, .... Service time of job A and B is 10 each. Service time of others is 2 each. In shortest job first A is served 0-10. C 10-12, D 12-14, E 14-16 and so on. Job B is never served. It is called starvation of B. Because B is never served.
