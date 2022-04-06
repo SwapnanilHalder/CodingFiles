@@ -1,0 +1,8 @@
+for i in $*
+do 
+    case $i in
+    t) ans=$y ;;
+    esac
+    y=$i
+done 
+echo $ans

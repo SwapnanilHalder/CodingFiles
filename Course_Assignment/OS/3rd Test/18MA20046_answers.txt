@@ -1,0 +1,59 @@
+Name : Swapnanil Halder
+Roll No. : 18MA20046
+
+1 =>
+
+
+2 =>
+
+
+3 =>
+
+print(y[10])        73487684      p3:D->R
+y[2]=74             73487684,20abgh74     no transfer
+y[1]=37             73487684,40ab3774     no transfer
+y[4]=87             73487684,40ab3774,11st87pq      no transfer
+y[0]=28             73487684,80283774,11st87pq      no transfer
+over             p0:R->D 283774->D    812927->R 818727->D
+
+print(y[10])        73487684      p3:D->R
+y[2]=74             73487684,20abgh74     no transfer
+y[1]=37             73487684,40ab3774     no transfer
+y[4]=87             73487684,40ab3774,11st87pq      no transfer
+y[0]=28             73487684,80283774,11st87pq      no transfer
+over             p0:R->D 283774->D    812927->R 818727->D
+
+
+print(y[13])  74982085                    p4:D->R
+y[2]=74       74982085,20abcd74           no transfer
+y[1]=37       74982085,40ab3774           no transfer
+y[4]=87       74982085,40ab3774,11ef87gh no transfer
+y[0]=28       74982085,90283774,11ef87gh no transfer
+over     p0:R->D 283774->D  p1:D->R 812927->R 818727->D
+
+print(y[10])        73487684      p3:D->R
+y[2]=98             73487684,20abgh98     no transfer
+y[1]=23             73487684,40ab2398     no transfer
+y[4]=62             73487684,40ab2398,11st62pq      no transfer
+y[0]=47             73487684,80472398,11st62pq      no transfer
+over             p0:R->D 472398->D    812927->R 816227->D
+
+
+
+print(y[13])
+
+y[2]=74
+
+y[1]=37
+
+y[4]=87
+
+y[0]=28
+
+y[2]=74
+
+y[1]=37
+
+y[4]=87
+
+y[0]=28 

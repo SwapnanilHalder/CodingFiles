@@ -1,0 +1,126 @@
+DBMS Assignment
+-----------------------------------
+
+Name : Swapnanil Halder
+Roll No. : 18MA20046
+-----------------------------------
+
+
+Q1 >
+SELECT USER_1.RNo, USER_1.RName,USER_2.RNo,USER_2.RName,Course.CId,Course.CName
+FROM RegUser USER_1,RegUser USER_2,Faculty,Course,CourseReg
+WHERE USER_1.RNo = CourseReg.RNo
+AND Faculty.FId = Course.FId
+AND Course.CId = CourseReg.CId
+AND USER_2.RNo = Faculty.FId
+
+
+Q2 >
+SELECT USER_1.RNo, USER_1.RName,USER_2.RNo,USER_2.RName,Course.CId,Course.CName
+FROM RegUser USER_1,RegUser USER_2,Faculty,Course,CourseReg
+WHERE USER_1.RNo = CourseReg.RNo
+AND Faculty.FId = Course.FId
+AND Course.CId = CourseReg.CId
+AND USER_2.RNo = Faculty.FId
+AND USER_1.Roccu = ‘STUDENT’
+
+
+Q3 >
+SELECT USER_1.RNo, USER_1.RName,USER_2.RNo,USER_2.RName,Course.CId,Course.CName
+FROM RegUser USER_1,RegUser USER_2,Faculty,Course,CourseReg
+WHERE USER_1.RNo = CourseReg.RNo
+AND Faculty.FId = Course.FId
+AND Course.CId = CourseReg.CId
+AND USER_2.RNo = Faculty.FId
+AND USER_1.HighestQual = ‘BTECH’
+
+
+Q4 >
+SELECT USER_1.RNo, USER_1.RName,USER_2.RNo,USER_2.RName,Course.CId,Course.CName
+FROM RegUser USER_1,RegUser USER_2,Faculty,Course,CourseReg
+WHERE USER_1.RNo = CourseReg.RNo
+AND Faculty.FId = Course.FId
+AND Course.CId = CourseReg.CId
+AND USER_2.RNo = Faculty.FId
+AND USER_1.HighestQual = ‘MTECH’
+AND Course.CDept = ‘CS’
+
+
+Q5 >
+SELECT USER_1.RNo, USER_1.RName,USER_2.RNo,USER_2.RName,Course.CId,Course.CName
+FROM RegUser USER_1,RegUser USER_2,Faculty,Course,CourseReg
+WHERE USER_1.RNo = CourseReg.RNo
+AND Faculty.FId = Course.FId
+AND Course.CId = CourseReg.CId
+AND USER_2.RNo = Faculty.FId
+AND USER_1.ROccu <> ‘STAFF’
+AND Course.CDuration = ‘SHORT’
+And Faculty.FDept = ‘CS’
+
+
+Q6 >
+SELECT USER_1.RNo, USER_1.RName,USER_2.RNo,USER_2.RName,Course.CId,Course.CName
+FROM RegUser USER_1,RegUser USER_2,Faculty,Course,CourseReg
+WHERE USER_1.RNo = CourseReg.RNo
+AND Faculty.FId = Course.FId
+AND Course.CId = CourseReg.CId
+AND USER_2.RNo = Faculty.FId
+AND USER_1.HighestQual <> ‘PHD’
+AND Faculty.ResearchArea = ‘AI’
+AND (Faculty.ResearchArea = ‘ML’ or Faculty.ResearchArea = ‘ALGO’)
+
+
+7.Q7 >
+SELECT USER_1.RNo, USER_1.RName,USER_2.RNo,USER_2.RName,Course.CId,Course.CName
+FROM RegUser USER_1,RegUser USER_2,Faculty,Course,CourseReg
+WHERE USER_1.RNo = CourseReg.RNo
+AND Faculty.FId = Course.FId
+AND Course.CId = CourseReg.CId
+AND USER_2.RNo = Faculty.FId
+AND Course.CDept = ‘CS’
+AND Faculty.FDept <> ‘CS’
+GROUP BY USER_1.RNo
+HAVING Count(Course.CId) > 1
+
+
+Q8 >
+SELECT USER_1.RNo, USER_1.RName,USER_2.RNo,USER_2.RName,Course.CId,Course.CName
+FROM RegUser USER_1,RegUser USER_2,Faculty,Course,CourseReg
+WHERE USER_1.RNo = CourseReg.RNo
+AND Faculty.FId = Course.FId
+AND Course.CId = CourseReg.CId
+AND USER_2.RNo = Faculty.FId
+AND (Course.CDuration = ‘SHORT’ or Course.CDuration = ‘MEDIUM’)
+AND Course.CDept in (‘EE’,’CS’)
+AND USER_1.RNo NOT in (SELECT RegUser.RNo from RegUser where RegUser.RNo = CourseReg.RNo
+AND CourseReg.CId = Course.CId
+AND Course.CDept in (‘EE’,’CS’)
+GROUP BY RegUser.RNo, Course.CDept
+HAVING Count(*) = 0)
+
+
+Q9 >
+SELECT USER_1.RNo, USER_1.RName, USER_2.RNo, USER_2.RName, Course.CId, Course.CName
+FROM RegUser USER_1, RegUser USER_2, Faculty, Course, Course Reg
+WHERE USER_1.RNo=CourseReg.RNo 
+AND Faculty.FId=Course.FId 
+AND Course.CId=CourseReg.CId 
+AND USER_2.RNo=Faculty.FId
+AND USER_1.HighestQual='BTECH'
+AND Course.CDept Not In ('EE', 'ME')
+AND Faculty.ResarchArea <> 'DBMS'
+
+
+Q10 >
+SELECT USER_1.RNo, USER_1.RName, USER_2.RNo, USER_2.RName, Course.CId, Course.CName
+FROM RegUser USER_1, RegUser USER_2, Faculty, Course, Course Reg
+WHERE USER_1.RNo=CourseReg.RNo 
+AND Faculty.FId=Course.FId 
+AND Course.CId=CourseReg.CId 
+AND USER_2.RNo=Faculty.FId 
+AND (USER_1.HighestQual='BTECH' or USER_1.HighestQual='MTECH')
+AND (Course.CDept=='EE' or Course.CDept=='ECE')
+AND Course.Cduration='MEDIUM'
+AND Faculty.FDept <> 'ME'
+AND (Faculty.ResarchArea='AI' or Faculty.ResearchArea='ML')
+

@@ -1,0 +1,93 @@
+DBMS Assignment
+-----------------------------------
+
+Name : Swapnanil Halder
+Roll No. : 18MA20046
+-----------------------------------
+
+
+Q1 >
+SELECT 
+    USER_1.RNo, USER_1.RName, fac.FId, USER_2.RName, course.CId, course.CName
+FROM 
+    RegUser as USER_1, RegUser as USER_2, CourseReg as crs_reg, Course as course
+WHERE 
+    (USER_1.RNo = crs_reg.RNo) AND (crs_reg.CId = course.CId) AND (course.FId = USER_2.RNo)
+
+Q2 >
+SELECT 
+    USER_1.RNo, USER_1.RName, fac.FId, USER_2.RName, course.CId, course.CName
+FROM 
+    RegUser as USER_1, RegUser as USER_2, CourseReg as crs_reg, Course as course
+WHERE 
+    (USER_1.ROccu=STUDENTS) AND (USER_1.RNo = crs_reg.RNo) AND (crs_reg.CId = course.CId) AND (course.FId = USER_2.RNo)
+
+Q3 >
+SELECT 
+    USER_1.RNo, USER_1.RName, fac.FId, USER_2.RName, course.CId, course.CName
+FROM 
+    RegUser as USER_1, RegUser as USER_2, CourseReg as crs_reg, Course as course
+WHERE 
+    (USER_1.HighestQual=BTech)AND(USER_1.RNo = crs_reg.RNo) AND (crs_reg.CId = course.CId) AND (course.FId = USER_2.RNo)
+
+Q4 >
+SELECT 
+    USER_1.RNo, USER_1.RName, fac.FId, USER_2.RName, course.CId, course.CName
+FROM 
+    RegUser as USER_1, RegUser as USER_2, CourseReg as crs_reg, Course as course
+WHERE 
+    (USER_1.HighestQual=MTECH) AND (USER_1.RNo = crs_reg.RNo) AND (crs_reg.CId = course.CId) AND (course.CName=CS) AND (course.FId = USER_2.RNo)
+
+Q5 >
+SELECT 
+    USER_1.RNo, USER_1.RName, fac.FId, USER_2.RName, course.CId, course.CName
+FROM 
+    RegUser as USER_1, RegUser as USER_2, CourseReg as crs_reg, Course as course,Faculty as Fac
+WHERE 
+    (USER_1.ROccu NOT STAFF) AND (USER_1.RNo = crs_reg.RNo) AND (crs_reg.CId = course.CId) AND (course.FId=Fac.FId) AND (Fac.FDept=CS) AND (FAC.FId=USER_2.RNo)
+
+Q6 >
+SELECT 
+    USER_1.RNo, USER_1.RName, fac.FId, USER_2.RName, course.CId, course.CName
+FROM 
+    RegUser as USER_1, RegUser as USER_2, CourseReg as crs_reg, Course as course,Faculty as Fac
+WHERE 
+    (USER_1.HighestQual NOT PHD)AND(USER_1.RNo = crs_reg.RNo) AND (crs_reg.CId = course.CId) AND (course.FId=Fac.FId)AND(Fac.ResearchArea=AI)AND(Fac.ResearchArea=ML OR Fac.ResearchArea=ALGO)AND(Fac.FId=USER_2.RNo)
+
+Q7 >
+SELECT 
+    USER_1.RNo, USER_1.RName, fac.FId, USER_2.RName, course.CId, course.CName
+FROM 
+    RegUser as USER_1, RegUser as USER_2, CourseReg as crs_reg, Course as course,Faculty as Fac
+WHERE 
+    (USER_1.RNo = crs_reg.RNo) AND (crs_reg.CId = course.CId)AND(COUNT(course.CName=CS)>1) AND (course.FId =Fac.FId)AND(Fac.FDept NOT CS)AND(Fac.FId=USER_2.RName)
+
+Q8 >
+SELECT 
+    USER_1.RNo, USER_1.RName, fac.FId, USER_2.RName, course.CId, course.CName
+FROM 
+    RegUser as USER_1, RegUser as USER_2, CourseReg as crs_reg, Course as course,Faculty as Fac
+WHERE
+    (USER_1.RNo=crs_reg.RNo)AND(crs_reg.CId=course.CId)AND(course.CName=CS OR course.CName=EE)AND(course.CDuration NOT LONG)AND(course.FId=USER_2.RNo)
+
+Q9 >
+SELECT 
+    USER_1.RNo, USER_1.RName, fac.FId, USER_2.RName, course.CId, course.CName
+FROM 
+    RegUser as USER_1, RegUser as USER_2, CourseReg as crs_reg, Course as course,Faculty as Fac
+WHERE
+    (USER_1.HighestQual=BTECH)AND(USER_1.RNo=crs_reg.RNo)AND(crs_reg.CId=course.CId)AND(course.CName NOT EE)AND(course.CName NOT ME)AND(course.FId=Fac.FId)AND(Fac.ResearchArea NOT DBMS)AND(Fac.FId=USER_2.RNo)
+
+Q10 >
+SELECT 
+    USER_1.RNo, USER_1.RName, fac.FId, USER_2.RName, course.CId, course.CName
+FROM 
+    RegUser as USER_1, RegUser as USER_2, CourseReg as crs_reg, Course as course,Faculty as Fac
+WHERE 
+    (USER_1.HighestQual=BTECH OR USER_1.HighestQual=MTECH)
+    AND (USER_1.RNo=crs_reg.RNo)
+    AND(crs_reg.CId=course.CId)
+    AND(course.CName=EE OR course.CName=ECE)
+    AND(course.FId=Fac.FId)
+    AND (Fac.FDept NOT ME)
+    AND(Fac..ResearchArea=AI OR Fac.ResearchArea=ML)

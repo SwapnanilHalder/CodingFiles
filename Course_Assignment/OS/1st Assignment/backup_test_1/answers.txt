@@ -1,0 +1,126 @@
+Name: Swapnanil Halder
+Roll No. : 18MA20046
+
+
+1 =>
+
+Question 1: Define class g. At t=0 and 3142 thread a prints 34.
+At t=703 and 3845 thread b prints 78. Smallest java program.
+
+ANS:
+import java.io.*;
+class g implements Runnable{
+    int num;
+    public void run( ){
+       System.out.print(num);
+       try { 
+           Thread.sleep(3142);
+        }
+       catch ( Exception e ){ }
+       System.out.print(num);
+    }
+}
+class Main{
+    public static void main(String k[]) throws Exception{
+        g obj; Thread a,b;
+        obj = new g(); 
+        obj.num = 34;
+        a = new Thread(obj);
+        a.start();
+        obj = new g(); 
+        obj.num = 78;
+        Thread.sleep(703);
+        b = new Thread(obj);
+        b.start();
+   }  
+}
+
+
+2 =>
+
+ANS:
+At t=2,    34
+At t=7,    34
+At t=57,   51
+At t=68,   51
+At t=98,   51
+
+3 =>
+
+Question 3: What is missing and various files so that output is anil kapil sani.
+These words are in separate lines. Smallest.
+int main()
+{   system("missing;./hari;echo kapil;$gopal;"); }
+
+ANS:
+int main()
+{   system("gopal='echo sani';./hari;echo kapil;$gopal;"); }
+
+'hari' file Contains :
+echo anil
+
+4 =>
+
+Question 4: Define command to print the letter before last t.
+system("./g a w er mc t y d t uk") outputs d. What is file g?
+Assume at least one t
+
+ANS:
+for i in $*
+do 
+    case $i in
+    t) final=$y ;;
+    esac
+    y=$i
+done 
+echo $final
+
+5 =>
+
+Question 5: Output of following is m45 m98 m23 m64
+What is missing line (smallest). No if,case
+When p=12 is deleted then output is m40 m30 m32 m67
+Strict smallest insisted. Extra letter one mark less.
+p=7;p=12;m45=98;m98=23;m23=64;m40=30;m30=32;m32=67;
+missing
+echo $h $y $u $d
+
+ANS:
+p=7; p=12; m45=98; m98=23; m23=64; m40=30; m30=32; m32=67;
+h=m$((33+$p)); y=m$(($h)); u=m$(($y)); d=m$(($u))
+echo $h $y $u $d
+
+
+6 =>
+
+Question 6: Write output for various x,y.
+Answer format:
+x=1..4  y=1..7PWR  Y=8..34 RTY
+x=5..12 y=any QWE
+First write condition for x. Then for y.
+Answer in any other form will not be considered.
+
+#include <stdio.h>
+#include<fcntl.h>
+main()
+{  int p,x,y;x=29;y=19;
+   p=fork();
+   open("t",O_RDWR|O_CREAT);
+   if(p==0)
+   {  lseek(3,47,0);lockf(3,F_LOCK,x);
+      sleep(2);printf("K");fflush(stdout);
+      lseek(3,54,0);lockf(3,F_ULOCK,21);
+      sleep(2);printf("J");fflush(stdout);
+   }
+   else
+   {  sleep(1);
+      lseek(3,56,0);
+      lockf(3,F_LOCK,y);
+      printf("Z");fflush(stdout);
+      sleep(4);
+   }
+}
+
+ANS:
+
+

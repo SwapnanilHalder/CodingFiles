@@ -1,0 +1,15 @@
+c)
+SELECT EMPLOYEE.employee_name
+FROM employee as EMPLOYEE, works as WORKS_1
+WHERE 
+    EMPLOYEE.employee_name = WORKS_1.employee_name AND EMPLOYEE.salary > (
+        SELECT AVG(salary) 
+        FROM employee as e2, works as WORKS_2
+        WHERE 
+        e2.employee_name = WORKS_2.employee_name AND WORKS_2.company_name = WORKS_1.company_name )
+
+
+d)
+SELECT c.company_name
+FROM company as c
+WHERE c.city = (SELECT city FROM company WHERE company.company_name = ‘XYZ’)
