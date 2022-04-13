@@ -1,0 +1,120 @@
+1)
+A) Round Robin :
+Time Job
+0-10 1 (arrival at t=0)
+10-20 2 (arrival at t=3)
+20-30 3 (arrival at t=6)
+30-40 4 (arrival at t=9)
+...
+190-200 20 (arrival at t=57)
+200-210 1 
+210-220 2
+220-230 3
+...
+390-400 20
+400-408 1
+
+So Job 1 (arrival at t=0) is completed at time 408
+1B>
+0-10, 200-210, 400-408
+
+Answer 2:
+If the order of the process is KL
+K gets V internal fragmentation 59(340-281)
+L gets JU internal fragmentation 136(460-324)
+Total internal fragmentation : 59+136 = 195
+
+
+If the order of the process is LK
+L gets V internal fragmentation 16(340-324)
+K gets JU internal fragmentation 179(460-281)
+Total internal fragmentation : 16+179 = 195
+
+
+Q3) Initial: ur,kr,d,m,hr Referenced: y 
+Step 1 -> kr,d,m,hr,u
+Step 2 -> d,m,hr,u,k 
+Step 3 -> m,hr,u,k,yr
+
+ur,kr,d,m,hr -> kr,d,m,hr,u -> d,m,hr,u,k -> m,hr,u,k,yr
+
+finally m,hr,u,k,yr holds
+victim: d
+
+4)
+LJMW, LJWM
+
+Q5) 
+(A) Programmed driven I/O: Job Ready Service Interval U 0 60[80]47 0-187 V 10 90 187-277 During interval 60-140, cpu is not doing any execution (B) DMA: Job Ready Service Interval-CPU Interval-Disk U 0 60[80]47 0-60,150-197 60-70P,70-130 fetch data,130-140Q V 10 90 60-150 During interval 60-70: P is executed(disk picks information) Interval 70-130: disk operations Interval 130-140: Q is executed
+(disk transfers information to main memory)
+
+
+
+6.
+
+A)
+
+max (A2 - 1, min (m, A1 + A2 + A3 + A4 - 4))
+
+B)
+
+max (A4 - 1, min (m, A1 + A2 + A3 + A4 - 4))
+
+7)
+cobegin begin u=31+74 z=u*2 end →step1 begin h=82*43 d=u/h end →step2 coend
+
+8)
+if arrival B <= 17: any order
+else: C first, then B
+
+q8 
+
+service time =30.
+case 1: arrival of b at t=10.
+Job Arrival RL DL ABC  ACB  
+A 0  30 30 0-30 (Td 0 ) 0-30 (Td  0)
+B 10  43 53 30-60(Td 7) 60-90(Td 37)
+C 10  40 50 60-90(Td 40) 30-60(Td 10)
+     total td=47 total td= 47
+ABC and ACB both are equal. No one is better.
+
+case 2: arrival of b at t=30
+Job Arrival RL DL ABC  ACB  
+A 0  30 30 0-30 (Td  0) 0-30 (Td  0)
+B 30  43 73 30-60(Td  0) 60-90(Td 17)
+C 10  40 50 60-90(Td 40) 30-60(Td 10)
+     total td=40 total td=27
+ACB is better.
+
+
+service time =30.
+case 1: arrival of b at t=10.
+Job  Arrival  RL  DL  ABC    ACB  
+A  0    30  30  0-30 (Td 0 )  0-30 (Td  0)
+B  10    43  53  30-60(Td 7)  60-90(Td 37)
+C  10    40  50  60-90(Td 40)  30-60(Td 10)
+          total td=47  total td= 47
+ABC and ACB both are equal. No one is better.
+
+case 2: arrival of b at t=30
+Job  Arrival  RL  DL  ABC    ACB  
+A  0    30  30  0-30 (Td  0)  0-30 (Td  0)
+B  30    43  73  30-60(Td  0)  60-90(Td 17)
+C  10    40  50  60-90(Td 40)  30-60(Td 10)
+          total td=40  total td=27
+ACB is better.
+
+9 )
+14-38 has 00111,  01,    1000, 10010, 100110
+reason:   14-15, 16-31, 32-35, 36-37,  38
+
+11 )
+Every group has 2 variables. Four groups. RAM is shown after every step.
+Write missing steps.
+Initial        abc,def,ghi,jkl
+y[101]=56      abc,156,ghi,jkl
+y[011]=29      abc,156,ghi,029
+y[001]=34      abc,034,ghi,029 y[101]=56 updated on Disk
+y[000]=89      089,034,ghi,029 
+y[010]=23      089,034,023,029
+y[100]=78      178,034,023,029 y[000]=89 updaded on Disk
