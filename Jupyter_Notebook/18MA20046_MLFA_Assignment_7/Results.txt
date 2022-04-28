@@ -1,0 +1,17 @@
+Accuracy of Linear Regression is :  86.21 %
+Accuracy of Ridge Regression is :  86.21 %
+Accuracy of Lasso Regression is :  86.21 %
+
+--Simplest model gives the same output irrespective of testing data
+Accuracy of Simplest Model is :  64.37 %
+
+
+
+We have got the accuracy of all the regreesion model to be same as it may happen that by 
+including regularization term doesn't increase the accuracy
+
+
+In code we have iterated from 1 to 100 for lambdaa ( hyper-parameter ) to know for which lambda value we get the highest accuracy
+And it turned out to be that keeping lambda = 0 goves the highest accuracy
+
+For lambda = 0, Then both Ridge and Lasso regression is same as Linear regression 
