@@ -1,0 +1,161 @@
+School name,Country,Intl GPA,US GPA
+Aligarh Muslim University,India,10/8.5/7/6.5/6/4,4.0/3.6/3.3/3.0/2.5/1.0
+Amity University,India,10/8.5/6.5/6.0,4.0/3.6/3.0/2.0
+"Anna University, Chennai",India,10/9/8/7/6,4.0/3.7/3.0/2.0/1.7
+B.S. Abdur Rahman University,India,10/8/7/6,4.0/3.0/2.0/1.0
+Banasthali University,India,100/60/48/36,4.0/3.6/3.0/2.0
+"Biju Patnaik University of Technology, Odisha Rourkela",India,10/8/7/6,4.0/3.6/3.0/2.0
+Birla Institute of Technology,India,10/7/6/5,4.0/3.6/3.0/2.0
+"Birla Institute of Technology and Science, Pilani (Rajasthan)",India,10/9/7/4.5,4.0/3.6/3.0/2.0
+"BMS College of Engineering, Bangalore",India,10/7.75/6.75/5.75,4.0/3.6/3.0/2.0
+Chaitanya Bharathi Institue of Technology,India,10/9/8/7/6/5.5/5/4.01,4.0/3.9/3.8/3.7/3.6/3.5/3.0/2.0
+Charotar University of Science and Technology,India,10/9/8/7/6,4.0/3.7/3.0/2.7/2.0
+Chhattisgarh Swami Vivekanand Technical University,India,10/9/8/7/6,4.0/3.7/3.3/3.0/2.3
+Chitkara University,India,10/9/8/7/6.5/6/5/4.5/4/2,4.0/3.8/3.7/3.3/3.0/2.7/2.3/2.0/1.7/1.0
+Coimbatore Institute of Technology,India,10/9/8/7,4.0/3.6/3.0/2.0
+"College of Engineering, Pune",India,10/9/8/7/6,4.0/3.7/3.0/2.7/2.0
+Cummins College of Engineering for Women,India,100/66/60/55/50/40,4.0/3.6/3.0/2.7/2.3/2.0
+D.Y. Patil,India,7/6/5/4/3/2/1,4.0/3.9/3.7/3.3/3.0/2.3/2.0
+Datta Meghe College of Engineering - 10-point scale,India,10/8.25/7.75/7.25/6.75,4.0/3.7/3.3/3.0/2.0
+Datta Meghe College of Engineering - 100-percentage scale,India,100/70/60/50,4.0/3.6/3.0/2.0
+Dayananda Sagar College of Engineering,India,10/9/8/7/6,4.0/3.8/3.6/3.0/2.0
+DEFAULT India - 10-point scale,India,10/9/8/7,4.0/3.6/3.0/2.0
+DEFAULT India - Letter Grades,India,A/B/C,
+"DEFAULT India - Other Traditional Patterns (B.Engr, B.Arch)",India,100/70/60/50,4.0/3.6/3.0/2.0
+"DEFAULT India - Predominant (BS, BSc, MA, MSc)",India,100/60/45/33,4.0/3.6/3.0/2.0
+Delhi Technological University,India,100/75/60/50/40,4.0/3.6/3.0/2.0/1.0
+Dharmsinh Desai University,India,10/7.5/7/6,4.0/3.6/3.0/2.0
+Dhirubhai Ambani Institute of Information and Communication Technology,India,10/9/8/7/6,4.0/3.6/3.0/2.6/2.0
+Don Bosco Institute of Technology,India,100/70/60/50,4.0/3.6/3.0/2.0
+DRAPJ Abdul Kalam Technical University,India,100/75/60/50,4.0/3.6/3.0/2.0
+Dwarkadas J. Sanghvi College of Engineering,India,10/9/8/7,4.0/3.7/3.0/2.0
+Fr Conceicao Rodrigues College of Engineering,India,10/9/8/7/6,4.0/3.7/3.3/2.3/2.0
+Gandhi Institute of Technology and Management,India,10/8/7/6/5,4.0/3.7/3.3/3.0/2.0
+Ganpat University,India,10/8/7/6/5,4.0/3.6/3.3/3.0/2.3/2.0
+Goa University,India,100/70/60/50,4.0/3.6/3.0/2.0
+Govind Ballabh Pant University of Agriculture and Technology,India,10/7.75/6.75/6,4.0/3.6/3.0/2.0
+"Gujarat Technological University, Ahmedabad",India,10/7.1/6.5/5.5,4.0/3.6/3.0/2.0
+"Guru Gobind Singh Indraprastha University, Delhi",India,100/75/60/50,4.0/3.6/3.0/2.0
+"Indian Institute of Engineering Science and Technology, Shibpur",India,10/8/7/6,4.0/3.6/3.0/2.0
+Indian Institute of Information Technology Allahabad,India,,
+"Indian Institute of Information Technology, Design and Manufacturing Jabalpur",India,10/9/8/7/6,4.0/3.7/3.3/3.0/2.3
+Indian Institute of Science,India,8/7/6/5/4,4.0/3.7/3.3/3.0/2.0
+Indian Institute of Science Education and Research,India,10/8/2006,4.0/3.0/2.0
+Indian Institute of Space Science and Technology,India,10/9/8/7,4.0/3.7/3.0/2.0
+Indian Institute of Technology,India,10/9.75/9.5/9.25/9/8.75/8.5/8.25/8/7.75/7.5/7.25/7/6.75/6.5/6.25/6/5.75/5.5/5.25/5,4.0/3.93/3.87/3.81/3.74/3.67/3.6/3.52/3.45/3.38/3.3/3.23/3.15/3.08/3.0/2.83/2.66/2.5/2.33/2.17/2.0
+Indian Institute of Technology (Banaras Hindu University),India,10/9.75/9.5/9.25/9/8.75/8.5/8.25/8/7.75/7.5/7.25/7/6.75/6.5/6.25/6/5.75/5.5/5.25/5,4.0/3.93/3.87/3.81/3.74/3.67/3.6/3.52/3.45/3.38/3.3/3.23/3.15/3.08/3.0/2.83/2.66/2.5/2.33/2.17/2.0
+Indian Institute of Technology Delhi,India,10/9.75/9.5/9.25/9/8.75/8.5/8.25/8/7.75/7.5/7.25/7/6.75/6.5/6.25/6/5.75/5.5/5.25/5,4.0/3.93/3.87/3.81/3.74/3.67/3.6/3.52/3.45/3.38/3.3/3.23/3.15/3.08/3.0/2.83/2.66/2.5/2.33/2.17/2.0
+Indian Institute of Technology Hyderabad,India,10/9.75/9.5/9.25/9/8.75/8.5/8.25/8/7.75/7.5/7.25/7/6.75/6.5/6.25/6/5.75/5.5/5.25/5,4.0/3.93/3.87/3.81/3.74/3.67/3.6/3.52/3.45/3.38/3.3/3.23/3.15/3.08/3.0/2.83/2.66/2.5/2.33/2.17/2.0
+Indian Institute of Technology Kanpur,India,10/9.75/9.5/9.25/9/8.75/8.5/8.25/8/7.75/7.5/7.25/7/6.75/6.5/6.25/6/5.75/5.5/5.25/5,4.0/3.93/3.87/3.81/3.74/3.67/3.6/3.52/3.45/3.38/3.3/3.23/3.15/3.08/3.0/2.83/2.66/2.5/2.33/2.17/2.0
+Indian Institute of Technology Mandhi,India,10/9.75/9.5/9.25/9/8.75/8.5/8.25/8/7.75/7.5/7.25/7/6.75/6.5/6.25/6/5.75/5.5/5.25/5,4.0/3.93/3.87/3.81/3.74/3.67/3.6/3.52/3.45/3.38/3.3/3.23/3.15/3.08/3.0/2.83/2.66/2.5/2.33/2.17/2.0
+Indian Institute of Technology Roorkee,India,10/9.75/9.5/9.25/9/8.75/8.5/8.25/8/7.75/7.5/7.25/7/6.75/6.5/6.25/6/5.75/5.5/5.25/5,4.0/3.93/3.87/3.81/3.74/3.67/3.6/3.52/3.45/3.38/3.3/3.23/3.15/3.08/3.0/2.83/2.66/2.5/2.33/2.17/2.0
+Indian Institute of Technology Ropar,India,10/9.75/9.5/9.25/9/8.75/8.5/8.25/8/7.75/7.5/7.25/7/6.75/6.5/6.25/6/5.75/5.5/5.25/5,4.0/3.93/3.87/3.81/3.74/3.67/3.6/3.52/3.45/3.38/3.3/3.23/3.15/3.08/3.0/2.83/2.66/2.5/2.33/2.17/2.0
+"Indian Institute of Technology, Kharagpur",India,10/9.75/9.5/9.25/9/8.75/8.5/8.25/8/7.75/7.5/7.25/7/6.75/6.5/6.25/6/5.75/5.5/5.25/5,4.0/3.93/3.87/3.81/3.74/3.67/3.6/3.52/3.45/3.38/3.3/3.23/3.15/3.08/3.0/2.83/2.66/2.5/2.33/2.17/2.0
+"Indian Institute of Technology, Madras",India,10/9.75/9.5/9.25/9/8.75/8.5/8.25/8/7.75/7.5/7.25/7/6.75/6.5/6.25/6/5.75/5.5/5.25/5,4.0/3.93/3.87/3.81/3.74/3.67/3.6/3.52/3.45/3.38/3.3/3.23/3.15/3.08/3.0/2.83/2.66/2.5/2.33/2.17/2.0
+Indian School of Mines,India,10/9/8/7/6/5,4.0/3.6/3.3/3.0/2.3/2.0
+Institute of Chemical Technology,India,10/9/8/7/6.5,4.0/3.6/3.0/2.5/2.0
+ITM University/The Northcap University,India,,
+Jadavpur University,India,,
+Jain University,India,10/7.5/7/6.5/6/5.5,4.0/3.6/3.3/3.0/2.3/2.0
+Jawaharlal Nehru Engineering College,India,100/66/60/50,4.0/3.6/3.0/2.0
+Jaypee Institute of Information Technology,India,10/9/8/7/6/5,4.0/3.6/3.3/3.0/2.3/2.0
+JSS Science and Technology University,India,10/7.75/6.75/5,4.0/3.6/3.0/2.0
+Kalinga Institute of Industrial Technology,India,10/9/8/7/6/5,4.0/3.7/3.3/3.0/2.0/1.0
+Karunya University,India,10/8/7/6,4.0/3.6/3.0/2.0
+KC College of Engineering and Management Studies and Research,India,100/70/60/50,4.0/3.6/3.0/2.0
+KJ Somaiya College of Engineering,India,10/9/8/7/6/5,4.0/3.7/3.3/3.0/2.3/2.0
+KJ Somaiya Institute of Engineering and Information Technology,India,100/60/50/40,4.0/3.6/3.0/2.0
+KK Wagh Institute of Engineering Education and Research,India,100/66/60/55/50,4/3.6/3.0/2.7/2.0
+KL University,India,,
+Kumaraguru College of Technology,India,10/9/8/7,4.0/3.6/3.0/2.0
+"LNM Institute of Information and Technology, Jaipur",India,,
+Lovely Professional University,India,10/9/8/7/6,4.0/3.7/3.0/2.7/2.0
+Maharashtra State Board of Technical Education,India,100/75/60/45,4.0/3.6/3.0/2.0
+Mahatma Gandhi University,India,,
+"Malviya National Institute of Technology, Jaipur",India,10/9/8/7/6,4.0/3.7/3.0/2.7/2.0
+Manipal Institute of Technology,India,10/9/8/7,4.0/3.6/3.0/2.0
+Manipal University,India,10/9/8/7,4.0/3.6/3.0/2.0
+"Maulana Abul Kalam Azad University of Technology, West Bengal",India,10/8/7/6,4.0/3.6/3.0/2.0
+Maulana Azad National Institute of Technology,India,10/8/7/6/5,4.0/3.6/3.3/3.0/2.0
+Motilal Nehru National Institute of Technology,India,10/9/8/7/6,4.0/3.7/3.3/3.0/2.0
+National Institute of Technology,India,10/8.5/6.5,4.0/3.6/3.0
+National Institute of Technology Calicut,India,10/8/6.5/5,4.0/3.6/3.0/2.0
+National Institute of Technology Durgapur,India,10/9/8/7,4.0/3.6/3.0/2.0
+National Institute of Technology Goa,India,10/9/8/7/6,4.0/3.7/3.0/2.7/2.0
+National Institute of Technology Hamirpur,India,10/9/8/7/6,4.0/3.7/3.0/2.7/2.0
+"National Institute of Technology Karnataka, Surathkal",India,10/6.5/5.5,4.0/3.0/2.0
+National Institute of Technology Raipur,India,10/9/8/7/6/5,4.0/3.6/3.3/3.0/2.7/2.0
+National Institute of Technology Rourkela,India,10/9/8/7,4.0/3.6/3.0/2.0
+National Institute of Technology Silchar,India,10/9/8/7/6,4.0/3.7/3.0/2.7/2.0
+National Institute of Technology Warangal,India,10/8/6.5/5,4.0/3.6/3.0/2.0
+Navrachana University,India,10/9/8/7/6/5/4,4.0/3.6/3.0/2.5/2.0/1.5/1.0
+Netaji Subhas Institute of Technology,India,100/75/60/50,4.0/3.6/3.0/2.0
+Nirma Institute of Technology,India,10/9/8/7/6,4.0/3.7/3.3/3.0/2.5
+Nitte Meenakshi Institute of Technology,India,,
+NMIMS University,India,,
+Osmania University,India,100/75/60/45/40,4.0/3.6/3.0/2.0/1.0
+Padmabhushan Vasantdada Patil Pratishthan's College of Engineering,India,100/70/60/50,4.0/3.6/3.0/2.0
+Pandit Deendayal Petroleum University,India,10/9/8/7/6/5,4.0/3.9/3.6/3.3/3.0/2.0
+Panjab University,India,10/9/8/7/6/5,4.0/3.6/3.3/3.0/2.3/2.0
+"PEC University of Technology, Chandigarh",India,,
+PES Institute of Technology,India,10/9/8/7,4.0/3.6/3.0/2.0
+PES University,India,10/9.5/7.75/6.75/5.75,4.0/3.9/3.6/3.0/2.0
+Pondicherry University,India,,
+PSG College of Technology,India,10/9/8/7,4.0/3.6/3.0/2.0
+Pune Institute of Computer Technology,India,100/66/60/55/50,4.0/3.6/3.3/3.0/2.0
+Rajiv Gandhi Institute of Technology,India,10/9/8/7/6,4.0/3.6/3.0/2.0/1.0
+Rajiv Gandhi Proudyogiki Vishwavidyalaya,India,10/7.5/6.5/5.0,4.0/3.6/3.0/2.0
+Rajiv Gandhi Proudyogiki Vishwavidyalaya - 100-point scale,India,100/75/65/45,4.0/3.6/3.0/2.0
+Ramaiah Institute of Technology,India,10/9/8/7/5,4.0/3.6/3.0/2.0/1.0
+Ramnarian Ruia College,India,7/6/5/4,4.0/3.6/3.0/2.0
+Rizvi College of Engineering,India,100/70/60/50,4.0/3.6/3.0/2.0
+RKN Engg College,India,100/75/60/50,4.0/3.6/3.0/2.0
+"RV College of Engineering, Bengaluru",India,10/9/8/7,4.0/3.7/3.0/2.0
+Sardar Patel College of Engineering,India,10/9/8/7,4.0/3.6/3.0/2.0
+Sardar Patel Institute of Technology - 10-point scale,India,10/9/8/7,4.0/3.6/3.0/2.0
+Sardar Patel Institute of Technology - Percentage Scale,India,100/70/60/50,4.0/3.6/3.0/2.0
+Sardar Vallabhbhai National Institute of Technology,India,10/9/8/7/6,4.0/3.6/3.0/2.6/2.0
+Sastra University,India,10/8/7/6,4.0/3.6/3.0/2.0
+Sathyabama University,India,10/9/8/7/6,4.0/3.7/3.3/3.0/2.0
+Savitribai Phule Pune University (formerly University of Pune),India,100/66/60/55/50,4.0/3.6/3.0/2.7/2.0
+SDM College of Engineering and Technology,India,,
+Shiv Nadar University,India,10/8.5/7.5/6.5/5.5,4.0/3.7/3.0/2.7/2.0
+Shivajirao S Jondhale College of Engineering,India,10/9/8/7,4.0/3.6/3.0/2.0
+Shri Guru Gobind Singhji Institute of Engineering and Technology,India,10/9/8/7/6/5/4,4.0/3.7/3.3/3.0/2.3/2.0/1.0
+Shri Ramdeobaba College of Engineering and Management,India,10/9/8/7/6,4.0/3.6/3.0/2.7/2.0
+Siddaganga Institute of Technology,India,,
+SIES Graduate School of Technology,India,10/9/8/7,4.0/3.7/3.0/2.0
+Sikkim Manipal University,India,,
+Siksha O Anusandhan University,India,,
+Sinhgad Institute of Technology,India,100/60/55/50/40,4.0/3.6/3.3/3.0/2.0
+Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya,India,,
+Sri Jayachamarajendra College of Engineering,India,10/7.75/6.75/5,4.0/3.6/3.0/2.0
+SRM Institute of Science and Technology,India,10/9/8/7/6/5,4.0/3.9/3.6/3.3/3.0/2.0
+SRM University,India,10/9/8.5/8/7.5/7/6.5,4.0/3.7/3.3/3.0/2.7/2.3/2.0
+St Francis Institute of Technology,India,100/60/50/40,4.0/3.6/3.0/2.0
+Symbiosis International University,India,10/9/8/7/6/5,4.0/3.9/3.6/3.3/3.0/2.0
+Thadomal Shahani Engineering College,India,10/9/8/7/6/5,4.0/3.7/3.3/3.0/2.3/2.0
+Thakur College of Engineering and Technology,India,100/70/60/50,4.0/3.6/3.0/2.0
+Thapar Institute of Engineering and Technology,India,10/8/2006,4.0/3.0/2.0
+Thapur University,India,,
+The NorthCap University,India,,
+University of Delhi,India,100/75/60/50,4.0/3.6/3.0/2.0
+"University of Kerala, Thiruvananthapuram",India,10/9/8.5/8/7.5/7/6.5,4.0/3.7/3.5/3.3/3.0/2.7/2.0
+University of Mumbai,India,10/9/8/7,4.0/3.6/3.0/2.0
+University Of Mumbai - Percentage Scale,India,100/70/60/50,4.0/3.6/3.0/2.0
+Uttar Pradesh Technical University,India,100/60/50,4.0/3.6/3.0
+Vasavi College of Engineering,India,10/9/8/7/6/5,4.0/3.6/3.3/3.0/2.0/1.0
+Veermata Jijabai Technological Institute/Victoria Jubilee Technical Institute,India,10/9/8/7/6,4.0/3.6/3.0/2.5/2.0
+Vidyalankar Institute of Technology,India,10/9/8/7,4.0/3.6/3.0/2.0
+Vishwakarma Institute of Technology,India,10/9/8/7/6,4.0/3.6/3.0/2.7/2.0
+Visvesvaraya National Institute of Technology,India,10/9/8/7/6,4.0/3.7/3.0/2.7/2.0
+Visvesvaraya National Institute of Technology,India,,
+Visvesvaraya Technological University - 100-point scale,India,100/70/60,4.0/3.6/3.0
+Visvesvaraya Technological University 10-point,India,10/9/8/7/6,4.0/3.9/3.6/3.0/2.0
+VIT (Vellore Institute of Technology),India,10/9/8/7/6,4.0/3.6/3.0/2.0/1.0
+Viva Institute of Technology,India,10/9/8/7/6/5,4.0/3.7/3.0/2.0/1.0/0
+Vivekanand Education Society's Institute of Technology,India,10/9/8/7,4.0/3.6/3.0/2.0
+VNR Vignana Jyothi Institute of Engineering & Technology,India,10/7.5/6.5/5.5,4.0/3.6/3.0/2.0
+VR Siddhartha Engineering College,India,10/9/8/7/6/5,4.0/3.9/3.6/3.3/3.0/2.0
+"Walchand College of Engineering, Sangli",India,,
+Watumull Institute of Electronics Engineering,India,,
