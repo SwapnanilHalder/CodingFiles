@@ -1,0 +1,82 @@
+.App {
+  margin: 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.header-app {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.profile {
+  letter-spacing: 0em;
+  text-align: left;
+
+  /* Header title */
+
+  width: 190px;
+  height: 29px;
+
+  /* Text H6 - Semi */
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 29px;
+
+  /* identical to box height */
+  align-items: center;
+
+  /* Secondary Button/Bold BG with Indicator */
+  color: #500061;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.intro {
+  /* Connect & Meet peopl */
+
+  /* position: absolute; */
+  left: 10.2%;
+  right: 33.93%;
+  top: 13.9%;
+  bottom: 81.22%;
+
+  /* Text H8 - Semi */
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+
+  /* Grey Light */
+  color: #646464;
+}
+
+.otpverification {
+  width: 201px;
+  height: 18px;
+
+  /* Text H4 */
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 112%;
+
+  /* identical to box height, or 18px */
+  text-align: center;
+  letter-spacing: -0.189447px;
+
+  /* Grey */
+  color: #8a8a8a;
+
+  /* Inside auto layout */
+  flex: none;
+  /* order: 1; */
+  flex-grow: 0;
+}
