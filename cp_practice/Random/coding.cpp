@@ -1,37 +1,51 @@
+// #pragma GCC optimize("Ofast","inline","-ffast-math")
+// #pragma GCC target("avx,mmx,sse2,sse3,sse4")
+
 #include <bits/stdc++.h>
 #define SPEED1 ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL)
-#define int long long int
-#define For(i, a, b) for(int i=a; i<b; i++)
-#define pl(x) cout << x << endl
-#define endl '\n'
+
 using namespace std;
 
-void solve() {
-    int q, x; cin>>q >> x;
-    if(q == 1) {
-        for(int k=1; k*k <= x; k++) {
-            if(k*k == x) {
-                cout << "YES\n"; return;
+class Solution {
+public:
+    int compress(vector<char>& chars) {
+        SPEED1;
+        vector<char> ans;
+        ans.push_back(chars[0]);
+        int count = 1;
+        for(int i=1; i<chars.size(); i++) {
+            if(chars[i] != chars[i-1]) {
+                if(count > 1) {
+                    string temp = to_string(count);
+                    for(auto &x: temp) {
+                        ans.push_back(x);
+                    }
+                }
+                ans.push_back(chars[i]);
+                count = 1;
+            }
+            else {
+                count++;
             }
         }
-        cout << "NO\n"; return;
-    }
-    if(q == 2) {
-        for(int k=1; k*k*k <= x; k++) {
-            if(k*k*k == x) {
-                cout << "YES\n"; return;
+        if(count > 1) {
+            string temp = to_string(count);
+            for(auto &x: temp) {
+                ans.push_back(x);
             }
         }
-        cout << "NO\n"; return;        
+        chars = ans;
+        return chars.size();
     }
-}
+};
 
-signed main() {
+
+int main() {
     SPEED1;
-    // #ifndef ONLINE_JUDGE 
-    //    freopen("input.txt", "r", stdin);
-    //    freopen("output.txt", "w", stdout);
-    // #endif
-    int __t; cin >> __t; while(__t--)
-    solve();
+    Solution mySolution;
+    vector<char> arr{"a","b","b","b","b","b","b","b","b","b","b","b","b"};
+    int start = 5;
+    string str = "abcdefg";
+    cout << "Answer : " << endl;
+    cout << mySolution.compress(arr)  ;
 }
