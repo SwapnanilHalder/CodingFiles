@@ -1,0 +1,14 @@
+{
+    "cph.general.saveLocation": "",
+    "files.associations": {
+        "*.html": "html",
+        "**/templates/**/*.html": "django-html",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "iostream": "cpp"
+    },
+    "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-14"
+}
