@@ -14,33 +14,22 @@
 #define inpt(x) int x{}; cin >> x
 using namespace std;
 
-int fillDP(vector<int> &arr, vector<vector<int>> &dp, int x, int y) {
-    if(dp[x][y] != LLONG_MIN) {
-        return dp[x][y];
-    }
-    if( (x+1) < dp.size()) {
-        dp[x][y] = max(dp[x][y], arr[x] - fillDP(arr, dp, x+1, y));
-    }
-    if( (y-1) >= 0) {
-        dp[x][y] = max(dp[x][y], arr[y] - fillDP(arr, dp, x, y-1));
-    }
-    return dp[x][y];
-}
-
 void solve() {
     inpt(n);
     vector<int> arr(n);
     For(i, 0, n) {
         cin >> arr[i];
     }
-    vector<vector<int>> dp(n, vector<int>(n, LLONG_MIN));
+
+    vector<int> dp(n+2, INT_MAX);
+    dp[0] = INT_MIN;
     For(i, 0, n) {
-        dp[i][i] = arr[i];
+        auto it = lower_bound(dp.begin(), dp.end(), arr[i]);
+        *it = arr[i];
     }
-    fillDP(arr, dp, 0, n-1);
-    // pv2d(dp);
-    int ans = (accumulate(arr.begin(), arr.end(), 0LL) +  dp[0][n-1]) >> 1;
-    pl(ans);
+    auto it = lower_bound(dp.begin(), dp.end(), INT_MAX);
+    pl((it-dp.begin())-1);
+    return;
 }
 
 signed main() {
