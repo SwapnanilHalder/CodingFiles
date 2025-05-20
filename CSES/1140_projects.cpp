@@ -15,8 +15,50 @@
 #define inpt(x) int x{}; cin >> x
 using namespace std;
 
-void solve() {
+bool comp(const vector<int> &a, const vector<int> &b) {
+    if(a[0] != b[0]) {
+        return (a[0] < b[0]);
+    } else {
+        if(a[1] != b[1]) {
+            return (a[1] < b[1]);
+        } else {
+            return (a[2] < b[2]);
+        }
+    }
+}
 
+void solve() {
+    inpt(n);
+    vector<int> dp(n+1, 0);
+    vector<vector<int>> arr(n);
+    For(i, 0, n) {
+        inpt(x); inpt(y); inpt(z);
+        arr[i] = {x, y, z};
+    }
+    vector<pair<int, int>> find(n+1);
+    find[0] = {0, 0};
+    For(i, 0, n) {
+        find[i+1] = {arr[i][1], i+1};
+    }
+    sort(find.begin(), find.end());
+
+    // sort(arr.begin(), arr.end(), comp);
+
+    // For(i, 0, n+1) {
+    //     cout << find[i].first << ", " << find[i].second << endl;
+    // }
+    dp[0] = 0LL;
+    For(i, 1, n+1) {
+        vector<int> curr = arr[find[i].second-1];
+        // deb(curr[0]);
+        auto it = lower_bound(find.begin(), find.begin()+i, make_pair(curr[0],LLONG_MIN), [](const pii &a, const pii &b){return a<b;});
+        it--;
+        // cout << "found: " << it->first << " , " << it->second << endl;
+        dp[i] = max(dp[i-1], dp[it-find.begin()] + curr[2]);
+        // pv(dp);
+    }
+    pl(dp[n]);
+    return;
 }
 
 signed main() {

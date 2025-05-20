@@ -49,8 +49,8 @@ void solve() {
             } 
             dp[i][j] = max(dp[i][j], max(dp[i-1][j], dp[i][j-1]));
         }
+        pv2d(dp); cout << endl;
     }
-    pv2d(dp);
 
     deque<int> ans = findPath(dp, a, b);
     pl(dp[m][n]);
