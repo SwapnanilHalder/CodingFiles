@@ -4,7 +4,9 @@
         "*.html": "html",
         "**/templates/**/*.html": "django-html",
         "iostream": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "__node_handle": "cpp",
+        "vector": "cpp"
     },
     "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-14"
 }
